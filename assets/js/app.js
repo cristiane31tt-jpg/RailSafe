@@ -460,8 +460,7 @@ function startTraining() {
 }
 
 cardSinalizacao.addEventListener("click", () => {
-  startTraining();
-  showView("view-sinalizacao");
+  iniciarConteudoSinalizacao();
 });
 
 document.getElementById("btn-back-sinalizacao").addEventListener("click", () => {
@@ -495,6 +494,213 @@ btnAnswer.addEventListener("click", () => {
 document.getElementById("btn-back-to-trainings").addEventListener("click", () => {
   startTraining();
   showView("view-trainings");
+});
+
+/* ===== Conteúdo didático de Sinalização (curso linear) ===== */
+
+const SEQUENCIA_AULAS = [];
+for (let n = 1; n <= 7; n++) SEQUENCIA_AULAS.push("conteudo-aula-" + n);
+SEQUENCIA_AULAS.push("conteudo-revisao", "conteudo-referencia");
+
+const TOTAL_ETAPAS = SEQUENCIA_AULAS.length;
+
+/* ===== Progresso das aulas concluídas (módulo de Sinalização) ===== */
+
+const AULAS_CONCLUIDAS_KEY = "railsafe_sinalizacao_aulas_concluidas";
+
+let aulasConcluidas = (function () {
+  try {
+    const raw = localStorage.getItem(AULAS_CONCLUIDAS_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch (e) {
+    return new Set();
+  }
+})();
+
+function salvarAulaConcluida(id) {
+  if (!id.startsWith("conteudo-aula-")) return;
+  aulasConcluidas = new Set(aulasConcluidas);
+  aulasConcluidas.add(id);
+  localStorage.setItem(AULAS_CONCLUIDAS_KEY, JSON.stringify(Array.from(aulasConcluidas)));
+}
+
+function atualizarProgressoCurso() {
+  if (!cursoProgressoInfo) return;
+  let count = 0;
+  for (let n = 1; n <= 7; n++) {
+    if (aulasConcluidas.has("conteudo-aula-" + n)) count++;
+  }
+  if (count === 0 || count === 7) {
+    cursoProgressoInfo.hidden = true;
+    return;
+  }
+  cursoProgressoInfo.textContent = count + " de 7 aulas concluídas";
+  cursoProgressoInfo.hidden = false;
+}
+
+const aulaBody = document.getElementById("aula-body");
+const btnAulaPrev = document.getElementById("btn-aula-prev");
+const btnAulaNext = document.getElementById("btn-aula-next");
+const progressoBloco = document.getElementById("curso-progresso");
+const progressoLabel = document.getElementById("aula-progresso-label");
+const progressoFill = document.getElementById("aula-progresso-fill");
+const progressoBar = document.getElementById("aula-progresso-bar");
+const cursoProgressoInfo = document.getElementById("curso-progresso-info");
+const conteudoTemplates = document.querySelector(".conteudo__templates");
+
+const atividadesContainer = document.getElementById("opcoes-atividade-sinal");
+const btnAtividadeResponder = document.getElementById("btn-atividade-responder");
+const feedbackAtividade = document.getElementById("feedback-atividade-sinal");
+const respostaAtividadeTexto = document.getElementById("atividade-resposta-correta");
+
+/**
+ * Configuracao da atividade "Encontre o sinal apagado".
+ * A alternativa correta (0 a 3, correspondente a "Sinal 1" a "Sinal 4")
+ * deve ser definida quando a imagem for inserida.
+ * Enquanto estiver como null, o app exibe o texto de reserva.
+ */
+const RESPOSTA_SINAL_APAGADO = null;
+
+let aulaPos = 0;
+let atividadeRespondida = false;
+let atividadeSelecionada = -1;
+
+function reiniciarAtividadeVisual() {
+  atividadeRespondida = false;
+  atividadeSelecionada = -1;
+  feedbackAtividade.hidden = true;
+  btnAtividadeResponder.hidden = false;
+  atividadesContainer.querySelectorAll(".option__input").forEach((input) => {
+    input.disabled = false;
+    input.checked = false;
+  });
+  atividadesContainer.querySelectorAll(".option").forEach((label) => {
+    label.style.pointerEvents = "";
+    label.classList.remove("is-correct", "is-wrong");
+  });
+}
+
+function nomeEtapa(id) {
+  if (id.indexOf("conteudo-aula-") === 0) {
+    const n = parseInt(id.replace("conteudo-aula-", ""), 10);
+    return "Aula " + n + " de 7";
+  }
+  if (id === "conteudo-revisao") return "Revisão";
+  if (id === "conteudo-referencia") return "Referência técnica";
+  return "";
+}
+
+function proximoRotulo(id) {
+  if (id === "conteudo-referencia") return "Iniciar quiz";
+  if (id === "conteudo-revisao") return "Continuar para referências →";
+  if (id === "conteudo-aula-7") return "Continuar para revisão →";
+  return "Próxima aula →";
+}
+
+function abrirAula(id) {
+  aulaPos = SEQUENCIA_AULAS.indexOf(id);
+  const naSequencia = aulaPos !== -1;
+  const conteudo = document.getElementById(id);
+  while (aulaBody.firstChild) conteudoTemplates.appendChild(aulaBody.firstChild);
+  if (conteudo) aulaBody.appendChild(conteudo);
+
+  if (naSequencia) {
+    const pct = Math.round(((aulaPos + 1) / TOTAL_ETAPAS) * 100);
+    progressoBloco.hidden = false;
+    progressoLabel.textContent = nomeEtapa(id);
+    progressoFill.style.width = pct + "%";
+    if (progressoBar) progressoBar.setAttribute("aria-valuenow", String(pct));
+
+    btnAulaPrev.hidden = aulaPos === 0;
+    btnAulaPrev.textContent = "← Aula anterior";
+    btnAulaNext.hidden = false;
+    btnAulaNext.textContent = proximoRotulo(id);
+  } else {
+    progressoBloco.hidden = true;
+    btnAulaPrev.hidden = true;
+    btnAulaNext.hidden = true;
+  }
+
+  if (id === "conteudo-atividade") reiniciarAtividadeVisual();
+  if (typeof window !== "undefined") window.scrollTo(0, 0);
+  showView("view-aula-sinalizacao");
+}
+
+function iniciarConteudoSinalizacao() {
+  atualizarProgressoCurso();
+  showView("view-conteudo-sinalizacao");
+}
+
+document.getElementById("btn-iniciar-treinamento-sinalizacao").addEventListener("click", () => {
+  abrirAula("conteudo-aula-1");
+});
+
+document.getElementById("btn-avaliacao-sinalizacao").addEventListener("click", () => {
+  showView("view-sinalizacao");
+  startTraining();
+});
+
+document.getElementById("btn-back-conteudo-sinalizacao").addEventListener("click", () => {
+  showView("view-trainings");
+});
+
+document.getElementById("btn-back-aula-sinalizacao").addEventListener("click", () => {
+  atualizarProgressoCurso();
+  showView("view-conteudo-sinalizacao");
+});
+
+btnAulaPrev.addEventListener("click", () => {
+  if (aulaPos > 0) abrirAula(SEQUENCIA_AULAS[aulaPos - 1]);
+});
+
+btnAulaNext.addEventListener("click", () => {
+  salvarAulaConcluida(SEQUENCIA_AULAS[aulaPos]);
+  if (aulaPos === SEQUENCIA_AULAS.length - 1) {
+    showView("view-sinalizacao");
+    startTraining();
+    return;
+  }
+  abrirAula(SEQUENCIA_AULAS[aulaPos + 1]);
+});
+
+atividadesContainer.querySelectorAll(".option__input").forEach((input) => {
+  input.addEventListener("change", () => {
+    atividadeSelecionada = Number(input.value);
+  });
+});
+
+btnAtividadeResponder.addEventListener("click", () => {
+  if (atividadeSelecionada === -1) return;
+
+  respostaAtividadeTexto.textContent = RESPOSTA_SINAL_APAGADO === null
+    ? "[Sinal correspondente a imagem]"
+    : "Sinal " + (RESPOSTA_SINAL_APAGADO + 1);
+
+  feedbackAtividade.hidden = false;
+
+  if (RESPOSTA_SINAL_APAGADO !== null) {
+    const chosen = atividadesContainer.querySelector(
+      '.option__input[value="' + atividadeSelecionada + '"]'
+    ).closest(".option");
+    const correctLabel = atividadesContainer.querySelector(
+      '.option__input[value="' + RESPOSTA_SINAL_APAGADO + '"]'
+    ).closest(".option");
+    correctLabel.classList.add("is-correct");
+    if (atividadeSelecionada !== RESPOSTA_SINAL_APAGADO) {
+      chosen.classList.add("is-wrong");
+    }
+  }
+
+  atividadesContainer.querySelectorAll(".option__input").forEach((input) => {
+    input.disabled = true;
+  });
+  atividadesContainer.querySelectorAll(".option").forEach((label) => {
+    label.style.pointerEvents = "none";
+  });
+
+  btnAtividadeResponder.hidden = true;
+  atividadeRespondida = true;
 });
 
 /* ===== Treinamento de AMV ===== */
