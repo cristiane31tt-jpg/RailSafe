@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -156,7 +156,415 @@
       </main>
     </section>
 
-    <!-- ===== Tela: Treinamento de Sinalização ===== -->
+<!-- ===== Tela: Apresentação do Treinamento de Sinalização ===== -->
+    <section class="view view--page" id="view-conteudo-sinalizacao" data-view hidden>
+      <main class="page page--curso">
+        <button class="btn btn--back" id="btn-back-conteudo-sinalizacao" type="button">
+          ← Voltar
+        </button>
+
+        <header class="page__header">
+          <span class="curso__badge">Curso · 7 aulas</span>
+          <h2 class="page__title">Treinamento de Sinalização</h2>
+          <p class="page__subtitle">
+            Um curso linear sobre os fundamentos da sinalização ferroviária, da introdução à avaliação de conhecimento.
+          </p>
+        </header>
+
+        <div class="curso__descricao">
+          <p class="conteudo__p">
+            O treinamento de Sinalização Ferroviária é composto por sete aulas, que apresentam os principais conceitos e fundamentos da sinalização e do controle da circulação ferroviária.
+          </p>
+          <p class="conteudo__p">
+            As aulas devem ser realizadas na sequência. Ao final do conteúdo, você terá acesso à revisão do módulo, às referências técnicas e, posteriormente, à avaliação de conhecimento.
+          </p>
+          <p class="conteudo__p">
+            Inicie pela Aula 1 e siga a sequência até a avaliação.
+          </p>
+        </div>
+
+        <p class="curso__progresso" id="curso-progresso-info" hidden></p>
+
+        <button class="btn btn--primary" id="btn-iniciar-treinamento-sinalizacao" type="button">
+          Estudar conteúdo
+        </button>
+
+        <button class="btn btn--secondary" id="btn-avaliacao-sinalizacao" type="button">
+          Fazer avaliação
+        </button>
+      </main>
+    </section>
+
+    <!-- ===== Tela: Aula de Sinalização (curso linear) ===== -->
+    <section class="view view--page" id="view-aula-sinalizacao" data-view hidden>
+      <main class="page">
+        <button class="btn btn--back" id="btn-back-aula-sinalizacao" type="button">
+          ← Voltar
+        </button>
+
+        <div class="curso__progress" id="curso-progresso" hidden>
+          <span class="curso__progress-label" id="aula-progresso-label">Aula 1 de 7</span>
+          <div
+            class="curso__progress-track"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            id="aula-progresso-bar"
+          >
+            <div class="curso__progress-fill" id="aula-progresso-fill"></div>
+          </div>
+        </div>
+
+        <div class="conteudo" id="aula-body"></div>
+
+        <nav class="conteudo__aula-nav">
+          <button class="btn btn--secondary" id="btn-aula-prev" type="button">
+            ← Aula anterior
+          </button>
+          <button class="btn btn--primary" id="btn-aula-next" type="button">
+            Próxima aula →
+          </button>
+        </nav>
+      </main>
+
+      <div class="conteudo__templates" hidden>
+
+<article class="conteudo__stage" id="conteudo-aula-1">
+<h3 class="conteudo__title">Introdução à Sinalização</h3>
+
+<p class="conteudo__p">A circulação ferroviária exige que cada movimento seja realizado de forma ordenada, previsível e segura. À medida que as ferrovias passaram a operar com maior quantidade de trens e maior complexidade de circulação, surgiu a necessidade de estabelecer meios claros para indicar ao profissional responsável pelo movimento quando, onde e em quais condições um trem pode prosseguir.</p>
+
+<p class="conteudo__p">A sinalização ferroviária é o conjunto de sinais, equipamentos, dispositivos e sistemas utilizados para transmitir indicações relacionadas aos movimentos ferroviários e contribuir para que esses movimentos ocorram de forma segura e ordenada.</p>
+
+<p class="conteudo__p">Na prática, a sinalização participa diretamente do controle e da autorização da circulação dos trens. Por meio das indicações apresentadas pelos sinais e da interação com os demais elementos do sistema, o profissional recebe informações que orientam a continuidade, a restrição ou a parada de um movimento.</p>
+
+<p class="conteudo__p">Nesse contexto, um termo técnico importante é <strong>licenciar</strong>. Quando um sinal apresenta uma indicação que permite determinado movimento, essa indicação está licenciando o movimento dentro das condições estabelecidas pelo sistema.</p>
+
+<figure class="atividade__imagem">
+  <figcaption class="atividade__placeholder">Imagem: sinal luminoso ferroviário — a ser inserida</figcaption>
+</figure>
+
+<p class="conteudo__p">A indicação apresentada por um sinal não deve ser interpretada isoladamente. Seu significado está relacionado às regras do sistema de sinalização, às condições da via, aos equipamentos envolvidos e aos procedimentos operacionais aplicáveis.</p>
+
+<p class="conteudo__p">Por isso, a sinalização não deve ser entendida como um elemento isolado que substitui a atuação do profissional. O maquinista ou condutor deve observar a indicação apresentada, interpretá-la de acordo com as regras aplicáveis e cumprir os procedimentos operacionais correspondentes.</p>
+
+<p class="conteudo__p">A segurança da circulação resulta justamente da integração entre sinalização, equipamentos, condições da via, regras operacionais e atuação profissional.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p">a sinalização ferroviária transmite indicações que participam do controle e da autorização dos movimentos. <strong>Licenciar</strong> significa autorizar determinado movimento dentro das condições estabelecidas pelo sistema. A indicação deve sempre ser interpretada de acordo com as regras e condições operacionais aplicáveis.</p>
+</div>
+</article>
+
+          <article class="conteudo__stage" id="conteudo-aula-2">
+<h3 class="conteudo__title">Sinais e suas funções</h3>
+
+<p class="conteudo__p">Os sinais ferroviários são dispositivos utilizados para apresentar indicações ao profissional responsável pelo movimento. Dependendo do sistema, podem ser luminosos, mecânicos ou apresentar outras formas de indicação.</p>
+
+<p class="conteudo__p">Dentro de um sistema de sinalização, os sinais podem desempenhar funções diferentes. Para compreender essas funções, é necessário distinguir quatro tipos: <strong>Sinal Principal</strong>, <strong>Sinal Secundário</strong> ou <strong>Unidade B</strong>, <strong>Sinal de Manobra</strong> e <strong>Ponto</strong>.</p>
+
+<p class="conteudo__p">O <strong>Sinal Principal</strong> controla os movimentos de trens em circulação. Quando sua indicação licencia o prosseguimento pela linha principal, o trem segue em linha corrida, pela linha principal, <strong>de reta a reta</strong>, observadas as demais condições e regras aplicáveis à circulação.</p>
+
+<p class="conteudo__p">O <strong>Sinal Secundário</strong>, também denominado <strong>Unidade B</strong>, possui função relacionada ao licenciamento do trem para <strong>cruzamento</strong>, permitindo o encaminhamento do movimento para uma condição diferente daquela estabelecida pelo Sinal Principal.</p>
+
+<p class="conteudo__p">O <strong>Sinal de Manobra</strong> é destinado aos movimentos de manobra. Sua indicação licencia o movimento de manobra até o <strong>limite de manobra</strong>, estabelecendo o limite dentro do qual aquele movimento pode ser realizado conforme as regras do sistema.</p>
+
+<p class="conteudo__p">O <strong>Ponto</strong> constitui um destaque de <strong>parada obrigatória</strong>. Sua função é indicar ao profissional a necessidade de parada no local estabelecido, conforme as regras operacionais aplicáveis.</p>
+
+<figure class="atividade__imagem">
+  <figcaption class="atividade__placeholder">Imagem: conjunto ilustrativo dos sinais Principal, Secundário/Unidade B, de Manobra e Ponto — a ser inserida</figcaption>
+</figure>
+
+<p class="conteudo__p">Os sinais também podem apresentar características construtivas diferentes. O <strong>sinal alto</strong> é instalado em posição elevada, enquanto o <strong>sinal anão</strong> apresenta instalação em posição mais baixa. Essas características construtivas não devem ser confundidas com a função operacional do sinal.</p>
+
+<p class="conteudo__p">Também é necessário considerar o sentido de circulação estabelecido pelo sistema. Uma via pode possuir sinalização que permita circulação em determinado sentido ou nos dois sentidos, de acordo com sua configuração e as regras de operação.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p"><strong>Sinal Principal</strong> controla os movimentos em circulação e, quando licencia pela linha principal, o movimento segue de reta a reta. <strong>Unidade B</strong> licencia para <strong>cruzamento</strong>. <strong>Sinal de Manobra</strong> licencia o movimento até o <strong>limite de manobra</strong>. <strong>Ponto</strong> é destaque de <strong>parada obrigatória</strong>.</p>
+</div>
+</article>
+
+          <article class="conteudo__stage" id="conteudo-aula-3">
+<h3 class="conteudo__title">Indicações e interpretação</h3>
+
+<p class="conteudo__p">Depois de compreender a função dos sinais, é necessário entender o que eles apresentam em cada situação. Essa indicação é denominada <strong>aspecto</strong>.</p>
+
+<p class="conteudo__p">O <strong>aspecto</strong> de um sinal luminoso é a indicação apresentada pelo sinal. Seu significado é definido pelas regras do sistema de sinalização.</p>
+
+<p class="conteudo__p">É importante diferenciar <strong>cor da luz</strong> e <strong>aspecto do sinal</strong>. A cor corresponde à característica luminosa apresentada por uma unidade. Já o aspecto corresponde à indicação formada conforme a configuração prevista para aquele sinal.</p>
+
+<p class="conteudo__p">Quando um sinal possui mais de uma unidade luminosa, as luzes devem ser interpretadas <strong>em conjunto</strong>. O significado não deve ser obtido pela leitura isolada de cada luz, mas pelo aspecto formado pelo conjunto.</p>
+
+<figure class="atividade__imagem">
+  <figcaption class="atividade__placeholder">Imagem: sinal luminoso com múltiplas unidades e o aspecto correspondente — a ser inserida</figcaption>
+</figure>
+
+<p class="conteudo__p">A intermitência também pode fazer parte de um aspecto. No <strong>aspecto vermelho piscante</strong>, por exemplo, a característica de piscar integra a indicação e possui significado definido pelo sistema de sinalização adotado.</p>
+
+<p class="conteudo__p">No <strong>sistema de referência deste treinamento</strong>, o vermelho piscante está associado à condição de <strong>entrada do trem em uma linha ocupada por outra composição</strong>. Essa indicação deve ser interpretada conforme as regras operacionais aplicáveis ao sistema, não como uma definição universal para todas as ferrovias.</p>
+
+<p class="conteudo__p">Outro princípio fundamental diz respeito ao <strong>sinal apagado</strong>. Conforme a referência normativa adotada no treinamento, um sinal luminoso apagado deve ser considerado <strong>sinal de parada</strong>. Portanto, a ausência de luz não deve ser interpretada simplesmente como ausência de indicação.</p>
+
+<p class="conteudo__p">A <strong>velocidade máxima autorizada (VMA)</strong> também não deve ser presumida apenas pela cor de um sinal. Quando a velocidade é estabelecida por sinalização específica, sua indicação deve ser considerada conforme a sinalização e as regras do sistema, incluindo a sinalização instalada junto à via.</p>
+
+<p class="conteudo__p">A indicação apresentada por um sinal é resultado das condições existentes no sistema. Elementos como <strong>intertravamento</strong>, <strong>seção de bloqueio</strong>, <strong>estado dos AMVs</strong>, condições de circulação e licenciamento podem participar da definição da indicação apresentada.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p">aspecto é a indicação apresentada pelo sinal e, quando existem várias unidades luminosas, elas devem ser interpretadas em conjunto. O vermelho piscante possui significado definido pelo sistema; neste treinamento, está associado à entrada em linha ocupada. Sinal apagado deve ser considerado sinal de parada conforme a referência adotada.</p>
+</div>
+</article>
+
+          <article class="conteudo__stage" id="conteudo-aula-4">
+<h3 class="conteudo__title">Controle e separação da circulação</h3>
+
+<p class="conteudo__p">A sinalização indica as condições para os movimentos, mas a segurança da circulação também depende de mecanismos que controlem a ocupação da via e mantenham os movimentos devidamente separados.</p>
+
+<p class="conteudo__p">Um dos conceitos fundamentais é a <strong>Seção de Bloqueio</strong>. Trata-se de um trecho da via destinado ao controle da circulação, no qual as regras de bloqueio estabelecem as condições para autorização dos movimentos.</p>
+
+<p class="conteudo__p">Em sistemas que adotam o princípio de exclusividade de ocupação, enquanto um trem ocupa determinada seção, outro movimento incompatível não pode ser autorizado para aquele mesmo trecho.</p>
+
+<p class="conteudo__p">Para determinar se um trecho está ocupado ou livre, podem ser utilizados diferentes sistemas de detecção. Um deles é o <strong>circuito de via</strong>, que utiliza características elétricas do circuito formado pela própria via para detectar a condição de ocupação ou desocupação do trecho.</p>
+
+<p class="conteudo__p">A informação obtida pela detecção de ocupação pode ser utilizada pelo sistema de sinalização para controlar autorizações, proteger rotas e modificar indicações dos sinais, de acordo com a arquitetura do sistema.</p>
+
+<p class="conteudo__p">O <strong>bloqueio ferroviário</strong> corresponde ao conjunto de regras, procedimentos e recursos técnicos utilizados para controlar a ocupação da via e a autorização dos movimentos, evitando que movimentos incompatíveis sejam autorizados para o mesmo trecho ou para trechos conflitantes.</p>
+
+<p class="conteudo__p">É importante diferenciar os conceitos. <strong>Seção de bloqueio, circuito de via, bloqueio, sinalização e intertravamento</strong> estão relacionados, mas não são sinônimos. Cada elemento exerce uma função específica dentro do sistema de controle e segurança da circulação.</p>
+
+<p class="conteudo__p">Outro conceito fundamental é o <strong>headway</strong>. De maneira geral, headway é o intervalo de tempo entre movimentos ferroviários consecutivos, considerado segundo a referência de medição adotada pelo sistema.</p>
+
+<p class="conteudo__p">O headway está diretamente relacionado à capacidade de circulação. Quanto menor o intervalo entre movimentos consecutivos, maior pode ser a quantidade de trens circulando em determinado período. Entretanto, a redução do headway depende das condições de segurança, da capacidade do sistema de controle, da detecção de ocupação, das características da via e das regras operacionais.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p">a seção de bloqueio organiza o espaço destinado ao controle da circulação; o circuito de via é um dos meios de detecção de ocupação; o bloqueio controla a autorização dos movimentos; e headway representa o intervalo entre movimentos consecutivos, conforme a referência de medição adotada pelo sistema.</p>
+</div>
+</article>
+
+          <article class="conteudo__stage" id="conteudo-aula-5">
+<h3 class="conteudo__title">Intertravamento</h3>
+
+<p class="conteudo__p">Nos pontos em que as vias se cruzam ou se ramificam, a circulação exige um controle ainda maior. Nesses locais, é necessário estabelecer o caminho que será utilizado pelo trem e impedir que movimentos incompatíveis sejam autorizados simultaneamente.</p>
+
+<p class="conteudo__p">O <strong>AMV</strong> — Aparelho de Mudança de Via — é o conjunto destinado a permitir que um veículo ferroviário passe de uma via para outra. Sua posição determina o encaminhamento físico do veículo entre as vias disponíveis.</p>
+
+<p class="conteudo__p">A <strong>rota</strong> é o itinerário estabelecido para determinado movimento ferroviário. O estabelecimento de uma rota envolve mais do que simplesmente verificar se existe espaço livre: devem ser consideradas as condições dos sinais, AMVs, detecção de ocupação, bloqueio, dispositivos de proteção e demais condições necessárias para a realização segura do movimento.</p>
+
+<p class="conteudo__p">Quando duas rotas não podem ser utilizadas simultaneamente porque seus movimentos podem entrar em conflito, são consideradas <strong>rotas conflitantes</strong>.</p>
+
+<p class="conteudo__p">É nesse contexto que atua o <strong>intertravamento</strong>. Ele estabelece relações de segurança entre sinais, rotas, AMVs, condições de ocupação e outros elementos do sistema, de modo a impedir que sejam estabelecidas condições incompatíveis.</p>
+
+<p class="conteudo__p">Na prática, o intertravamento impede que uma rota conflitante seja autorizada quando as condições de segurança necessárias não estiverem satisfeitas.</p>
+
+<p class="conteudo__p">Assim, o intertravamento não representa simplesmente o comando de um equipamento. Ele é um conjunto de relações de segurança que impede que determinadas combinações de condições resultem em uma <strong>autorização indevida</strong>.</p>
+
+<p class="conteudo__p">Uma distinção importante é que a posição física de um AMV não significa, por si só, autorização para circulação. A autorização do movimento depende do conjunto de condições estabelecidas pelo sistema de sinalização, intertravamento, bloqueio e pelas regras operacionais aplicáveis.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p">AMV permite a mudança de uma via para outra; rota é o itinerário estabelecido para um movimento; e intertravamento estabelece relações de segurança que impedem condições incompatíveis e autorizações indevidas.</p>
+</div>
+</article>
+
+          <article class="conteudo__stage" id="conteudo-aula-6">
+<h3 class="conteudo__title">Sinalização em situações específicas</h3>
+
+<p class="conteudo__p">Nem todos os sinais encontrados na via estão necessariamente em serviço. Durante determinadas condições operacionais, intervenções ou alterações no sistema, um sinal fixo pode estar fora de serviço.</p>
+
+<p class="conteudo__p">Nessa condição, os <strong>sinais fixos que não estiverem em serviço devem ser considerados inexistentes</strong> pelos maquinistas e condutores, conforme as regras aplicáveis. Isso significa que aquele sinal não deve ser interpretado como uma indicação operacional válida.</p>
+
+<p class="conteudo__p">A identificação visual dessa condição pode ser feita por meio da <strong>Cruz de Santo André</strong>, utilizada sobre o sinal para indicar sua condição de fora de serviço, conforme o padrão estabelecido para o sistema.</p>
+
+<figure class="atividade__imagem">
+  <figcaption class="atividade__placeholder">Imagem: sinal fora de serviço identificado pela Cruz de Santo André — a ser inserida</figcaption>
+</figure>
+
+<p class="conteudo__p">A Cruz de Santo André, portanto, não representa uma indicação de circulação como as apresentadas normalmente por um sinal em serviço. Sua função, nesse contexto, é permitir a identificação visual de que aquele sinal não está participando da operação.</p>
+
+<p class="conteudo__p">Outra situação específica é a <strong>manobra</strong>.</p>
+
+<p class="conteudo__p">Manobra é o movimento ferroviário realizado segundo condições e regras específicas, normalmente relacionado ao deslocamento de veículos dentro de pátios, formação ou desmembramento de composições, posicionamento de veículos ou transferência entre linhas.</p>
+
+<p class="conteudo__p">Como se trata de uma condição diferente da circulação regular de um trem em seu itinerário, a sinalização de manobra possui função própria.</p>
+
+<p class="conteudo__p">O <strong>Sinal de Manobra</strong> licencia o movimento de manobra até o <strong>limite de manobra</strong>, respeitando as condições e regras estabelecidas para aquela operação.</p>
+
+<p class="conteudo__p">Por isso, a sinalização utilizada para manobras não deve ser interpretada automaticamente da mesma maneira que a sinalização destinada à circulação regular. O significado de cada indicação deve ser entendido dentro do contexto operacional correspondente.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p">um sinal fixo fora de serviço não deve ser considerado uma indicação operacional válida e pode ser identificado pela Cruz de Santo André, conforme o padrão do sistema. Na manobra, o Sinal de Manobra licencia o movimento até o limite de manobra.</p>
+</div>
+</article>
+
+          <article class="conteudo__stage" id="conteudo-aula-7">
+<h3 class="conteudo__title">Sistemas de proteção e controle</h3>
+
+<p class="conteudo__p">A evolução da sinalização ferroviária trouxe sistemas capazes de integrar informações da via, dos trens e dos equipamentos de controle. Entre as tecnologias utilizadas em diferentes sistemas ferroviários estão <strong>ATP</strong>, <strong>ATO</strong> e <strong>CBTC</strong>.</p>
+
+<p class="conteudo__p">Embora possam trabalhar em conjunto, essas tecnologias possuem funções diferentes e não devem ser tratadas como equivalentes.</p>
+
+<p class="conteudo__p">O <strong>ATP</strong> — Automatic Train Protection — está relacionado à <strong>proteção automática do trem</strong>. Sua função é supervisionar condições de circulação e atuar de forma a contribuir para que o movimento permaneça dentro dos limites de segurança estabelecidos pelo sistema.</p>
+
+<p class="conteudo__p">Dependendo da arquitetura adotada, o ATP pode utilizar diferentes formas de obtenção e transmissão das informações necessárias à proteção. Portanto, a existência de comunicação entre o trem e a via não deve ser tratada como requisito universal de todos os sistemas ATP.</p>
+
+<p class="conteudo__p">A função central do ATP é a <strong>proteção do movimento</strong>, e não a automação completa da operação.</p>
+
+<p class="conteudo__p">O <strong>ATO</strong> — Automatic Train Operation — está relacionado à <strong>automação da operação</strong> do trem. Sua função é executar automaticamente determinadas tarefas operacionais, de acordo com a configuração do sistema e dentro das condições de segurança estabelecidas.</p>
+
+<p class="conteudo__p">ATP e ATO podem atuar conjuntamente: o ATO está relacionado à execução automática da operação, enquanto o ATP está relacionado à proteção do movimento.</p>
+
+<p class="conteudo__p">O <strong>CBTC</strong> — Communication-Based Train Control — é uma arquitetura de controle de trens baseada em <strong>comunicação contínua</strong> entre os equipamentos embarcados e a infraestrutura do sistema.</p>
+
+<p class="conteudo__p">O CBTC permite obter e trocar informações necessárias ao controle da circulação de forma contínua, possibilitando, em determinadas configurações, um controle mais preciso da posição e do espaçamento entre trens e, consequentemente, a redução do intervalo entre movimentos com manutenção das condições de segurança.</p>
+
+<figure class="atividade__imagem">
+  <figcaption class="atividade__placeholder">Imagem conceitual: ATP, ATO e CBTC — funções distintas e possibilidade de integração</figcaption>
+</figure>
+
+<p class="conteudo__p">É importante não simplificar essas tecnologias como se fossem três nomes para a mesma coisa.</p>
+
+<p class="conteudo__p"><strong>ATP</strong> está relacionado à proteção.</p>
+
+<p class="conteudo__p"><strong>ATO</strong> está relacionado à automação da operação.</p>
+
+<p class="conteudo__p"><strong>CBTC</strong> está relacionado ao controle baseado em comunicação.</p>
+
+<p class="conteudo__p">Os três podem coexistir em um mesmo sistema, mas sua aplicação depende da arquitetura adotada, da infraestrutura, do tipo de operação e dos requisitos de segurança da ferrovia.</p>
+
+<div class="conteudo__box conteudo__box--conceito">
+  <h4 class="conteudo__box-label">Resumo da aula</h4>
+  <p class="conteudo__p">ATP = proteção automática do movimento; ATO = automação da operação; CBTC = controle de trens baseado em comunicação. São funções distintas e podem atuar de forma integrada.</p>
+</div>
+
+<h4 class="conteudo__sec">Fechamento do módulo</h4>
+
+<p class="conteudo__p">Ao concluir as sete aulas, o profissional deve ser capaz de compreender a sinalização não apenas como um conjunto de cores ou luzes, mas como parte de um sistema integrado de controle e segurança da circulação ferroviária.</p>
+
+<p class="conteudo__p">A interpretação de um sinal depende de seu tipo, aspecto, função, condições da via, ocupação dos trechos, rotas, AMVs, intertravamentos, regras de bloqueio e procedimentos operacionais.</p>
+
+<p class="conteudo__p">Conhecer esses elementos permite compreender por que uma determinada indicação é apresentada e qual condição operacional ela representa.</p>
+
+<p class="conteudo__p">Esse entendimento será utilizado na próxima etapa do módulo, durante a revisão e, posteriormente, na avaliação de conhecimento.</p>
+</article>
+
+          
+
+          
+
+          
+
+          
+
+          
+
+                    <article class="conteudo__stage" id="conteudo-revisao">
+            <h3 class="conteudo__title">Revisão do módulo</h3>
+
+            <p class="conteudo__p">Nesta etapa, apresentamos a síntese dos principais conceitos abordados nas sete aulas do módulo, antes da referência técnica e da avaliação de conhecimento.</p>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 1 — Introdução à Sinalização</h4>
+              <p class="conteudo__p">A sinalização ferroviária transmite indicações que participam do controle e da autorização dos movimentos. Licenciar significa autorizar determinado movimento dentro das condições estabelecidas pelo sistema. A indicação deve sempre ser interpretada de acordo com as regras e condições operacionais aplicáveis.</p>
+            </div>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 2 — Sinais e suas funções</h4>
+              <p class="conteudo__p">O Sinal Principal licencia a circulação em linha corrida; a Unidade B licencia o cruzamento; o Sinal de Manobra licencia o movimento até o limite de manobra; o Ponto indica parada obrigatória. Sinais altos e anões diferem pela construção, e não pela função operacional.</p>
+            </div>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 3 — Indicações e interpretação</h4>
+              <p class="conteudo__p">O aspecto é a indicação apresentada pelo sinal, e seu significado é definido pelas regras do sistema. A leitura deve considerar o conjunto de luzes, e não cada luz isoladamente. Sinal apagado deve ser considerado sinal de parada. O vermelho piscante pode indicar a entrada em linha ocupada, conforme o sistema de referência do treinamento.</p>
+            </div>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 4 — Controle e separação da circulação</h4>
+              <p class="conteudo__p">A Seção de Bloqueio é o trecho da via onde só pode estar presente um trem por vez. O circuito de via detecta a ocupação por características elétricas do circuito formado pela via. Headway é o intervalo de tempo entre movimentos consecutivos, considerado segundo a referência de medição adotada pelo sistema.</p>
+            </div>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 5 — Intertravamento</h4>
+              <p class="conteudo__p">O AMV determina o encaminhamento físico do veículo entre as vias; a rota é o itinerário estabelecido para o movimento; o intertravamento impede a autorização de rotas conflitantes, estabelecendo relações de segurança entre sinais, AMVs e condições de ocupação.</p>
+            </div>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 6 — Sinalização em situações específicas</h4>
+              <p class="conteudo__p">Sinais fixos que não estiverem em serviço devem ser considerados inexistentes e são identificados pela Cruz de Santo André. A sinalização de manobra possui função própria, distinta da sinalização de circulação regular.</p>
+            </div>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Aula 7 — Sistemas de proteção e controle</h4>
+              <p class="conteudo__p">ATP é a proteção automática do movimento; ATO é a automação da operação; CBTC é o controle baseado em comunicação. São funções distintas e podem atuar de forma integrada, conforme a arquitetura do sistema.</p>
+            </div>
+          </article>
+
+<article class="conteudo__stage conteudo__stage--atividade" id="conteudo-atividade">
+            <div class="conteudo__badge">Atividade</div>
+            <h3 class="conteudo__title">Encontre o sinal apagado</h3>
+
+            <figure class="atividade__imagem">
+              <img
+                class="atividade__img"
+                src=""
+                alt="Imagem com quatro sinais ferroviários para identificar o sinal apagado"
+              />
+              <figcaption class="atividade__placeholder">
+                Imagem dos sinais ferroviários — a ser inserida
+              </figcaption>
+            </figure>
+
+            <p class="conteudo__p conteudo__p--pergunta">Observe a imagem e identifique o sinal apagado.</p>
+
+            <div class="options" id="opcoes-atividade-sinal">
+              <label class="option">
+                <input class="option__input" type="radio" name="atividade-sinal" value="0" />
+                <span class="option__label">A) Sinal 1</span>
+              </label>
+              <label class="option">
+                <input class="option__input" type="radio" name="atividade-sinal" value="1" />
+                <span class="option__label">B) Sinal 2</span>
+              </label>
+              <label class="option">
+                <input class="option__input" type="radio" name="atividade-sinal" value="2" />
+                <span class="option__label">C) Sinal 3</span>
+              </label>
+              <label class="option">
+                <input class="option__input" type="radio" name="atividade-sinal" value="3" />
+                <span class="option__label">D) Sinal 4</span>
+              </label>
+            </div>
+
+            <button class="btn btn--primary" id="btn-atividade-responder" type="button">
+              Responder
+            </button>
+
+            <div class="atividade__feedback" id="feedback-atividade-sinal" hidden>
+              <h4 class="atividade__feedback-title">Resposta correta</h4>
+              <p class="atividade__feedback-resposta" id="atividade-resposta-correta"></p>
+              <p class="atividade__feedback-texto">
+                Conforme a ABNT NBR 7635:2010, um sinal luminoso apagado deve ser considerado como sinal de parada.
+              </p>
+            </div>
+          </article>
+
+          <article class="conteudo__stage" id="conteudo-referencia">
+            <h3 class="conteudo__title">Referência Técnica Principal</h3>
+
+            <div class="conteudo__box conteudo__box--conceito">
+              <h4 class="conteudo__box-label">Referência técnica</h4>
+              <p class="conteudo__p"><strong>ABNT NBR 7635:2010 — Sinalização ferroviária — Terminologia.</strong></p>
+            </div>
+          </article>
+
+</div>
+
+    </section>
+
+<!-- ===== Tela: Treinamento de Sinalização ===== -->
     <section class="view view--page" id="view-sinalizacao" data-view hidden>
       <main class="page">
         <button class="btn btn--back" id="btn-back-sinalizacao" type="button">
