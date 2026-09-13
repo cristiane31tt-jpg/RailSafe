@@ -935,7 +935,9 @@ body {
 }
 
 /* ===== Curso de Sinalização: leitura linear ===== */
-#view-aula-sinalizacao .page {
+#view-aula-sinalizacao .page,
+#view-aula-amv .page,
+#view-aula-seguranca .page {
   max-width: 760px;
 }
 
@@ -1007,6 +1009,84 @@ body {
 }
 
 #view-aula-sinalizacao .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__box--conceito {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  background: rgba(245, 158, 11, 0.07);
+  margin: 26px 0 0;
+  padding: 18px 20px;
+}
+
+/* Etapas como página contínua de leitura (aulas + revisão + referência) — módulo de AMV. */
+#view-aula-amv .conteudo__stage:not(.conteudo__stage--atividade) {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+#view-aula-amv .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__title {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+#view-aula-amv .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+#view-aula-amv .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__p:last-child {
+  margin-bottom: 0;
+}
+
+#view-aula-amv .conteudo__stage:not(.conteudo__stage--atividade) .atividade__imagem {
+  margin: 22px 0;
+}
+
+#view-aula-amv .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__box--conceito {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  background: rgba(245, 158, 11, 0.07);
+  margin: 26px 0 0;
+  padding: 18px 20px;
+}
+
+/* Etapas como página contínua de leitura (aulas + revisão + referência) — módulo de Segurança Ferroviária. */
+#view-aula-seguranca .conteudo__stage:not(.conteudo__stage--atividade) {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+#view-aula-seguranca .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__title {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+#view-aula-seguranca .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+#view-aula-seguranca .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__p:last-child {
+  margin-bottom: 0;
+}
+
+#view-aula-seguranca .conteudo__stage:not(.conteudo__stage--atividade) .atividade__imagem {
+  margin: 22px 0;
+}
+
+#view-aula-seguranca .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__box--conceito {
   border: 1px solid rgba(245, 158, 11, 0.35);
   border-left: 4px solid var(--color-primary);
   border-radius: 0 12px 12px 0;

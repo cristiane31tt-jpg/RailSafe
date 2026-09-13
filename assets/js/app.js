@@ -32,290 +32,681 @@ const questions = [
     id: 1,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Qual é a função do sinal Principal?",
+    pergunta: "A sinalização ferroviária pode ser compreendida como:",
     alternativas: [
-      "Licenciar o trem para cruzamento.",
-      "Licenciar o trem em manobra.",
-      "Licenciar o trem em linha corrida normalmente.",
-      "Indicar uma parada obrigatória para o trem.",
+      "Um conjunto de placas utilizadas exclusivamente para indicar a velocidade dos trens.",
+      "Um sistema destinado apenas à comunicação entre o condutor e o CCO.",
+      "Um conjunto de elementos, dispositivos e sistemas utilizados para estabelecer condições para a circulação e orientar movimentos ferroviários.",
+      "Um sistema destinado exclusivamente à proteção física da via.",
     ],
     correta: 2,
     explicacaoCorrecta:
-      "O sinal Principal licencia o trem para circulação em linha corrida normalmente.",
+      "A sinalização estabelece condições para a circulação e orienta movimentos ferroviários, atuando de forma integrada com outros elementos do sistema.",
     explicacaoErrada:
-      "O sinal Principal está relacionado à circulação em linha corrida normalmente. As demais alternativas descrevem funções diferentes de sinalização.",
+      "A sinalização estabelece condições para a circulação e orienta movimentos ferroviários, atuando de forma integrada com outros elementos do sistema.",
   },
   {
     id: 2,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Para qual finalidade o sinal Secundário ou Unidade B licencia o trem?",
+    pergunta: "Durante uma operação ferroviária, um sinal deve ser interpretado:",
     alternativas: [
-      "Para cruzamento.",
-      "Para circulação em linha corrida normalmente.",
-      "Para manobra.",
-      "Para parada obrigatória.",
+      "Somente de acordo com sua cor predominante.",
+      "Considerando seu tipo, aspecto, função e as condições estabelecidas pelo sistema.",
+      "Apenas conforme a velocidade do trem.",
+      "Somente após confirmação verbal do CCO.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "O sinal Secundário ou Unidade B licencia o trem para cruzamento.",
+      "A indicação de um sinal depende de seu tipo, aspecto e função dentro do sistema de sinalização.",
     explicacaoErrada:
-      "O sinal Secundário ou Unidade B tem a função de licenciar para cruzamento. As demais alternativas não correspondem à sua função.",
+      "A indicação de um sinal depende de seu tipo, aspecto e função dentro do sistema de sinalização.",
   },
   {
     id: 3,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Até onde o sinal de Manobra licencia o movimento?",
+    pergunta: "Qual é a principal característica de um sinal principal?",
     alternativas: [
-      "Até a próxima plataforma.",
-      "Até o próximo terminal.",
-      "Até o limite de manobra.",
-      "Até o fim da linha.",
+      "Controlar exclusivamente movimentos de manobra.",
+      "Indicar somente a velocidade máxima da via.",
+      "Controlar movimentos na linha principal e estabelecer condições para a circulação de trens.",
+      "Ser utilizado apenas em pátios.",
     ],
     correta: 2,
     explicacaoCorrecta:
-      "O sinal de Manobra licencia o movimento em manobra até o limite de manobra.",
+      "O sinal principal está relacionado ao controle dos movimentos realizados na linha principal.",
     explicacaoErrada:
-      "A licença de manobra se estende até o limite de manobra. As demais alternativas não correspondem ao limite indicado para esse movimento.",
+      "O sinal principal está relacionado ao controle dos movimentos realizados na linha principal.",
   },
   {
     id: 4,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "O que indica o Ponto?",
+    pergunta: "O sinal de manobra está relacionado principalmente:",
     alternativas: [
-      "Um sinal de parada obrigatória para veículos ferroviários.",
-      "Uma autorização para cruzamento.",
-      "Uma autorização para circulação em linha corrida.",
-      "Uma autorização para iniciar uma manobra.",
+      "À circulação regular de trens na linha principal.",
+      "Ao controle de movimentos de manobra.",
+      "À indicação da velocidade máxima autorizada.",
+      "À identificação dos circuitos de via.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "O Ponto é um destaque de parada obrigatória para um veículo ferroviário.",
+      "O sinal de manobra estabelece condições para movimentos de manobra.",
     explicacaoErrada:
-      "O Ponto indica uma parada obrigatória para um veículo ferroviário.",
+      "O sinal de manobra estabelece condições para movimentos de manobra.",
   },
   {
     id: 5,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "O que indica o aspecto vermelho piscante apresentado pelos sinais ferroviários?",
+    pergunta: "Um sinal de ponto caracteriza-se por estabelecer:",
     alternativas: [
-      "Aumento da velocidade autorizada.",
-      "Entrada do trem em uma linha ocupada por outra composição.",
-      "Fim obrigatório da linha.",
-      "Ausência de sinalização.",
+      "Uma condição de velocidade reduzida.",
+      "Uma condição de prosseguimento obrigatório.",
+      "Uma condição de parada obrigatória.",
+      "Uma condição de circulação automática.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "O aspecto vermelho piscante pode indicar que o trem vai entrar em uma linha ocupada por outra composição.",
+      "O sinal de ponto estabelece uma condição de parada obrigatória para o movimento.",
     explicacaoErrada:
-      "O aspecto vermelho piscante pode indicar a entrada do trem em uma linha ocupada por outra composição.",
+      "O sinal de ponto estabelece uma condição de parada obrigatória para o movimento.",
   },
   {
     id: 6,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Qual é a principal finalidade do intertravamento entre sinais?",
+    pergunta: "Considerando as condições apresentadas pelo sistema, o aspecto vermelho de um sinal está relacionado a:",
     alternativas: [
-      "Permitir a liberação simultânea de rotas conflitantes.",
-      "Aumentar a velocidade dos trens.",
-      "Impedir a autorização de uma rota conflitante com outra já protegida.",
-      "Substituir os sinais ferroviários.",
+      "Prosseguimento livre.",
+      "Parada.",
+      "Operação automática.",
+      "Mudança de via.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "O intertravamento impede a autorização de uma rota e a liberação de seu sinal de proteção quando já existe outra rota conflitante com seu sinal de proteção liberado.",
+      "O aspecto vermelho estabelece condição de parada conforme as regras do sistema de sinalização.",
     explicacaoErrada:
-      "O intertravamento tem como finalidade impedir a autorização de rotas conflitantes. Ele não tem como função aumentar a velocidade ou substituir a sinalização.",
+      "O aspecto vermelho estabelece condição de parada conforme as regras do sistema de sinalização.",
   },
   {
     id: 7,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "O que é Headway?",
+    pergunta: "Um sinal apagado deve ser tratado operacionalmente como:",
     alternativas: [
-      "A distância entre os terminais.",
-      "O intervalo de tempo entre trens consecutivos.",
-      "O tempo de permanência do trem na oficina.",
-      "O tempo de realização de uma manobra.",
+      "Sinal de via livre.",
+      "Sinal de velocidade reduzida.",
+      "Condição de parada.",
+      "Sinal de manobra.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "Headway é o intervalo de tempo entre trens consecutivos.",
+      "Um sinal apagado não apresenta uma indicação luminosa válida e deve ser tratado como condição de parada.",
     explicacaoErrada:
-      "Headway corresponde ao intervalo de tempo entre trens consecutivos. Não corresponde à distância entre os terminais nem ao tempo de realização de uma manobra.",
+      "Um sinal apagado não apresenta uma indicação luminosa válida e deve ser tratado como condição de parada.",
   },
   {
     id: 8,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Qual é a finalidade do sinal ferroviário?",
+    pergunta: "A VMA — Velocidade Máxima Autorizada — pode ser estabelecida por:",
     alternativas: [
-      "Autorizar e controlar a circulação de trens.",
-      "Aumentar a velocidade dos trens.",
-      "Controlar somente os AMVs.",
-      "Substituir a comunicação entre os profissionais.",
+      "Placa de sinalização.",
+      "Apenas pelo rádio.",
+      "Somente pelo condutor.",
+      "Exclusivamente pelo circuito de via.",
     ],
     correta: 0,
     explicacaoCorrecta:
-      "O sinal ferroviário transmite informações aos maquinistas com a finalidade de autorizar e controlar a circulação de trens.",
+      "A VMA pode ser estabelecida por meio de placa, indicando a velocidade máxima autorizada para determinado trecho ou condição.",
     explicacaoErrada:
-      "A finalidade do sinal ferroviário é autorizar e controlar a circulação de trens. Ele não tem como finalidade aumentar a velocidade ou substituir a comunicação entre os profissionais.",
+      "A VMA pode ser estabelecida por meio de placa, indicando a velocidade máxima autorizada para determinado trecho ou condição.",
   },
   {
     id: 9,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "De quais elementos depende o funcionamento do sinal ferroviário?",
+    pergunta: "O circuito de via é utilizado para:",
     alternativas: [
-      "Controle de intertravamento, seção de bloqueio, estado de AMV, limites de velocidade de circulação e licença de circulação.",
-      "Somente velocidade e estado de AMV.",
-      "Apenas licença de circulação.",
-      "Somente seção de bloqueio.",
+      "Alterar fisicamente a geometria do AMV.",
+      "Detectar a ocupação de determinado trecho de via.",
+      "Definir a velocidade do trem diretamente.",
+      "Realizar exclusivamente comunicação por rádio.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "O funcionamento do sinal ferroviário depende do controle de intertravamento, seção de bloqueio, estado de AMV, limites de velocidade de circulação e licença de circulação.",
+      "O circuito de via é um dos elementos utilizados para detectar a ocupação de trechos ferroviários.",
     explicacaoErrada:
-      "O funcionamento do sinal ferroviário considera diferentes elementos, incluindo intertravamento, seção de bloqueio, estado de AMV, limites de velocidade e licença de circulação.",
+      "O circuito de via é um dos elementos utilizados para detectar a ocupação de trechos ferroviários.",
   },
   {
     id: 10,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "No contexto do sinal ferroviário, o termo 'autorizar' corresponde a qual termo?",
+    pergunta: "A informação de ocupação de um trecho pode influenciar:",
     alternativas: [
-      "Parar.",
-      "Licenciar.",
-      "Manobrar.",
-      "Bloquear.",
+      "Apenas a manutenção da via.",
+      "Somente a velocidade do trem.",
+      "As condições estabelecidas pelo sistema de sinalização e controle da circulação.",
+      "Apenas a comunicação entre funcionários.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "No contexto do sinal ferroviário, autorizar significa licenciar.",
+      "A ocupação do trecho é uma informação utilizada pelo sistema para estabelecer condições de circulação.",
     explicacaoErrada:
-      "No contexto do sinal ferroviário, o termo autorizar corresponde a licenciar.",
+      "A ocupação do trecho é uma informação utilizada pelo sistema para estabelecer condições de circulação.",
   },
   {
     id: 11,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Uma linha que possui sinalização fixa de circulação nos dois sentidos permite o quê?",
+    pergunta: "O bloqueio ferroviário está relacionado:",
     alternativas: [
-      "Circulação somente em um sentido.",
-      "Circulação de trens em ambos os sentidos.",
-      "Somente movimentos de manobra.",
-      "Circulação somente em horários específicos.",
+      "À organização da circulação entre determinados pontos da via.",
+      "Exclusivamente ao controle das portas do trem.",
+      "Somente à manutenção dos trilhos.",
+      "Apenas à comunicação entre estações.",
     ],
-    correta: 1,
+    correta: 0,
     explicacaoCorrecta:
-      "Uma linha com sinalização fixa de circulação nos dois sentidos permite a circulação de trens em ambos os sentidos.",
+      "O bloqueio organiza a circulação entre determinados pontos e estabelece condições para os movimentos.",
     explicacaoErrada:
-      "A característica dessa linha é permitir a circulação de trens em ambos os sentidos.",
+      "O bloqueio organiza a circulação entre determinados pontos e estabelece condições para os movimentos.",
   },
   {
     id: 12,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "O que é uma Seção de Bloqueio?",
+    pergunta: "Headway corresponde:",
     alternativas: [
-      "Um trecho onde podem estar vários trens simultaneamente.",
-      "Um trecho da via, sinalizado ou não, no qual só pode estar presente um trem por vez.",
-      "Uma área destinada exclusivamente à manutenção.",
-      "Uma plataforma destinada ao embarque.",
+      "À distância entre dois AMV.",
+      "Ao intervalo entre movimentos sucessivos de trens em determinada condição de circulação.",
+      "Ao comprimento de um trem.",
+      "Ao tempo de manutenção da via.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "Seção de Bloqueio é o trecho da via, sinalizado ou não, no qual só pode estar presente um trem por vez.",
+      "Headway é o intervalo entre movimentos sucessivos de trens em uma mesma direção ou condição de circulação.",
     explicacaoErrada:
-      "Uma Seção de Bloqueio é um trecho da via, sinalizado ou não, no qual só pode estar presente um trem por vez.",
+      "Headway é o intervalo entre movimentos sucessivos de trens em uma mesma direção ou condição de circulação.",
   },
   {
     id: 13,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Como devem ser considerados pelos maquinistas e condutores os sinais fixos que não estiverem em serviço?",
+    pergunta: "Uma rota ferroviária corresponde:",
     alternativas: [
-      "Como sinais de parada obrigatória.",
-      "Como sinais de velocidade reduzida.",
-      "Como inexistentes.",
-      "Como sinais de manobra.",
+      "À velocidade máxima permitida no trecho.",
+      "Ao caminho definido para determinado movimento.",
+      "Ao conjunto de sinais existentes em uma estação.",
+      "Ao circuito elétrico do trem.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "Os maquinistas e condutores considerarão inexistentes os sinais fixos que não estiverem em serviço.",
+      "A rota corresponde ao caminho estabelecido para a realização de determinado movimento ferroviário.",
     explicacaoErrada:
-      "Os sinais fixos que não estiverem em serviço devem ser considerados inexistentes pelos maquinistas e condutores.",
+      "A rota corresponde ao caminho estabelecido para a realização de determinado movimento ferroviário.",
   },
   {
     id: 14,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Como devem ser identificados os sinais fixos que não estiverem em serviço?",
+    pergunta: "O intertravamento tem como uma de suas funções:",
     alternativas: [
-      "Com uma faixa vermelha.",
-      "Com uma Cruz de Santo André pintada de branco.",
-      "Com uma placa amarela.",
-      "Com uma luz piscante.",
+      "Aumentar a velocidade dos trens.",
+      "Impedir que determinadas condições incompatíveis sejam estabelecidas simultaneamente.",
+      "Controlar somente a iluminação da estação.",
+      "Substituir todos os procedimentos operacionais.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "Os sinais fixos que não estiverem em serviço deverão ser cobertos por uma Cruz de Santo André, pintada de branco.",
+      "O intertravamento estabelece relações entre elementos do sistema para impedir combinações incompatíveis.",
     explicacaoErrada:
-      "A Cruz de Santo André pintada de branco é utilizada para cobrir os sinais fixos que não estiverem em serviço.",
+      "O intertravamento estabelece relações entre elementos do sistema para impedir combinações incompatíveis.",
   },
   {
     id: 15,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "O que é Aspecto de Sinal?",
+    pergunta: "Historicamente, os primeiros sistemas de intertravamento estavam associados principalmente:",
     alternativas: [
-      "A indicação de um sinal luminoso, sendo que cada aspecto possui seu significado próprio.",
-      "A distância entre dois sinais.",
-      "A velocidade máxima da composição.",
-      "O estado de uma seção de bloqueio.",
+      "À inteligência artificial.",
+      "A mecanismos mecânicos.",
+      "À comunicação digital.",
+      "Aos sistemas CBTC.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "Aspecto de Sinal é a indicação de um sinal luminoso, sendo que cada aspecto possui seu significado próprio.",
+      "No século XIX, sistemas mecânicos foram utilizados para impedir fisicamente combinações incompatíveis de posições de aparelhos e sinais.",
     explicacaoErrada:
-      "Aspecto de Sinal é a indicação de um sinal luminoso. Cada aspecto possui seu significado próprio.",
+      "No século XIX, sistemas mecânicos foram utilizados para impedir fisicamente combinações incompatíveis de posições de aparelhos e sinais.",
   },
   {
     id: 16,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Qual é a finalidade do ATP no sistema de controle e sinalização ferroviária?",
+    pergunta: "O AMV permite:",
     alternativas: [
-      "Garantir a segurança do tráfego por meio de uma funcionalidade de proteção.",
-      "Realizar exclusivamente o embarque de passageiros.",
-      "Controlar somente as portas do trem.",
-      "Substituir completamente a sinalização da via.",
+      "Aumentar automaticamente a velocidade do trem.",
+      "A passagem de um trem ou veículo ferroviário de uma via para outra.",
+      "Detectar a ocupação de uma via.",
+      "Controlar a comunicação por rádio.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "O ATP é uma funcionalidade de proteção do sistema de controle e sinalização ferroviária que tem como objetivo garantir a segurança do tráfego.",
+      "A função do AMV é possibilitar a passagem do veículo de uma via para outra.",
     explicacaoErrada:
-      "O ATP está relacionado à proteção do sistema de controle e sinalização ferroviária e à segurança do tráfego.",
+      "A função do AMV é possibilitar a passagem do veículo de uma via para outra.",
   },
   {
     id: 17,
     tema: "Sinalização",
     dificuldade: "Fácil",
-    pergunta: "Entre quais equipamentos ocorre a comunicação utilizada pelo ATP?",
+    pergunta: "Para que uma rota seja estabelecida, é necessário considerar:",
     alternativas: [
-      "Entre duas estações ferroviárias.",
-      "Entre o equipamento do trem e o equipamento na via.",
-      "Entre o maquinista e os passageiros.",
-      "Entre o terminal e a oficina.",
+      "Apenas a posição do trem.",
+      "As condições da via, dos AMV e dos demais elementos relacionados ao movimento.",
+      "Somente a velocidade do trem.",
+      "Apenas a comunicação entre os operadores.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "O ATP utiliza comunicação entre o equipamento do trem e o equipamento na via com o objetivo de contribuir para a segurança do tráfego.",
+      "O estabelecimento de uma rota depende da combinação das condições dos diferentes elementos envolvidos no movimento.",
     explicacaoErrada:
-      "A comunicação utilizada pelo ATP ocorre entre o equipamento do trem e o equipamento na via.",
+      "O estabelecimento de uma rota depende da combinação das condições dos diferentes elementos envolvidos no movimento.",
+  },
+  {
+    id: 18,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "A relação entre AMV, rota e intertravamento pode ser descrita como:",
+    alternativas: [
+      "Elementos independentes sem relação operacional.",
+      "Elementos integrados utilizados para estabelecer condições para determinados movimentos.",
+      "Sistemas utilizados apenas para manutenção.",
+      "Equipamentos destinados exclusivamente à comunicação.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "AMV, rotas e intertravamento participam conjuntamente das condições necessárias para determinados movimentos ferroviários.",
+    explicacaoErrada:
+      "AMV, rotas e intertravamento participam conjuntamente das condições necessárias para determinados movimentos ferroviários.",
+  },
+  {
+    id: 19,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Uma manobra ferroviária é:",
+    alternativas: [
+      "Qualquer circulação realizada em velocidade máxima.",
+      "Um movimento ferroviário realizado de acordo com uma condição operacional específica.",
+      "Uma falha do sistema de sinalização.",
+      "Um movimento realizado sem necessidade de sinalização.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A manobra possui características próprias e deve obedecer às condições operacionais estabelecidas.",
+    explicacaoErrada:
+      "A manobra possui características próprias e deve obedecer às condições operacionais estabelecidas.",
+  },
+  {
+    id: 20,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Durante uma manobra, o movimento deve:",
+    alternativas: [
+      "Ignorar os limites estabelecidos pela sinalização.",
+      "Respeitar os sinais e procedimentos aplicáveis.",
+      "Ser realizado sempre em velocidade máxima.",
+      "Ser conduzido sem comunicação.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "As manobras devem respeitar as condições estabelecidas pela sinalização e pelos procedimentos operacionais.",
+    explicacaoErrada:
+      "As manobras devem respeitar as condições estabelecidas pela sinalização e pelos procedimentos operacionais.",
+  },
+  {
+    id: 21,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Uma situação em que o sinal está apagado deve ser tratada:",
+    alternativas: [
+      "Como indicação de via livre.",
+      "Como indicação de prosseguimento.",
+      "Como condição de parada.",
+      "Como autorização automática de manobra.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "O sinal apagado não apresenta indicação luminosa válida e deve ser tratado como condição de parada.",
+    explicacaoErrada:
+      "O sinal apagado não apresenta indicação luminosa válida e deve ser tratado como condição de parada.",
+  },
+  {
+    id: 22,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "ATP é um sistema relacionado:",
+    alternativas: [
+      "À proteção automática do movimento do trem.",
+      "Apenas ao entretenimento dos passageiros.",
+      "Exclusivamente à manutenção dos trilhos.",
+      "À comunicação administrativa.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O ATP — Automatic Train Protection — está relacionado à proteção automática e à supervisão das condições de movimento.",
+    explicacaoErrada:
+      "O ATP — Automatic Train Protection — está relacionado à proteção automática e à supervisão das condições de movimento.",
+  },
+  {
+    id: 23,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "ATO está relacionado principalmente:",
+    alternativas: [
+      "À operação automática do trem.",
+      "Ao controle manual de AMV.",
+      "À manutenção da via.",
+      "À comunicação entre estações.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O ATO — Automatic Train Operation — está relacionado à operação automática do trem.",
+    explicacaoErrada:
+      "O ATO — Automatic Train Operation — está relacionado à operação automática do trem.",
+  },
+  {
+    id: 24,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "O CBTC utiliza:",
+    alternativas: [
+      "Comunicação entre o trem e os equipamentos de controle.",
+      "Somente placas físicas.",
+      "Exclusivamente mecanismos mecânicos.",
+      "Apenas comunicação verbal.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O CBTC utiliza comunicação entre o trem e os equipamentos de controle para funções relacionadas à proteção e ao controle da circulação.",
+    explicacaoErrada:
+      "O CBTC utiliza comunicação entre o trem e os equipamentos de controle para funções relacionadas à proteção e ao controle da circulação.",
+  },
+  {
+    id: 25,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "A principal diferença entre ATP e ATO está relacionada ao fato de que:",
+    alternativas: [
+      "ATP está associado à proteção, enquanto ATO está associado à operação automática.",
+      "ATP é exclusivamente mecânico e ATO exclusivamente hidráulico.",
+      "ATP controla somente passageiros e ATO controla somente a via.",
+      "Não existe diferença funcional entre os dois.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "ATP está relacionado à proteção automática, enquanto ATO está relacionado à operação automática do trem.",
+    explicacaoErrada:
+      "ATP está relacionado à proteção automática, enquanto ATO está relacionado à operação automática do trem.",
+  },
+  {
+    id: 26,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "A segurança da circulação ferroviária depende:",
+    alternativas: [
+      "Somente dos sinais.",
+      "Somente do condutor.",
+      "Da integração entre equipamentos, sistemas, infraestrutura, procedimentos e atuação humana.",
+      "Exclusivamente do CCO.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "A circulação ferroviária depende da atuação integrada de diferentes elementos técnicos e humanos.",
+    explicacaoErrada:
+      "A circulação ferroviária depende da atuação integrada de diferentes elementos técnicos e humanos.",
+  },
+  {
+    id: 27,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "A indicação apresentada por um sinal representa:",
+    alternativas: [
+      "Apenas uma informação visual sem relação com a operação.",
+      "Uma condição operacional estabelecida pelo sistema de sinalização.",
+      "Somente uma recomendação ao condutor.",
+      "Uma informação exclusivamente administrativa.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A indicação representa uma condição operacional que deve ser interpretada de acordo com as regras aplicáveis.",
+    explicacaoErrada:
+      "A indicação representa uma condição operacional que deve ser interpretada de acordo com as regras aplicáveis.",
+  },
+  {
+    id: 28,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Qual situação demonstra melhor a integração entre os elementos de sinalização?",
+    alternativas: [
+      "Um sinal funcionando sem considerar a ocupação da via.",
+      "Um circuito de via atuando isoladamente.",
+      "Ocupação da via, bloqueio, rota, intertravamento e indicação do sinal atuando de forma relacionada.",
+      "Um condutor escolhendo a indicação do sinal.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Os diferentes elementos participam de um sistema integrado que estabelece condições para os movimentos.",
+    explicacaoErrada:
+      "Os diferentes elementos participam de um sistema integrado que estabelece condições para os movimentos.",
+  },
+  {
+    id: 29,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "O objetivo do intertravamento é melhor representado por:",
+    alternativas: [
+      "Permitir todas as combinações possíveis entre sinais e AMV.",
+      "Evitar que condições incompatíveis sejam estabelecidas simultaneamente.",
+      "Substituir a sinalização visual.",
+      "Controlar exclusivamente a velocidade do trem.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O intertravamento estabelece relações de segurança entre os elementos do sistema.",
+    explicacaoErrada:
+      "O intertravamento estabelece relações de segurança entre os elementos do sistema.",
+  },
+  {
+    id: 30,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Considere uma situação em que um trecho esteja ocupado. Qual afirmação melhor representa a relação dessa condição com a sinalização?",
+    alternativas: [
+      "A ocupação nunca interfere na indicação dos sinais.",
+      "A ocupação pode ser utilizada pelo sistema para estabelecer condições para a circulação.",
+      "A ocupação altera automaticamente a velocidade física do trem.",
+      "A ocupação determina diretamente a rota escolhida pelo condutor.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A informação de ocupação é utilizada pelo sistema de sinalização e controle para estabelecer condições para os movimentos.",
+    explicacaoErrada:
+      "A informação de ocupação é utilizada pelo sistema de sinalização e controle para estabelecer condições para os movimentos.",
+  },
+  {
+    id: 31,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Um sinal de manobra e um sinal principal diferenciam-se principalmente:",
+    alternativas: [
+      "Pela cor obrigatoriamente utilizada.",
+      "Pela função exercida dentro da operação ferroviária.",
+      "Pela altura física do poste.",
+      "Pela localização do CCO.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Os sinais possuem funções diferentes dentro do sistema, podendo controlar diferentes tipos de movimentos.",
+    explicacaoErrada:
+      "Os sinais possuem funções diferentes dentro do sistema, podendo controlar diferentes tipos de movimentos.",
+  },
+  {
+    id: 32,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Em relação ao aspecto de um sinal, é correto afirmar que:",
+    alternativas: [
+      "O aspecto deve ser interpretado independentemente do tipo de sinal.",
+      "O significado do aspecto deve ser compreendido considerando a função do sinal e as condições do sistema.",
+      "Todos os sinais possuem exatamente o mesmo significado para todos os aspectos.",
+      "O aspecto é apenas uma informação estética.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A interpretação do aspecto depende do tipo e da função do sinal dentro do sistema.",
+    explicacaoErrada:
+      "A interpretação do aspecto depende do tipo e da função do sinal dentro do sistema.",
+  },
+  {
+    id: 33,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Por que a ocupação da via é uma informação importante para o controle da circulação?",
+    alternativas: [
+      "Porque permite estabelecer condições relacionadas à disponibilidade do trecho.",
+      "Porque determina a composição do trem.",
+      "Porque altera fisicamente o trilho.",
+      "Porque substitui o sistema de sinalização.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A informação de ocupação permite ao sistema considerar a condição do trecho para estabelecer condições de circulação.",
+    explicacaoErrada:
+      "A informação de ocupação permite ao sistema considerar a condição do trecho para estabelecer condições de circulação.",
+  },
+  {
+    id: 34,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Qual alternativa apresenta somente elementos relacionados ao controle da circulação ferroviária?",
+    alternativas: [
+      "Bloqueio, rota, intertravamento e sinalização.",
+      "Pintura, limpeza, iluminação e bilhetagem.",
+      "Passageiros, bilhetes, catracas e plataformas.",
+      "Comunicação administrativa, uniformes, documentos e bilhetes.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "Bloqueio, rota, intertravamento e sinalização participam diretamente do controle da circulação.",
+    explicacaoErrada:
+      "Bloqueio, rota, intertravamento e sinalização participam diretamente do controle da circulação.",
+  },
+  {
+    id: 35,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "A existência de um sistema de proteção automática significa que:",
+    alternativas: [
+      "Os procedimentos operacionais deixam de ser necessários.",
+      "A atuação humana deixa de ter importância.",
+      "O sistema pode contribuir para a proteção do movimento, mas permanece integrado aos demais elementos da operação.",
+      "O condutor pode ignorar os sinais.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Sistemas automáticos complementam o controle da circulação e fazem parte de uma operação integrada.",
+    explicacaoErrada:
+      "Sistemas automáticos complementam o controle da circulação e fazem parte de uma operação integrada.",
+  },
+  {
+    id: 36,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Qual alternativa melhor representa o conceito de headway?",
+    alternativas: [
+      "Distância física entre dois trilhos.",
+      "Intervalo entre movimentos sucessivos de trens.",
+      "Comprimento de um AMV.",
+      "Tempo necessário para trocar um sinal.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Headway representa o intervalo entre movimentos sucessivos de trens em determinada condição de circulação.",
+    explicacaoErrada:
+      "Headway representa o intervalo entre movimentos sucessivos de trens em determinada condição de circulação.",
+  },
+  {
+    id: 37,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Em relação às manobras ferroviárias, é correto afirmar que:",
+    alternativas: [
+      "São movimentos sem regras específicas.",
+      "Possuem condições operacionais próprias e devem respeitar a sinalização e os procedimentos aplicáveis.",
+      "Não dependem de autorização ou condições estabelecidas.",
+      "Podem ignorar os limites estabelecidos para a movimentação.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "As manobras possuem condições próprias e devem ser realizadas de acordo com as regras estabelecidas.",
+    explicacaoErrada:
+      "As manobras possuem condições próprias e devem ser realizadas de acordo com as regras estabelecidas.",
+  },
+  {
+    id: 38,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Qual alternativa melhor descreve a função dos sistemas ATP, ATO e CBTC?",
+    alternativas: [
+      "São sistemas exclusivamente destinados à manutenção da via.",
+      "São sistemas relacionados à proteção, controle e/ou automação da circulação ferroviária.",
+      "São sistemas utilizados somente para comunicação administrativa.",
+      "São sistemas destinados exclusivamente aos passageiros.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "ATP, ATO e CBTC possuem funções relacionadas à proteção, controle e automação da circulação ferroviária.",
+    explicacaoErrada:
+      "ATP, ATO e CBTC possuem funções relacionadas à proteção, controle e automação da circulação ferroviária.",
+  },
+  {
+    id: 39,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Considere a seguinte sequência: ocupação da via, bloqueio, rota, intertravamento e indicação do sinal. Qual alternativa melhor representa a relação entre esses elementos?",
+    alternativas: [
+      "Cada elemento atua de forma independente e sua condição não interfere nos demais.",
+      "O circuito de via determina sozinho a indicação apresentada pelo sinal, sem participação de outros elementos.",
+      "Os diferentes elementos participam de um sistema integrado que estabelece condições para os movimentos e influencia as indicações apresentadas pela sinalização.",
+      "A indicação do sinal é definida exclusivamente pelo condutor.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Os diferentes elementos participam de um sistema integrado que estabelece condições para os movimentos ferroviários.",
+    explicacaoErrada:
+      "Os diferentes elementos participam de um sistema integrado que estabelece condições para os movimentos ferroviários.",
+  },
+  {
+    id: 40,
+    tema: "Sinalização",
+    dificuldade: "Fácil",
+    pergunta: "Qual afirmação melhor resume o funcionamento da sinalização ferroviária?",
+    alternativas: [
+      "A sinalização é formada apenas por sinais luminosos.",
+      "A sinalização funciona de maneira independente dos demais elementos da operação.",
+      "A sinalização integra diferentes elementos e sistemas para estabelecer condições de circulação e proteção dos movimentos ferroviários.",
+      "A sinalização tem como única finalidade informar a velocidade do trem.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "A sinalização ferroviária integra sinais, ocupação da via, bloqueio, rotas, intertravamento e sistemas de proteção e controle para estabelecer condições de circulação.",
+    explicacaoErrada:
+      "A sinalização ferroviária integra sinais, ocupação da via, bloqueio, rotas, intertravamento e sistemas de proteção e controle para estabelecer condições de circulação.",
   },
 ];
 
@@ -703,6 +1094,143 @@ btnAtividadeResponder.addEventListener("click", () => {
   atividadeRespondida = true;
 });
 
+/* ===== Conteúdo didático de AMV (curso linear) ===== */
+
+const AMV_SEQUENCIA_AULAS = [];
+for (let n = 1; n <= 7; n++) AMV_SEQUENCIA_AULAS.push("conteudo-amv-aula-" + n);
+AMV_SEQUENCIA_AULAS.push("conteudo-amv-revisao", "conteudo-amv-referencia");
+
+const AMV_TOTAL_ETAPAS = AMV_SEQUENCIA_AULAS.length;
+
+/* ===== Progresso das aulas concluídas (módulo de AMV) ===== */
+
+const AMV_AULAS_CONCLUIDAS_KEY = "railsafe_amv_aulas_concluidas";
+
+let amvAulasConcluidas = (function () {
+  try {
+    const raw = localStorage.getItem(AMV_AULAS_CONCLUIDAS_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch (e) {
+    return new Set();
+  }
+})();
+
+function salvarAulaConcluidaAmv(id) {
+  if (id.indexOf("conteudo-amv-aula-") !== 0) return;
+  amvAulasConcluidas = new Set(amvAulasConcluidas);
+  amvAulasConcluidas.add(id);
+  localStorage.setItem(AMV_AULAS_CONCLUIDAS_KEY, JSON.stringify(Array.from(amvAulasConcluidas)));
+}
+
+function atualizarProgressoCursoAmv() {
+  const info = document.getElementById("curso-progresso-info-amv");
+  if (!info) return;
+  let count = 0;
+  for (let n = 1; n <= 7; n++) {
+    if (amvAulasConcluidas.has("conteudo-amv-aula-" + n)) count++;
+  }
+  if (count === 0 || count === 7) {
+    info.hidden = true;
+    return;
+  }
+  info.textContent = count + " de 7 aulas concluídas";
+  info.hidden = false;
+}
+
+let aulaPosAmv = 0;
+
+const aulaBodyAmv = document.getElementById("aula-body-amv");
+const btnAulaPrevAmv = document.getElementById("btn-aula-prev-amv");
+const btnAulaNextAmv = document.getElementById("btn-aula-next-amv");
+const progressoBlocoAmv = document.getElementById("curso-progresso-amv");
+const progressoLabelAmv = document.getElementById("aula-progresso-label-amv");
+const progressoFillAmv = document.getElementById("aula-progresso-fill-amv");
+const progressoBarAmv = document.getElementById("aula-progresso-bar-amv");
+const conteudoTemplatesAmv = document.querySelector("#view-aula-amv .conteudo__templates");
+
+function nomeEtapaAmv(id) {
+  if (id.indexOf("conteudo-amv-aula-") === 0) {
+    const n = parseInt(id.replace("conteudo-amv-aula-", ""), 10);
+    return "Aula " + n + " de 7";
+  }
+  if (id === "conteudo-amv-revisao") return "Revisão";
+  if (id === "conteudo-amv-referencia") return "Referência técnica";
+  return "";
+}
+
+function proximoRotuloAmv(id) {
+  if (id === "conteudo-amv-referencia") return "Iniciar quiz";
+  if (id === "conteudo-amv-revisao") return "Continuar para referências →";
+  if (id === "conteudo-amv-aula-7") return "Continuar para revisão →";
+  return "Próxima aula →";
+}
+
+function abrirAulaAmv(id) {
+  aulaPosAmv = AMV_SEQUENCIA_AULAS.indexOf(id);
+  const naSequencia = aulaPosAmv !== -1;
+  const conteudo = document.getElementById(id);
+  while (aulaBodyAmv.firstChild) conteudoTemplatesAmv.appendChild(aulaBodyAmv.firstChild);
+  if (conteudo) aulaBodyAmv.appendChild(conteudo);
+
+  if (naSequencia) {
+    const pct = Math.round(((aulaPosAmv + 1) / AMV_TOTAL_ETAPAS) * 100);
+    progressoBlocoAmv.hidden = false;
+    progressoLabelAmv.textContent = nomeEtapaAmv(id);
+    progressoFillAmv.style.width = pct + "%";
+    if (progressoBarAmv) progressoBarAmv.setAttribute("aria-valuenow", String(pct));
+
+    btnAulaPrevAmv.hidden = aulaPosAmv === 0;
+    btnAulaPrevAmv.textContent = "← Aula anterior";
+    btnAulaNextAmv.hidden = false;
+    btnAulaNextAmv.textContent = proximoRotuloAmv(id);
+  } else {
+    progressoBlocoAmv.hidden = true;
+    btnAulaPrevAmv.hidden = true;
+    btnAulaNextAmv.hidden = true;
+  }
+
+  if (typeof window !== "undefined") window.scrollTo(0, 0);
+  showView("view-aula-amv");
+}
+
+function iniciarConteudoAmv() {
+  atualizarProgressoCursoAmv();
+  showView("view-conteudo-amv");
+}
+
+document.getElementById("btn-iniciar-treinamento-amv").addEventListener("click", () => {
+  abrirAulaAmv("conteudo-amv-aula-1");
+});
+
+document.getElementById("btn-avaliacao-amv").addEventListener("click", () => {
+  showView("view-amv");
+  startAmvTraining();
+});
+
+document.getElementById("btn-back-conteudo-amv").addEventListener("click", () => {
+  showView("view-trainings");
+});
+
+document.getElementById("btn-back-aula-amv").addEventListener("click", () => {
+  atualizarProgressoCursoAmv();
+  showView("view-conteudo-amv");
+});
+
+btnAulaPrevAmv.addEventListener("click", () => {
+  if (aulaPosAmv > 0) abrirAulaAmv(AMV_SEQUENCIA_AULAS[aulaPosAmv - 1]);
+});
+
+btnAulaNextAmv.addEventListener("click", () => {
+  salvarAulaConcluidaAmv(AMV_SEQUENCIA_AULAS[aulaPosAmv]);
+  if (aulaPosAmv === AMV_SEQUENCIA_AULAS.length - 1) {
+    showView("view-amv");
+    startAmvTraining();
+    return;
+  }
+  abrirAulaAmv(AMV_SEQUENCIA_AULAS[aulaPosAmv + 1]);
+});
+
 /* ===== Treinamento de AMV ===== */
 
 const amvQuestions = [
@@ -1056,8 +1584,7 @@ function startAmvTraining() {
 }
 
 cardAmv.addEventListener("click", () => {
-  startAmvTraining();
-  showView("view-amv");
+  iniciarConteudoAmv();
 });
 
 document.getElementById("btn-back-amv").addEventListener("click", () => {
@@ -1091,6 +1618,143 @@ amvBtnAnswer.addEventListener("click", () => {
 document.getElementById("btn-back-amv-to-trainings").addEventListener("click", () => {
   startAmvTraining();
   showView("view-trainings");
+});
+
+/* ===== Conteúdo didático de Segurança Ferroviária (curso linear) ===== */
+
+const SEGURANCA_SEQUENCIA_AULAS = [];
+for (let n = 1; n <= 9; n++) SEGURANCA_SEQUENCIA_AULAS.push("conteudo-seguranca-aula-" + n);
+SEGURANCA_SEQUENCIA_AULAS.push("conteudo-seguranca-revisao", "conteudo-seguranca-referencia");
+
+const SEGURANCA_TOTAL_ETAPAS = SEGURANCA_SEQUENCIA_AULAS.length;
+
+/* ===== Progresso das aulas concluídas (módulo de Segurança Ferroviária) ===== */
+
+const SEGURANCA_AULAS_CONCLUIDAS_KEY = "railsafe_seguranca_aulas_concluidas";
+
+let segurancaAulasConcluidas = (function () {
+  try {
+    const raw = localStorage.getItem(SEGURANCA_AULAS_CONCLUIDAS_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch (e) {
+    return new Set();
+  }
+})();
+
+function salvarAulaConcluidaSeguranca(id) {
+  if (id.indexOf("conteudo-seguranca-aula-") !== 0) return;
+  segurancaAulasConcluidas = new Set(segurancaAulasConcluidas);
+  segurancaAulasConcluidas.add(id);
+  localStorage.setItem(SEGURANCA_AULAS_CONCLUIDAS_KEY, JSON.stringify(Array.from(segurancaAulasConcluidas)));
+}
+
+function atualizarProgressoCursoSeguranca() {
+  const info = document.getElementById("curso-progresso-info-seguranca");
+  if (!info) return;
+  let count = 0;
+  for (let n = 1; n <= 9; n++) {
+    if (segurancaAulasConcluidas.has("conteudo-seguranca-aula-" + n)) count++;
+  }
+  if (count === 0 || count === 9) {
+    info.hidden = true;
+    return;
+  }
+  info.textContent = count + " de 9 aulas concluídas";
+  info.hidden = false;
+}
+
+let aulaPosSeguranca = 0;
+
+const aulaBodySeguranca = document.getElementById("aula-body-seguranca");
+const btnAulaPrevSeguranca = document.getElementById("btn-aula-prev-seguranca");
+const btnAulaNextSeguranca = document.getElementById("btn-aula-next-seguranca");
+const progressoBlocoSeguranca = document.getElementById("curso-progresso-seguranca");
+const progressoLabelSeguranca = document.getElementById("aula-progresso-label-seguranca");
+const progressoFillSeguranca = document.getElementById("aula-progresso-fill-seguranca");
+const progressoBarSeguranca = document.getElementById("aula-progresso-bar-seguranca");
+const conteudoTemplatesSeguranca = document.querySelector("#view-aula-seguranca .conteudo__templates");
+
+function nomeEtapaSeguranca(id) {
+  if (id.indexOf("conteudo-seguranca-aula-") === 0) {
+    const n = parseInt(id.replace("conteudo-seguranca-aula-", ""), 10);
+    return "Aula " + n + " de 9";
+  }
+  if (id === "conteudo-seguranca-revisao") return "Revisão";
+  if (id === "conteudo-seguranca-referencia") return "Referência técnica";
+  return "";
+}
+
+function proximoRotuloSeguranca(id) {
+  if (id === "conteudo-seguranca-referencia") return "Iniciar quiz";
+  if (id === "conteudo-seguranca-revisao") return "Continuar para referências →";
+  if (id === "conteudo-seguranca-aula-9") return "Continuar para revisão →";
+  return "Próxima aula →";
+}
+
+function abrirAulaSeguranca(id) {
+  aulaPosSeguranca = SEGURANCA_SEQUENCIA_AULAS.indexOf(id);
+  const naSequencia = aulaPosSeguranca !== -1;
+  const conteudo = document.getElementById(id);
+  while (aulaBodySeguranca.firstChild) conteudoTemplatesSeguranca.appendChild(aulaBodySeguranca.firstChild);
+  if (conteudo) aulaBodySeguranca.appendChild(conteudo);
+
+  if (naSequencia) {
+    const pct = Math.round(((aulaPosSeguranca + 1) / SEGURANCA_TOTAL_ETAPAS) * 100);
+    progressoBlocoSeguranca.hidden = false;
+    progressoLabelSeguranca.textContent = nomeEtapaSeguranca(id);
+    progressoFillSeguranca.style.width = pct + "%";
+    if (progressoBarSeguranca) progressoBarSeguranca.setAttribute("aria-valuenow", String(pct));
+
+    btnAulaPrevSeguranca.hidden = aulaPosSeguranca === 0;
+    btnAulaPrevSeguranca.textContent = "← Aula anterior";
+    btnAulaNextSeguranca.hidden = false;
+    btnAulaNextSeguranca.textContent = proximoRotuloSeguranca(id);
+  } else {
+    progressoBlocoSeguranca.hidden = true;
+    btnAulaPrevSeguranca.hidden = true;
+    btnAulaNextSeguranca.hidden = true;
+  }
+
+  if (typeof window !== "undefined") window.scrollTo(0, 0);
+  showView("view-aula-seguranca");
+}
+
+function iniciarConteudoSeguranca() {
+  atualizarProgressoCursoSeguranca();
+  showView("view-conteudo-seguranca");
+}
+
+document.getElementById("btn-iniciar-treinamento-seguranca").addEventListener("click", () => {
+  abrirAulaSeguranca("conteudo-seguranca-aula-1");
+});
+
+document.getElementById("btn-avaliacao-seguranca").addEventListener("click", () => {
+  showView("view-seguranca");
+  startSegTraining();
+});
+
+document.getElementById("btn-back-conteudo-seguranca").addEventListener("click", () => {
+  showView("view-trainings");
+});
+
+document.getElementById("btn-back-aula-seguranca").addEventListener("click", () => {
+  atualizarProgressoCursoSeguranca();
+  showView("view-conteudo-seguranca");
+});
+
+btnAulaPrevSeguranca.addEventListener("click", () => {
+  if (aulaPosSeguranca > 0) abrirAulaSeguranca(SEGURANCA_SEQUENCIA_AULAS[aulaPosSeguranca - 1]);
+});
+
+btnAulaNextSeguranca.addEventListener("click", () => {
+  salvarAulaConcluidaSeguranca(SEGURANCA_SEQUENCIA_AULAS[aulaPosSeguranca]);
+  if (aulaPosSeguranca === SEGURANCA_SEQUENCIA_AULAS.length - 1) {
+    showView("view-seguranca");
+    startSegTraining();
+    return;
+  }
+  abrirAulaSeguranca(SEGURANCA_SEQUENCIA_AULAS[aulaPosSeguranca + 1]);
 });
 
 /* ===== Treinamento de Segurança Ferroviária ===== */
@@ -1563,8 +2227,7 @@ function startSegTraining() {
 }
 
 cardSeguranca.addEventListener("click", () => {
-  startSegTraining();
-  showView("view-seguranca");
+  iniciarConteudoSeguranca();
 });
 
 document.getElementById("btn-back-seguranca").addEventListener("click", () => {
