@@ -1238,222 +1238,681 @@ const amvQuestions = [
     id: 1,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "O que significa AMV?",
+    pergunta: "Em uma via ferroviária, qual é a principal finalidade de um Aparelho de Mudança de Via (AMV)?",
     alternativas: [
-      "Aparelho de Mudança de Via",
-      "Área de Manutenção de Via",
-      "Aviso de Movimento de Via",
-      "Acesso Manual de Via",
+      "Controlar a velocidade do veículo durante toda a circulação.",
+      "Estabelecer a conexão entre vias e direcionar o veículo para a trajetória correspondente à posição definida no aparelho.",
+      "Realizar a frenagem do veículo antes da passagem pelo aparelho.",
+      "Determinar o sentido de circulação de toda a linha.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "AMV significa Aparelho de Mudança de Via, o dispositivo responsável por transferir o veículo ferroviário de uma via para outra.",
+      "O AMV estabelece a conexão entre vias e direciona o veículo para a trajetória correspondente à posição definida no aparelho.",
     explicacaoErrada:
-      "AMV é a sigla de Aparelho de Mudança de Via. As demais alternativas não correspondem ao significado correto da sigla.",
+      "O AMV não controla a velocidade nem realiza a frenagem do veículo. Sua finalidade é estabelecer a conexão entre vias e direcionar o veículo para a trajetória correspondente à posição definida no aparelho, e não determinar o sentido de circulação de toda a linha.",
   },
   {
     id: 2,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Qual é a principal função de um AMV?",
+    pergunta: "Por que o AMV é constituído por diferentes componentes que atuam de forma conjunta?",
     alternativas: [
-      "Controlar a velocidade do trem",
-      "Permitir que o veículo ferroviário passe de uma via para outra",
-      "Acionar os sinais luminosos",
-      "Parar automaticamente o trem",
+      "Porque cada componente determina uma velocidade diferente para o veículo.",
+      "Porque a mudança de via depende somente da combinação entre componentes fixos.",
+      "Porque os diferentes elementos participam da orientação e da condução do veículo durante sua passagem.",
+      "Porque cada componente funciona independentemente dos demais.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "A principal função do AMV é permitir que o veículo ferroviário passe de uma via para outra.",
+      "O funcionamento do AMV depende da atuação conjunta dos diferentes elementos que formam o aparelho.",
     explicacaoErrada:
-      "O AMV tem como função permitir a passagem do veículo ferroviário de uma via para outra. Ele não controla a velocidade nem aciona os sinais.",
+      "Os componentes não atuam de forma independente nem determinam velocidades diferentes. A mudança de via depende da atuação conjunta dos elementos, que participam da orientação e da condução do veículo durante sua passagem, e não somente da combinação entre componentes fixos.",
   },
   {
     id: 3,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Quais são os principais elementos móveis responsáveis pela mudança de direção do trem em um AMV?",
+    pergunta: "Um veículo se aproxima de um AMV que está configurado para determinada trajetória. O que a posição estabelecida no aparelho representa nesse contexto?",
     alternativas: [
-      "Trilhos de encosto",
-      "Agulhas",
-      "Dormentes",
-      "Contratrilhos",
+      "A trajetória correspondente à configuração definida para a passagem do veículo.",
+      "O comprimento total do AMV.",
+      "A posição do centro do jacaré.",
+      "A distância entre o CMV e o FMV.",
     ],
-    correta: 1,
+    correta: 0,
     explicacaoCorrecta:
-      "As agulhas são os elementos móveis que, ao se moverem, conduzem o veículo para a via desejada.",
+      "A posição estabelecida no AMV determina a trajetória correspondente para a passagem do veículo.",
     explicacaoErrada:
-      "Os elementos móveis responsáveis pela mudança de direção do trem são as agulhas. Trilhos de encosto e contratrilhos possuem outras funções na via.",
+      "A posição do aparelho representa a trajetória correspondente à configuração definida para a passagem do veículo, e não o comprimento do AMV, a posição do centro do jacaré ou a distância entre o CMV e o FMV.",
   },
   {
     id: 4,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Antes de um trem circular por um AMV, o que é fundamental verificar?",
+    pergunta: "Por que conhecer os componentes do AMV é importante para compreender seu funcionamento?",
     alternativas: [
-      "Apenas a velocidade do trem",
-      "Se o AMV está corretamente posicionado e assegurado",
-      "Apenas a iluminação da via",
-      "Somente a condição dos dormentes",
+      "Porque todos os componentes possuem a mesma função.",
+      "Porque é necessário compreender a função desempenhada pelos diferentes elementos que formam o conjunto.",
+      "Porque somente os componentes móveis participam do funcionamento.",
+      "Porque os componentes definem exclusivamente a geometria da via.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "Antes da circulação é fundamental verificar se o AMV está corretamente posicionado e assegurado para a rota prevista.",
+      "O estudo do AMV envolve compreender seus principais componentes, suas denominações e a função desempenhada por cada um.",
     explicacaoErrada:
-      "O essencial é confirmar o correto posicionamento e asseguramento do AMV. Velocidade, iluminação e dormentes, por si sós, não garantem a rota correta.",
+      "Os componentes não possuem todos a mesma função e nem somente os componentes móveis participam do funcionamento. Compreender o AMV envolve conhecer seus principais componentes, suas denominações e a função desempenhada por cada um.",
   },
   {
     id: 5,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "O que pode acontecer se um AMV não estiver corretamente posicionado?",
+    pergunta: "Qual situação representa melhor a função geral de um AMV?",
     alternativas: [
-      "Nada, pois o trem corrige automaticamente sua trajetória",
-      "O trem pode tomar uma rota diferente da pretendida",
-      "Apenas o sinal ficará apagado",
-      "O trem necessariamente irá parar",
+      "Um veículo permanece obrigatoriamente na mesma via durante toda a passagem.",
+      "Um veículo utiliza o aparelho para estabelecer uma trajetória entre vias conforme a configuração definida.",
+      "Um veículo altera sua velocidade sem modificar sua trajetória.",
+      "Um veículo utiliza o aparelho exclusivamente para realizar uma parada.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "Com o AMV mal posicionado, o trem pode tomar uma rota diferente da pretendida, gerando situação de risco.",
+      "O AMV possibilita a conexão entre vias e direciona o veículo para a trajetória correspondente à configuração estabelecida.",
     explicacaoErrada:
-      "Um AMV mal posicionado pode fazer o trem tomar uma rota diferente da pretendida. O trem não corrige sua trajetória e nem necessariamente para.",
+      "O AMV possibilita a conexão entre vias e direciona o veículo para a trajetória correspondente à configuração definida. Ele não mantém o veículo obrigatoriamente na mesma via nem é utilizado para alterar a velocidade ou realizar uma parada.",
   },
   {
     id: 6,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Qual situação exige atenção especial antes da passagem de um trem pelo AMV?",
+    pergunta: "Qual conjunto está relacionado à movimentação e ao posicionamento das agulhas?",
     alternativas: [
-      "Existência de objetos ou materiais que possam impedir o correto fechamento das agulhas",
-      "Temperatura ambiente baixa",
-      "Trem com poucos passageiros",
-      "Iluminação da estação",
+      "Agulhagem.",
+      "Contratrilho.",
+      "Coração.",
+      "Trilhos de ligação.",
     ],
     correta: 0,
     explicacaoCorrecta:
-      "Objetos ou materiais que impeçam o correto fechamento das agulhas exigem atenção especial antes da passagem do trem.",
+      "A agulhagem é formada pelas agulhas, contra-agulhas e elementos associados à movimentação das agulhas.",
     explicacaoErrada:
-      "A presença de objetos ou materiais que impeçam o fechamento das agulhas exige atenção especial. Os demais fatores não comprometem o funcionamento do AMV.",
+      "A agulhagem reúne as agulhas, as contra-agulhas e os elementos associados à movimentação das agulhas. O contratrilho, o coração e os trilhos de ligação possuem outras funções no conjunto.",
   },
   {
     id: 7,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Em uma situação de irregularidade no AMV, qual deve ser a conduta?",
+    pergunta: "Qual é a função do aparelho de manobra, também denominado máquina de chave?",
     alternativas: [
-      "Passar rapidamente para evitar atrasos",
-      "Ignorar se aparentemente estiver próximo da posição correta",
-      "Comunicar a irregularidade e seguir os procedimentos operacionais aplicáveis",
-      "Empurrar manualmente a agulha sem autorização",
+      "Conduzir o rodeiro na região do jacaré.",
+      "Movimentar as agulhas e colocá-las na posição necessária.",
+      "Definir o comprimento do AMV.",
+      "Formar o núcleo do coração.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "Em caso de irregularidade, a conduta correta é comunicar a irregularidade e seguir os procedimentos operacionais aplicáveis.",
+      "O aparelho de manobra movimenta as agulhas e as coloca na posição correspondente à configuração desejada.",
     explicacaoErrada:
-      "Diante de uma irregularidade, deve-se comunicar e seguir os procedimentos operacionais. Passar rapidamente, ignorar ou manusear a agulha sem autorização é inseguro.",
+      "O aparelho de manobra, também denominado máquina de chave, movimenta as agulhas e as posiciona conforme a configuração desejada. Ele não conduz o rodeiro na região do jacaré, não define o comprimento do AMV nem forma o núcleo do coração.",
   },
   {
     id: 8,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Por que é importante confirmar a posição do AMV antes da circulação?",
+    pergunta: "Qual é a função dos trilhos de ligação no conjunto do AMV?",
     alternativas: [
-      "Para reduzir o consumo de energia",
-      "Para garantir que o movimento ferroviário ocorra pela rota prevista e com segurança",
-      "Para aumentar a velocidade do trem",
-      "Para evitar somente atrasos",
+      "Estabelecer a ligação entre a região da agulhagem e as demais partes do aparelho.",
+      "Movimentar as agulhas.",
+      "Definir a posição do VMV.",
+      "Estabelecer o espaçamento para o flange na região do coração.",
     ],
-    correta: 1,
+    correta: 0,
     explicacaoCorrecta:
-      "Confirmar a posição do AMV garante que o movimento ferroviário ocorra pela rota prevista e com segurança.",
+      "Os trilhos de ligação fazem parte do conjunto e estabelecem a ligação entre a região da agulhagem e as demais partes do aparelho.",
     explicacaoErrada:
-      "A confirmação da posição do AMV visa garantir a rota prevista e a segurança do movimento, e não consumo de energia ou aumento de velocidade.",
+      "Os trilhos de ligação estabelecem a ligação entre a região da agulhagem e as demais partes do aparelho. Eles não movimentam as agulhas, não definem a posição do VMV nem estabelecem o espaçamento para o flange na região do coração.",
   },
   {
     id: 9,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Qual é a importância do correto encosto das agulhas em um AMV?",
+    pergunta: "Qual componente está localizado na região em que ocorre o cruzamento das vias?",
     alternativas: [
-      "Apenas melhorar a aparência da via",
-      "Garantir que o veículo ferroviário seja direcionado corretamente e com segurança",
-      "Aumentar a velocidade permitida",
-      "Reduzir o ruído durante a passagem",
+      "CMV.",
+      "Aparelho de manobra.",
+      "Coração ou jacaré.",
+      "Trilho de ligação.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "O correto encosto das agulhas garante que o veículo ferroviário seja direcionado corretamente e com segurança.",
+      "O coração, também denominado jacaré, está localizado na região de cruzamento das vias.",
     explicacaoErrada:
-      "O correto encosto das agulhas assegura o direcionamento correto e seguro do veículo. Não se trata de estética, velocidade ou ruído.",
+      "O coração, também denominado jacaré, está localizado na região em que ocorre o cruzamento das vias. Os demais elementos citados possuem outras localizações e funções no conjunto.",
   },
   {
     id: 10,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Ao identificar uma obstrução entre a agulha e o trilho de encosto de um AMV, o que deve ser feito?",
+    pergunta: "Qual alternativa apresenta somente elementos mencionados no treinamento como componentes do AMV?",
     alternativas: [
-      "Retirar o objeto imediatamente, independentemente da situação operacional",
-      "Solicitar que o trem passe em baixa velocidade",
-      "Comunicar a irregularidade e seguir o procedimento operacional estabelecido",
-      "Ignorar se o objeto for pequeno",
+      "Agulhagem, aparelho de manobra, coração e contratrilhos.",
+      "Sinal principal, coração, contratrilho e agulhagem.",
+      "Pantógrafo, aparelho de manobra, coração e trilho de ligação.",
+      "Rodeiro, sinalização, contratrilho e coração.",
     ],
-    correta: 2,
+    correta: 0,
     explicacaoCorrecta:
-      "Diante de uma obstrução entre agulha e trilho de encosto, deve-se comunicar a irregularidade e seguir o procedimento operacional estabelecido.",
+      "Todos os elementos da alternativa A são apresentados no material como componentes do conjunto do AMV.",
     explicacaoErrada:
-      "A conduta correta é comunicar a irregularidade e seguir o procedimento operacional. Retirar o objeto por conta própria ou ignorá-lo é inseguro.",
+      "A alternativa A reúne apenas componentes apresentados no material como elementos do conjunto do AMV. Sinal principal, pantógrafo, rodeiro e sinalização pertencem a outros sistemas.",
   },
   {
     id: 11,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Por que a inspeção visual de um AMV é importante?",
+    pergunta: "Na forma básica do AMV apresentada no treinamento, como são caracterizadas a via principal e a via de desvio?",
     alternativas: [
-      "Para verificar apenas a limpeza da via",
-      "Para identificar condições que possam comprometer seu funcionamento ou a circulação segura",
-      "Para determinar o horário de passagem do próximo trem",
-      "Para verificar somente a pintura dos componentes",
+      "A via principal é curva e a via de desvio é reta.",
+      "Ambas são retas e diferem apenas pelo sentido de circulação.",
+      "A via principal é reta e a via de desvio é curva.",
+      "Ambas são curvas e possuem raios diferentes.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "A inspeção visual do AMV permite identificar condições que possam comprometer seu funcionamento ou a circulação segura.",
+      "Na forma básica apresentada, a via principal corresponde à via reta e a via de desvio à via desviada, curva.",
     explicacaoErrada:
-      "A inspeção visual tem por finalidade identificar condições que comprometam o funcionamento do AMV ou a circulação segura, e não limpeza ou pintura.",
+      "Na forma básica apresentada, a via principal é reta e a via de desvio é curva, desviada. As demais combinações não correspondem à caracterização apresentada no treinamento.",
   },
   {
     id: 12,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Um AMV apresenta indicação de posição diferente daquela necessária para a rota do trem. Qual é a atitude mais segura?",
+    pergunta: "O que caracteriza o CMV?",
     alternativas: [
-      "Autorizar a passagem porque o trem pode corrigir a trajetória",
-      "Prosseguir e corrigir o AMV depois da passagem",
-      "Não prosseguir até que a situação seja verificada e tratada conforme os procedimentos aplicáveis",
-      "Aumentar a velocidade para passar rapidamente",
+      "É a interseção das tangentes da via principal e da via de desvio.",
+      "Corresponde ao início do trilho de encosto da agulha.",
+      "Corresponde ao fim da mudança de via.",
+      "Corresponde ao centro do jacaré.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "A atitude mais segura é não prosseguir até que a situação seja verificada e tratada conforme os procedimentos aplicáveis.",
+      "CMV significa Começo da Mudança de Via e corresponde ao início do trilho de encosto da agulha.",
     explicacaoErrada:
-      "Diante de posição divergente do AMV, a atitude mais segura é não prosseguir até verificação e tratamento conforme os procedimentos. O trem não corrige a trajetória.",
+      "CMV significa Começo da Mudança de Via e corresponde ao início do trilho de encosto da agulha. A interseção das tangentes corresponde ao VMV, e o fim da mudança de via corresponde ao FMV.",
   },
   {
     id: 13,
     tema: "AMV",
     dificuldade: "Fácil",
-    pergunta: "Qual dos seguintes fatores pode comprometer o funcionamento de um AMV?",
+    pergunta: "Como é definido o comprimento do AMV?",
     alternativas: [
-      "Materiais ou objetos interferindo no movimento das agulhas",
-      "A quantidade de passageiros no trem",
-      "A iluminação interna do trem",
-      "A temperatura dentro da cabine",
+      "Pela distância entre o centro do jacaré e o VMV.",
+      "Pela distância entre o início da agulhagem e o centro do contratrilho.",
+      "Pela distância em linha reta entre o CMV e o FMV.",
+      "Pela distância entre o CMV e o VMV.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "O material define o comprimento do AMV pela distância em linha reta entre o CMV e o FMV.",
+    explicacaoErrada:
+      "O comprimento do AMV é definido pela distância em linha reta entre o CMV e o FMV, e não pelas demais medidas apresentadas.",
+  },
+  {
+    id: 14,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual referência corresponde ao fim da mudança de via?",
+    alternativas: [
+      "CMV.",
+      "FMV.",
+      "VMV.",
+      "Coração.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "FMV significa Fim da Mudança de Via.",
+    explicacaoErrada:
+      "FMV significa Fim da Mudança de Via. CMV corresponde ao começo, VMV ao vértice da mudança de via, e o coração está localizado na região de cruzamento das vias.",
+  },
+  {
+    id: 15,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Como o VMV é definido no treinamento?",
+    alternativas: [
+      "Como o início do trilho de encosto da agulha.",
+      "Como o fim da mudança de via.",
+      "Como a interseção das tangentes da via principal com a via de desvio.",
+      "Como o centro geométrico do coração.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "VMV significa Vértice da Mudança de Via e corresponde à interseção das tangentes da via principal com a via de desvio.",
+    explicacaoErrada:
+      "VMV significa Vértice da Mudança de Via e corresponde à interseção das tangentes da via principal com a via de desvio, e não às demais referências apresentadas.",
+  },
+  {
+    id: 16,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Um profissional precisa identificar as principais referências utilizadas para compreender a geometria e a localização de um AMV. Qual conjunto deve consultar?",
+    alternativas: [
+      "CMV, FMV e VMV.",
+      "CMV, coração e contratrilho.",
+      "FMV, agulhagem e aparelho de manobra.",
+      "VMV, núcleo e pernas do jacaré.",
     ],
     correta: 0,
     explicacaoCorrecta:
-      "Materiais ou objetos que interfiram no movimento das agulhas podem comprometer o funcionamento do AMV.",
+      "CMV, FMV e VMV são as referências apresentadas no treinamento para a identificação da posição e das características geométricas do AMV.",
     explicacaoErrada:
-      "O funcionamento do AMV pode ser comprometido por materiais ou objetos que interfiram no movimento das agulhas. Passageiros e iluminação do trem não o afetam.",
+      "As referências geométricas do AMV são CMV, FMV e VMV. Os demais conjuntos reúnem componentes do aparelho, e não referências geométricas.",
+  },
+  {
+    id: 17,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual relação entre a posição das agulhas e a configuração do AMV está correto afirmar?",
+    alternativas: [
+      "A posição das agulhas determina o comprimento do aparelho.",
+      "A posição das agulhas estabelece a direção correspondente à passagem do veículo.",
+      "A posição das agulhas define a geometria do jacaré.",
+      "A posição das agulhas determina o espaçamento do contratrilho.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "As agulhas são elementos móveis da agulhagem, e seu posicionamento estabelece a direção que será seguida pelo veículo.",
+    explicacaoErrada:
+      "As agulhas são elementos móveis da agulhagem, e seu posicionamento estabelece a direção que será seguida pelo veículo. Elas não determinam o comprimento do aparelho, a geometria do jacaré nem o espaçamento do contratrilho.",
+  },
+  {
+    id: 18,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual componente realiza a movimentação das agulhas para estabelecer a configuração desejada do AMV?",
+    alternativas: [
+      "Coração ou jacaré.",
+      "Contratrilho.",
+      "Aparelho de manobra.",
+      "Trilho de ligação.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "O aparelho de manobra, também denominado máquina de chave, movimenta as agulhas.",
+    explicacaoErrada:
+      "O aparelho de manobra, também denominado máquina de chave, é o componente que movimenta as agulhas. O coração, o contratrilho e os trilhos de ligação possuem outras funções.",
+  },
+  {
+    id: 19,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "O que ocorre com a condição estabelecida para a passagem do veículo quando a posição das agulhas é alterada?",
+    alternativas: [
+      "A condição de passagem é modificada de acordo com a nova configuração.",
+      "O comprimento do AMV é alterado.",
+      "A posição do VMV é alterada.",
+      "A geometria do jacaré é modificada.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A alteração da posição das agulhas modifica a condição estabelecida para a passagem do veículo e sua trajetória.",
+    explicacaoErrada:
+      "Ao alterar a posição das agulhas, a condição de passagem e a trajetória do veículo são modificadas de acordo com a nova configuração. O comprimento do AMV, a posição do VMV e a geometria do jacaré não são alterados.",
+  },
+  {
+    id: 20,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual alternativa apresenta corretamente a composição da agulhagem conforme o material?",
+    alternativas: [
+      "Agulhas, contra-agulhas e elementos associados à movimentação das agulhas.",
+      "Núcleo, pernas e contratrilho.",
+      "CMV, FMV e VMV.",
+      "Trilhos de ligação, coração e calços.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O material define a agulhagem como o conjunto formado pelas agulhas, contra-agulhas e elementos associados à movimentação das agulhas.",
+    explicacaoErrada:
+      "A agulhagem é o conjunto formado pelas agulhas, contra-agulhas e elementos associados à movimentação das agulhas. As demais alternativas reúnem outros elementos ou referências do AMV.",
+  },
+  {
+    id: 21,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Por que a movimentação das agulhas é fundamental para o funcionamento do AMV?",
+    alternativas: [
+      "Porque determina o comprimento do aparelho.",
+      "Porque estabelece a configuração correspondente à trajetória que será seguida pelo veículo.",
+      "Porque modifica a geometria do coração.",
+      "Porque determina a posição do contratrilho.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A movimentação das agulhas determina a configuração estabelecida para a passagem do veículo.",
+    explicacaoErrada:
+      "A movimentação das agulhas estabelece a configuração correspondente à trajetória que será seguida pelo veículo. Ela não determina o comprimento do aparelho, a geometria do coração nem a posição do contratrilho.",
+  },
+  {
+    id: 22,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Em qual região do AMV está localizado o coração ou jacaré?",
+    alternativas: [
+      "Na região inicial da agulhagem.",
+      "Na região em que ocorre o cruzamento das vias.",
+      "Na região do aparelho de manobra.",
+      "Na extremidade da via principal.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O coração ou jacaré está localizado na região de cruzamento das vias.",
+    explicacaoErrada:
+      "O coração ou jacaré está localizado na região em que ocorre o cruzamento das vias, e não na agulhagem, no aparelho de manobra ou na extremidade da via principal.",
+  },
+  {
+    id: 23,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Quais elementos formam a estrutura do jacaré?",
+    alternativas: [
+      "Agulhas e contra-agulhas.",
+      "Núcleo e pernas.",
+      "Gola e centro do contratrilho.",
+      "CMV e FMV.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O jacaré possui um núcleo e pernas, que formam sua estrutura.",
+    explicacaoErrada:
+      "O jacaré é formado por núcleo e pernas. Agulhas e contra-agulhas compõem a agulhagem, e gola e centro são elementos associados ao contratrilho.",
+  },
+  {
+    id: 24,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual conjunto apresenta exclusivamente configurações de jacaré mencionadas no treinamento?",
+    alternativas: [
+      "Fixo, móvel e com núcleo removível.",
+      "Reto, curvo e móvel.",
+      "Simples, duplo e triplo.",
+      "Principal, desviado e móvel.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O material apresenta três configurações: jacaré fixo, jacaré móvel e jacaré com núcleo removível.",
+    explicacaoErrada:
+      "As configurações de jacaré apresentadas no material são fixo, móvel e com núcleo removível. As demais não correspondem às classificações apresentadas.",
+  },
+  {
+    id: 25,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "No jacaré fixo, como o núcleo se relaciona com as pernas?",
+    alternativas: [
+      "O núcleo é rigidamente fixado às pernas.",
+      "O núcleo se movimenta em relação às pernas.",
+      "O núcleo é independente das pernas durante a circulação.",
+      "O núcleo é substituído pelos contratrilhos.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "No jacaré fixo, o núcleo é rigidamente fixado às pernas.",
+    explicacaoErrada:
+      "No jacaré fixo, o núcleo permanece rigidamente fixado às pernas. As demais relações não correspondem ao funcionamento do jacaré fixo.",
+  },
+  {
+    id: 26,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Quanto à geometria, quais configurações de jacaré são apresentadas no material?",
+    alternativas: [
+      "Reto ou curvo.",
+      "Fixo ou móvel.",
+      "Principal ou de desvio.",
+      "Simples ou duplo.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O material apresenta o jacaré como reto ou curvo quanto à sua geometria.",
+    explicacaoErrada:
+      "Quanto à geometria, o jacaré é apresentado como reto ou curvo. Fixo e móvel dizem respeito à configuração construtiva, e não à geometria.",
+  },
+  {
+    id: 27,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual característica corresponde ao jacaré com núcleo removível?",
+    alternativas: [
+      "O núcleo é movimentado pelo aparelho de manobra.",
+      "O núcleo é fixado às pernas e pode ser removido.",
+      "As pernas são removidas durante a passagem do veículo.",
+      "O núcleo substitui as agulhas durante a mudança de via.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "No jacaré com núcleo removível, o núcleo é fixado às pernas e pode ser removido.",
+    explicacaoErrada:
+      "No jacaré com núcleo removível, o núcleo é fixado às pernas e pode ser removido. Ele não é movimentado pelo aparelho de manobra nem substitui as agulhas durante a mudança de via.",
+  },
+  {
+    id: 28,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual é a principal relação do contratrilho com a circulação do veículo na região do jacaré?",
+    alternativas: [
+      "Movimentar as agulhas.",
+      "Participar da condução do rodeiro.",
+      "Definir o comprimento do AMV.",
+      "Estabelecer a posição do VMV.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O contratrilho é relacionado à condução do rodeiro na região do jacaré.",
+    explicacaoErrada:
+      "O contratrilho participa da condução do rodeiro na região do jacaré. Ele não movimenta as agulhas, não define o comprimento do AMV nem estabelece a posição do VMV.",
+  },
+  {
+    id: 29,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Por que a disposição do contratrilho em relação aos demais elementos da via é importante?",
+    alternativas: [
+      "Porque estabelece o espaço necessário para a passagem do flange da roda.",
+      "Porque define a posição do VMV.",
+      "Porque determina o comprimento do AMV.",
+      "Porque movimenta as agulhas.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A disposição do contratrilho estabelece o espaço necessário para a passagem do flange da roda na região do coração.",
+    explicacaoErrada:
+      "A disposição do contratrilho é importante porque estabelece o espaço necessário para a passagem do flange da roda. Ela não define a posição do VMV, não determina o comprimento do AMV nem movimenta as agulhas.",
+  },
+  {
+    id: 30,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual elemento é citado no treinamento como parte associada ao contratrilho?",
+    alternativas: [
+      "Gola do contratrilho.",
+      "Agulha móvel.",
+      "Núcleo do jacaré.",
+      "VMV.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A gola do contratrilho é um dos elementos associados ao contratrilho.",
+    explicacaoErrada:
+      "A gola do contratrilho é citada como elemento associado ao contratrilho. Agulha móvel e núcleo do jacaré pertencem a outros conjuntos, e o VMV é uma referência geométrica.",
+  },
+  {
+    id: 31,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual alternativa reúne exclusivamente elementos associados ao contratrilho citados no treinamento?",
+    alternativas: [
+      "Gola, centro, trilho de encosto e placa de apoio do contratrilho.",
+      "CMV, FMV, VMV e núcleo.",
+      "Agulha, contra-agulha, coração e máquina de chave.",
+      "Núcleo, pernas, agulha e trilho de ligação.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O treinamento cita a gola, o centro, o trilho de encosto e a placa de apoio do contratrilho como elementos associados a ele.",
+    explicacaoErrada:
+      "Gola, centro, trilho de encosto e placa de apoio do contratrilho são os elementos associados citados no treinamento. As demais alternativas reúnem outros elementos ou referências do AMV.",
+  },
+  {
+    id: 32,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual é a função do calço do contratrilho fixo?",
+    alternativas: [
+      "Movimentar o contratrilho durante a passagem do veículo.",
+      "Assegurar o espaçamento necessário à passagem do flange da roda.",
+      "Alterar a posição das agulhas.",
+      "Definir a geometria do jacaré.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O calço do contratrilho fixo é utilizado entre o trilho de encosto e o contratrilho para assegurar o espaçamento necessário à passagem do flange.",
+    explicacaoErrada:
+      "O calço do contratrilho fixo assegura o espaçamento necessário à passagem do flange da roda. Ele não movimenta o contratrilho, não altera a posição das agulhas nem define a geometria do jacaré.",
+  },
+  {
+    id: 33,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Um profissional está analisando a função do contratrilho na região do coração. Qual afirmação está de acordo com o treinamento?",
+    alternativas: [
+      "O contratrilho participa da condução do rodeiro e está relacionado ao espaço para passagem do flange.",
+      "O contratrilho movimenta as agulhas para selecionar a trajetória.",
+      "O contratrilho define o comprimento entre CMV e FMV.",
+      "O contratrilho estabelece a geometria do jacaré.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O contratrilho participa da condução do rodeiro e sua disposição está relacionada ao espaço necessário para a passagem do flange.",
+    explicacaoErrada:
+      "O contratrilho participa da condução do rodeiro e está relacionado ao espaço necessário para a passagem do flange. As demais funções apresentadas não correspondem ao contratrilho.",
+  },
+  {
+    id: 34,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual definição corresponde ao travessão?",
+    alternativas: [
+      "Conjunto formado por dois AMV interligados, assentados em vias diferentes e em sentidos opostos.",
+      "Conjunto formado por quatro AMV e dois cruzamentos.",
+      "Um único AMV com duas posições de agulhagem.",
+      "Conjunto formado por dois corações instalados na mesma via.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O travessão é formado por dois aparelhos de mudança de via interligados, assentados em vias diferentes e em sentidos opostos.",
+    explicacaoErrada:
+      "O travessão é formado por dois aparelhos de mudança de via interligados, assentados em vias diferentes e em sentidos opostos. As demais definições não correspondem ao travessão.",
+  },
+  {
+    id: 35,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual possibilidade está associada à configuração de um travessão?",
+    alternativas: [
+      "A transposição direta de um trem ou veículo de uma via para outra.",
+      "A alteração do comprimento de um AMV.",
+      "A substituição da agulhagem por um coração.",
+      "A eliminação da necessidade de aparelhos de manobra.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A disposição dos dois AMV interligados permite a transposição direta de um trem ou veículo de uma via para outra.",
+    explicacaoErrada:
+      "A configuração do travessão permite a transposição direta de um trem ou veículo de uma via para outra. As demais possibilidades não correspondem ao funcionamento do travessão.",
+  },
+  {
+    id: 36,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual é a composição do travessão duplo?",
+    alternativas: [
+      "Dois AMV's.",
+      "Três AMV's.",
+      "Quatro AMV's.",
+      "Seis AMV's.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "O travessão duplo é formado por quatro aparelhos de mudança de via.",
+    explicacaoErrada:
+      "O travessão duplo é formado por quatro aparelhos de mudança de via, e não por dois, três ou seis.",
+  },
+  {
+    id: 37,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Qual característica diferencia o travessão duplo do travessão simples?",
+    alternativas: [
+      "O travessão duplo utiliza quatro AMV's, enquanto o travessão simples utiliza dois.",
+      "O travessão duplo utiliza dois AMV's, enquanto o travessão simples utiliza um.",
+      "O travessão duplo não possui aparelhos de mudança de via.",
+      "O travessão simples possui um cruzamento e o duplo não possui.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "Essa é a diferença de composição apresentada no treinamento entre as duas configurações.",
+    explicacaoErrada:
+      "A diferença apresentada é que o travessão duplo utiliza quatro AMV's, enquanto o travessão simples utiliza dois.",
+  },
+  {
+    id: 38,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Um AMV precisa ser configurado para uma determinada trajetória antes da passagem de um veículo. Qual sequência representa corretamente a relação entre os elementos estudados?",
+    alternativas: [
+      "O contratrilho movimenta as agulhas e o coração define a posição do aparelho.",
+      "O aparelho de manobra movimenta as agulhas, cuja posição estabelece a configuração correspondente à trajetória do veículo.",
+      "O coração movimenta o aparelho de manobra e as agulhas definem o comprimento do AMV.",
+      "O VMV movimenta as agulhas e o contratrilho estabelece a via principal.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O aparelho de manobra movimenta as agulhas, e o posicionamento delas estabelece a configuração correspondente à trajetória do veículo.",
+    explicacaoErrada:
+      "A relação correta é: o aparelho de manobra movimenta as agulhas e a posição delas estabelece a configuração correspondente à trajetória do veículo. As demais sequências não correspondem ao funcionamento do AMV.",
+  },
+  {
+    id: 39,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Um profissional precisa identificar corretamente três referências geométricas do AMV. Qual associação está correta?",
+    alternativas: [
+      "CMV — início do trilho de encosto da agulha; FMV — fim da mudança de via; VMV — interseção das tangentes da via principal com a via de desvio.",
+      "CMV — fim da mudança de via; FMV — início do trilho de encosto; VMV — centro do jacaré.",
+      "CMV — centro do contratrilho; FMV — início da agulhagem; VMV — fim da via de desvio.",
+      "CMV — interseção das tangentes; FMV — centro do jacaré; VMV — fim da mudança de via.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A alternativa A reúne corretamente as definições de CMV, FMV e VMV apresentadas no treinamento.",
+    explicacaoErrada:
+      "A alternativa A apresenta corretamente as definições: CMV é o início do trilho de encosto da agulha, FMV o fim da mudança de via e VMV a interseção das tangentes da via principal com a via de desvio.",
+  },
+  {
+    id: 40,
+    tema: "AMV",
+    dificuldade: "Fácil",
+    pergunta: "Um profissional precisa explicar, de forma integrada, como os principais elementos estudados participam do funcionamento do AMV. Qual alternativa está correta?",
+    alternativas: [
+      "O aparelho de manobra movimenta as agulhas; a posição das agulhas estabelece a trajetória; o coração está na região de cruzamento; e o contratrilho participa da condução do rodeiro nessa região.",
+      "O contratrilho movimenta as agulhas; o coração define o comprimento do AMV; e o aparelho de manobra conduz o rodeiro.",
+      "O coração movimenta as agulhas; o VMV estabelece a posição do AMV; e o contratrilho determina o comprimento do aparelho.",
+      "As agulhas definem a geometria do jacaré; o FMV movimenta o aparelho de manobra; e o coração estabelece a via principal.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A alternativa A apresenta a relação funcional entre os elementos: o aparelho de manobra atua sobre as agulhas, o posicionamento das agulhas estabelece a trajetória do veículo, o coração está situado na região de cruzamento e o contratrilho contribui para a condução do rodeiro nessa região, mantendo as condições necessárias para sua passagem.",
+    explicacaoErrada:
+      "A alternativa A apresenta corretamente a atuação integrada dos elementos: aparelho de manobra atuando sobre as agulhas, posicionamento das agulhas estabelecendo a trajetória, coração na região de cruzamento e contratrilho contribuindo para a condução do rodeiro. As demais alternativas invertem ou atribuem funções incorretas aos elementos.",
   },
 ];
 
@@ -1762,343 +2221,853 @@ btnAulaNextSeguranca.addEventListener("click", () => {
 const segurancaQuestions = [
   {
     id: 1,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 1 — Introdução à Segurança Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Qual é o principal objetivo da segurança ferroviária?",
+    pergunta: "Qual é a relação entre segurança ferroviária e os elementos que participam da operação?",
     alternativas: [
-      "Aumentar a velocidade dos trens",
-      "Evitar acidentes e proteger pessoas, equipamentos e infraestrutura",
-      "Reduzir o tempo de parada nas estações",
-      "Aumentar a capacidade de passageiros",
+      "A segurança depende principalmente dos equipamentos utilizados na circulação.",
+      "A segurança depende da atuação isolada dos profissionais responsáveis pela operação.",
+      "A segurança depende da integração entre pessoas, procedimentos, equipamentos, infraestrutura e condições de circulação.",
+      "A segurança depende exclusivamente do cumprimento dos procedimentos estabelecidos.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "O principal objetivo da segurança ferroviária é evitar acidentes e proteger pessoas, equipamentos e infraestrutura.",
+      "A operação ferroviária envolve diferentes elementos que precisam atuar de forma coordenada. Pessoas, procedimentos, equipamentos, infraestrutura e condições de circulação estão relacionados entre si e devem ser considerados de maneira integrada para que a operação permaneça dentro das condições de segurança estabelecidas.",
     explicacaoErrada:
-      "A segurança ferroviária existe para evitar acidentes e proteger pessoas, equipamentos e a infraestrutura. Aumentar velocidade ou capacidade não é o seu objetivo principal.",
+      "A segurança não depende de um único elemento isolado ou da atuação independente dos profissionais. Pessoas, procedimentos, equipamentos, infraestrutura e condições de circulação precisam atuar de forma integrada para que a operação permaneça dentro das condições de segurança.",
   },
   {
     id: 2,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 1 — Introdução à Segurança Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "O que deve ser priorizado diante de uma situação de risco na operação ferroviária?",
+    pergunta: "Qual é o principal objetivo da segurança ferroviária?",
     alternativas: [
-      "Manter a circulação normal",
-      "Evitar atrasos",
-      "Preservar a segurança das pessoas e da operação",
-      "Cumprir o horário previsto",
+      "Eliminar completamente todos os riscos existentes na operação.",
+      "Reduzir a possibilidade de ocorrências que possam causar danos ou comprometer a operação.",
+      "Impedir a realização de atividades que apresentem qualquer possibilidade de risco.",
+      "Concentrar o controle dos riscos em uma única área responsável pela segurança.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "Diante de uma situação de risco, deve-se priorizar a preservação da segurança das pessoas e da operação.",
+      "Os riscos fazem parte do sistema ferroviário e não podem ser simplesmente considerados inexistentes. A segurança ferroviária busca reconhecer esses riscos e estabelecer controles capazes de reduzir a possibilidade de ocorrências que possam afetar pessoas, veículos, infraestrutura, meio ambiente ou a continuidade da operação.",
     explicacaoErrada:
-      "Em situação de risco, a segurança das pessoas e da operação vem antes da circulação normal, dos horários e dos atrasos.",
+      "Eliminar todos os riscos ou impedir qualquer atividade com possibilidade de risco não é possível na prática ferroviária. O objetivo da segurança é reconhecer os riscos e estabelecer controles que reduzam a possibilidade de ocorrências indesejadas.",
   },
   {
     id: 3,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 1 — Introdução à Segurança Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Ao identificar uma condição insegura na via, o profissional deve:",
+    pergunta: "Qual situação pode contribuir para a ocorrência de um evento indesejado?",
     alternativas: [
-      "Ignorá-la se não houver acidente",
-      "Comunicar a situação e seguir os procedimentos aplicáveis",
-      "Aguardar outra pessoa perceber",
-      "Continuar a atividade normalmente",
+      "Apenas uma falha na infraestrutura ferroviária.",
+      "Apenas uma falha nos sistemas de sinalização.",
+      "Uma condição inadequada da via, uma falha de equipamento, uma informação incorreta ou uma ação inadequada.",
+      "Somente uma ação inadequada realizada por um profissional.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "Ao identificar uma condição insegura, o profissional deve comunicar a situação e seguir os procedimentos aplicáveis.",
+      "Uma ocorrência pode resultar da presença de diferentes condições ou da combinação entre elas. Por isso, a análise da segurança não deve considerar apenas um equipamento ou uma pessoa isoladamente, mas também as condições da via, as informações disponíveis e a forma como as atividades estão sendo realizadas.",
     explicacaoErrada:
-      "Identificando uma condição insegura, o correto é comunicar a situação e seguir os procedimentos aplicáveis, nunca ignorá-la ou aguardar que outra pessoa perceba.",
+      "Um evento indesejado não depende de um único fator isolado. Condições inadequadas da via, falhas de equipamento, informações incorretas ou ações inadequadas podem contribuir para uma ocorrência, muitas vezes de forma combinada.",
   },
   {
     id: 4,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 1 — Introdução à Segurança Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Por que é importante respeitar os procedimentos operacionais?",
+    pergunta: "Qual é uma das etapas fundamentais da prevenção?",
     alternativas: [
-      "Porque eles estabelecem condições seguras para a realização das atividades",
-      "Apenas para evitar punições",
-      "Para reduzir o trabalho da equipe",
-      "Somente durante inspeções",
+      "Aguardar a ocorrência de uma situação perigosa para então definir uma medida de controle.",
+      "Identificar as condições que podem comprometer a operação e estabelecer medidas de controle.",
+      "Concentrar a análise somente nas consequências de ocorrências anteriores.",
+      "Considerar apenas os riscos relacionados aos equipamentos utilizados.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "Os procedimentos operacionais são importantes porque estabelecem condições seguras para a realização das atividades.",
+      "A prevenção começa antes da ocorrência de um evento indesejado. Identificar os perigos, compreender como eles podem contribuir para uma ocorrência e estabelecer medidas de controle permite atuar antecipadamente sobre as condições que podem comprometer a segurança da operação.",
     explicacaoErrada:
-      "Os procedimentos definem condições seguras para a realização das atividades. Não devem ser seguidos apenas para evitar punições ou somente durante inspeções.",
+      "A prevenção age antes que uma situação perigosa produza consequências. Identificar os perigos e estabelecer medidas de controle antecipadamente é o caminho para atuar sobre as condições que podem comprometer a operação, e não aguardar o evento acontecer.",
   },
   {
     id: 5,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 1 — Introdução à Segurança Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "O que caracteriza uma condição insegura?",
+    pergunta: "Um sistema ferroviário pode ser considerado seguro quando:",
     alternativas: [
-      "Uma situação que pode contribuir para um acidente ou incidente",
-      "Uma atividade realizada dentro do procedimento",
-      "Uma operação dentro dos limites estabelecidos",
-      "Uma situação previamente autorizada e controlada",
+      "Todos os riscos existentes foram eliminados.",
+      "Nenhuma condição de risco é identificada durante a operação.",
+      "Os riscos existentes são reconhecidos e controlados de forma adequada.",
+      "Apenas os equipamentos de segurança estão funcionando corretamente.",
     ],
-    correta: 0,
+    correta: 2,
     explicacaoCorrecta:
-      "Condição insegura é uma situação que pode contribuir para a ocorrência de um acidente ou incidente.",
+      "A segurança não depende da eliminação de todos os riscos existentes. Um sistema seguro é aquele em que os riscos são reconhecidos e existem medidas adequadas para mantê-los sob controle, considerando as condições reais da operação.",
     explicacaoErrada:
-      "Condição insegura é aquela que pode contribuir para um acidente ou incidente. Atividades dentro do procedimento não são condições inseguras.",
+      "Todo sistema ferroviário apresenta riscos que não podem ser simplesmente eliminados. Um sistema seguro é aquele em que os riscos são reconhecidos e medidas adequadas os mantêm sob controle, considerando as condições reais da operação.",
   },
   {
     id: 6,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 1 — Introdução à Segurança Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "O que é um comportamento inseguro?",
+    pergunta: "Durante uma atividade operacional, quais condições devem ser consideradas em conjunto para manter a atividade dentro das condições de segurança?",
     alternativas: [
-      "Uma ação que desrespeita uma condição ou procedimento de segurança",
-      "Uma inspeção preventiva",
-      "Uma comunicação operacional",
-      "Uma atividade planejada",
+      "Somente a informação disponível e o cumprimento dos procedimentos.",
+      "O estado dos equipamentos e as condições da via, independentemente das demais condições.",
+      "A informação disponível, o estado dos equipamentos, as condições da via e o cumprimento dos procedimentos.",
+      "Apenas as condições observadas no início da atividade.",
     ],
-    correta: 0,
+    correta: 2,
     explicacaoCorrecta:
-      "Comportamento inseguro é uma ação que desrespeita uma condição ou procedimento de segurança.",
+      "As condições de uma atividade não dependem de um único fator. A informação disponível, o estado dos equipamentos, as condições da via e o cumprimento dos procedimentos precisam ser considerados em conjunto, tanto antes quanto durante a realização da atividade.",
     explicacaoErrada:
-      "Comportamento inseguro é uma ação que desrespeita uma condição ou procedimento de segurança. Inspeção preventiva e comunicação operacional não são comportamentos inseguros.",
+      "As condições de uma atividade não dependem de um único fator. A informação disponível, o estado dos equipamentos, as condições da via e o cumprimento dos procedimentos devem ser considerados em conjunto durante toda a atividade, não apenas no início.",
   },
   {
     id: 7,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 2 — Riscos na Operação Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Ao perceber que uma atividade não pode ser realizada com segurança, a atitude mais adequada é:",
+    pergunta: "Os riscos presentes em uma operação ferroviária podem variar principalmente em função:",
     alternativas: [
-      "Continuar para não atrasar a operação",
-      "Improvisar uma solução",
-      "Interromper ou não iniciar a atividade e comunicar a situação conforme o procedimento",
-      "Esperar que o problema desapareça",
+      "Apenas do tipo de trem utilizado na operação.",
+      "Da atividade realizada, do local, das condições da via, dos equipamentos e das características da operação.",
+      "Somente das condições da infraestrutura ferroviária.",
+      "Apenas dos procedimentos utilizados pelos profissionais.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "Sem condições seguras, a atitude adequada é interromper ou não iniciar a atividade e comunicar a situação conforme o procedimento.",
+      "O risco não é necessariamente o mesmo em todas as situações. Ele pode variar conforme a atividade realizada, o local, as condições da via, os equipamentos utilizados e as características da operação. Por isso, a avaliação deve considerar o contexto em que a atividade ocorre.",
     explicacaoErrada:
-      "Quando a atividade não pode ser realizada com segurança, deve-se interrompê-la ou não iniciá-la e comunicar a situação conforme o procedimento, evitando continuar ou improvisar.",
+      "O risco varia conforme o contexto da atividade e não depende de um único fator, como o tipo de trem ou a infraestrutura. A avaliação deve considerar a atividade, o local, as condições da via, os equipamentos e as características da operação.",
   },
   {
     id: 8,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 2 — Riscos na Operação Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Por que a comunicação entre os profissionais é fundamental na operação ferroviária?",
+    pergunta: "Durante a realização de uma atividade, uma condição inicialmente controlada se modifica. Qual deve ser a atitude diante dessa situação?",
     alternativas: [
-      "Apenas para registrar ocorrências",
-      "Para garantir que informações importantes para a segurança sejam transmitidas corretamente",
-      "Para reduzir o tempo de trabalho",
-      "Somente para atividades administrativas",
+      "Manter a atividade sem alterações, pois os riscos já foram avaliados inicialmente.",
+      "Prosseguir normalmente e avaliar a nova condição somente após o término da atividade.",
+      "Observar a alteração e reavaliar as condições de segurança antes de continuar a atividade.",
+      "Encerrar automaticamente qualquer atividade sempre que houver uma alteração.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "A comunicação é fundamental para garantir que informações importantes para a segurança sejam transmitidas corretamente.",
+      "Uma condição que era segura no início pode deixar de ser segura após uma mudança. Por isso, as condições devem continuar sendo observadas durante a atividade. Quando uma alteração puder interferir na segurança, ela deve ser considerada antes da continuidade do trabalho.",
     explicacaoErrada:
-      "A comunicação entre os profissionais garante que informações importantes para a segurança sejam transmitidas corretamente. Não serve apenas para registros ou atividades administrativas.",
+      "As condições de segurança devem continuar sendo observadas durante toda a atividade. Quando uma condição inicialmente controlada se modifica, é necessário reavaliar as condições antes de continuar, em vez de manter o trabalho sem considerar a alteração.",
   },
   {
     id: 9,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 2 — Riscos na Operação Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Uma informação operacional recebida de forma incompleta deve ser:",
+    pergunta: "Qual situação pode modificar as condições de segurança de uma operação que já está em andamento?",
     alternativas: [
-      "Interpretada conforme a experiência pessoal",
-      "Ignorada",
-      "Confirmada antes de uma ação que possa afetar a segurança",
-      "Repassada imediatamente sem confirmação",
+      "Apenas uma alteração previamente prevista no procedimento.",
+      "Uma falha de equipamento, uma mudança na circulação ou uma informação que não corresponda à situação real.",
+      "Somente uma alteração nas condições climáticas.",
+      "Apenas uma mudança na equipe responsável pela atividade.",
     ],
-    correta: 2,
+    correta: 1,
     explicacaoCorrecta:
-      "Informação incompleta deve ser confirmada antes de qualquer ação que possa afetar a segurança.",
+      "Uma operação pode sofrer alterações enquanto está sendo realizada. Falhas de equipamentos, mudanças na circulação ou informações que não correspondam à situação real podem modificar as condições existentes e, consequentemente, os riscos associados à atividade.",
     explicacaoErrada:
-      "Uma informação incompleta deve ser confirmada antes de uma ação que possa afetar a segurança, e não interpretada ou repassada sem confirmação.",
+      "As condições de uma operação podem se modificar durante a sua realização por diferentes motivos. Falhas de equipamentos, mudanças na circulação ou informações que não correspondam à situação real podem alterar os riscos associados à atividade.",
   },
   {
     id: 10,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 2 — Riscos na Operação Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Durante uma atividade próxima à via férrea, por que o profissional deve manter atenção constante ao ambiente e à movimentação dos trens?",
+    pergunta: "A análise de um risco deve considerar:",
     alternativas: [
-      "Porque a movimentação ferroviária pode ocorrer a qualquer momento e exige que o profissional reconheça os riscos e mantenha-se em condição segura",
-      "Porque a atenção é necessária apenas quando há grande quantidade de trens circulando",
-      "Porque a movimentação dos trens pode causar somente desconforto e ruído",
-      "Porque a atenção serve principalmente para evitar atrasos na atividade",
+      "Apenas a possibilidade de ocorrer um evento.",
+      "Somente as consequências depois que o evento acontecer.",
+      "O que pode acontecer, as condições que podem contribuir para isso e as medidas que podem ser adotadas.",
+      "Apenas os procedimentos existentes para a atividade.",
     ],
-    correta: 0,
+    correta: 2,
     explicacaoCorrecta:
-      "A movimentação ferroviária pode ocorrer a qualquer momento, por isso o profissional deve reconhecer os riscos e manter-se em condição segura.",
+      "Analisar um risco significa compreender não apenas o evento que pode ocorrer, mas também as condições que podem contribuir para sua ocorrência e as medidas disponíveis para evitá-lo ou reduzir suas consequências. Essa análise permite atuar preventivamente.",
     explicacaoErrada:
-      "A atenção constante é necessária porque a movimentação ferroviária pode ocorrer a qualquer momento, exigindo o reconhecimento dos riscos e a manutenção de condição segura.",
+      "A análise de um risco vai além da possibilidade do evento ou das consequências após ocorrer. É necessário compreender também as condições que podem contribuir para a ocorrência e as medidas que podem ser adotadas para preveni-la.",
   },
   {
     id: 11,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 2 — Riscos na Operação Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Antes de acessar uma área operacional, é importante:",
+    pergunta: "Um procedimento estabelece uma forma segura de realizar determinada atividade. Durante sua execução, porém, surge uma condição anormal que não estava presente inicialmente. Qual situação representa melhor esse princípio de segurança?",
     alternativas: [
-      "Verificar as condições de segurança e as autorizações necessárias",
-      "Entrar rapidamente para reduzir o tempo de exposição",
-      "Entrar somente se não houver passageiros",
-      "Seguir apenas a própria experiência",
+      "O procedimento deve ser seguido sem considerar a nova condição, pois já foi definido previamente.",
+      "A condição anormal deve ser considerada, pois seguir um procedimento sem perceber uma alteração pode não ser suficiente para controlar o risco.",
+      "O procedimento deve ser abandonado imediatamente, independentemente da situação encontrada.",
+      "A condição deve ser ignorada caso ainda não tenha causado uma ocorrência.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "Antes de acessar uma área operacional, é importante verificar as condições de segurança e as autorizações necessárias.",
+      "Os procedimentos estabelecem formas seguras de realizar atividades, mas sua aplicação deve considerar as condições reais encontradas. Se uma condição anormal surgir, simplesmente continuar seguindo o procedimento sem reconhecer a mudança pode não ser suficiente para controlar o novo risco.",
     explicacaoErrada:
-      "Antes de acessar uma área operacional deve-se verificar as condições de segurança e as autorizações necessárias, e não confiar apenas na experiência ou entrar de forma apressada.",
+      "Os procedimentos estabelecem formas seguras de realizar atividades, mas não devem ser aplicados sem considerar as condições reais. Quando uma condição anormal surge, ela precisa ser reconhecida, pois continuar sem perceber a mudança pode não ser suficiente para controlar o risco.",
   },
   {
     id: 12,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 2 — Riscos na Operação Ferroviária",
     dificuldade: "Fácil",
-    pergunta: "Qual situação representa um risco grave durante uma atividade na via?",
+    pergunta: "Por que a identificação antecipada de uma condição de risco é importante para a prevenção?",
     alternativas: [
-      "Permanecer em local seguro e autorizado",
-      "Realizar uma atividade sem considerar a possibilidade de circulação ferroviária",
-      "Utilizar os equipamentos previstos",
-      "Manter comunicação com a equipe",
+      "Porque permite eliminar qualquer possibilidade de ocorrência.",
+      "Porque permite reconhecer o perigo, avaliar suas possíveis consequências e estabelecer um controle antes que a situação resulte em um evento indesejado.",
+      "Porque permite substituir os procedimentos existentes por decisões tomadas no momento da atividade.",
+      "Porque torna desnecessária a observação das condições durante a execução do trabalho.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "Realizar uma atividade sem considerar a possibilidade de circulação ferroviária representa um risco grave.",
+      "A identificação antecipada permite agir antes que uma condição de risco produza uma consequência. Ao reconhecer o perigo, avaliar o que pode acontecer e estabelecer medidas de controle, aumenta-se a possibilidade de evitar ou reduzir os efeitos de um evento indesejado.",
     explicacaoErrada:
-      "O risco grave é realizar atividade sem considerar a possibilidade de circulação ferroviária. Permanecer em local seguro, usar equipamentos e manter comunicação não representam esse risco.",
+      "A identificação antecipada permite agir antes que a condição de risco produza consequências. Reconhecer o perigo, avaliar o que pode acontecer e estabelecer medidas de controle não elimina toda possibilidade de ocorrência, mas aumenta a chance de evitá-la ou reduzir seus efeitos.",
   },
   {
     id: 13,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 3 — Circulação e Movimentação de Trens",
     dificuldade: "Fácil",
-    pergunta: "Por que a identificação dos riscos deve ocorrer antes da execução de uma atividade?",
+    pergunta: "Para que um movimento ferroviário seja realizado com segurança, é necessário conhecer:",
     alternativas: [
-      "Para permitir que medidas preventivas sejam adotadas",
-      "Para aumentar a velocidade da atividade",
-      "Para evitar registros",
-      "Para substituir os procedimentos operacionais",
+      "Apenas a velocidade prevista para o deslocamento.",
+      "As condições da via, a situação da circulação e as condições estabelecidas para o movimento.",
+      "Somente a posição dos aparelhos de mudança de via.",
+      "Apenas as condições do veículo que realizará o movimento.",
     ],
-    correta: 0,
+    correta: 1,
     explicacaoCorrecta:
-      "Identificar os riscos antes da atividade permite que medidas preventivas sejam adotadas.",
+      "Um movimento ferroviário precisa estar relacionado às condições reais da operação. Conhecer a situação da via, da circulação e as condições estabelecidas para o deslocamento permite que o movimento seja realizado de forma compatível com o que foi definido para aquela operação.",
     explicacaoErrada:
-      "A identificação prévia dos riscos permite a adoção de medidas preventivas. Ela não visa aumentar a velocidade nem substituir os procedimentos operacionais.",
+      "Um movimento seguro não depende apenas da velocidade prevista ou do veículo. É necessário conhecer as condições da via, a situação da circulação e as condições estabelecidas para que o deslocamento seja compatível com o que foi definido para a operação.",
   },
   {
     id: 14,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 3 — Circulação e Movimentação de Trens",
     dificuldade: "Fácil",
-    pergunta: "Um profissional percebe que seu colega está prestes a realizar uma ação que pode gerar risco. O que deve fazer?",
+    pergunta: "Antes de realizar um movimento ferroviário, quais informações podem ser necessárias para determinar por onde e em quais condições o veículo poderá circular?",
     alternativas: [
-      "Não interferir",
-      "Avisá-lo e agir conforme os procedimentos de segurança aplicáveis",
-      "Esperar acontecer um problema",
-      "Registrar a situação somente depois",
+      "Apenas a condição do veículo e a velocidade máxima permitida.",
+      "A condição da via, a posição dos aparelhos de mudança de via, a sinalização e outras condições estabelecidas para o movimento.",
+      "Somente a posição dos aparelhos de mudança de via e a condição dos equipamentos.",
+      "Apenas as informações relacionadas ao destino do veículo.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "Ao perceber uma ação que pode gerar risco, deve-se avisar o colega e agir conforme os procedimentos de segurança aplicáveis.",
+      "A circulação depende de diferentes condições que precisam ser conhecidas antes do movimento. A situação da via, a posição dos aparelhos de mudança de via, a sinalização e outras condições estabelecidas ajudam a determinar por onde e em quais condições o veículo poderá se deslocar.",
     explicacaoErrada:
-      "Deve-se avisar o colega e agir conforme os procedimentos de segurança aplicáveis, e não apenas esperar ou registrar a situação depois.",
+      "Antes do movimento é necessário conhecer mais do que o veículo e a velocidade. A condição da via, a posição dos aparelhos de mudança de via, a sinalização e outras condições estabelecidas ajudam a definir por onde e em quais condições o veículo poderá circular.",
   },
   {
     id: 15,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 3 — Circulação e Movimentação de Trens",
     dificuldade: "Fácil",
-    pergunta: "Qual é a finalidade de uma inspeção de segurança?",
+    pergunta: "Uma autorização ou condição estabelecida para um movimento deve:",
     alternativas: [
-      "Procurar apenas defeitos já conhecidos",
-      "Identificar perigos, condições inseguras e possíveis falhas antes que provoquem acidentes",
-      "Aumentar a velocidade da operação",
-      "Substituir a manutenção",
+      "Ser mantida mesmo quando a situação real da operação se modificar.",
+      "Corresponder à situação real da operação.",
+      "Considerar somente a intenção do profissional que realizará o movimento.",
+      "Ser definida apenas depois que o movimento tiver sido iniciado.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "A inspeção de segurança serve para identificar perigos, condições inseguras e possíveis falhas antes que provoquem acidentes.",
+      "Uma autorização ou condição de movimento precisa representar a situação real da operação. Informações incorretas ou desatualizadas podem levar a um deslocamento incompatível com as condições da via ou da circulação e, consequentemente, comprometer a segurança.",
     explicacaoErrada:
-      "A finalidade da inspeção de segurança é identificar perigos, condições inseguras e falhas antes que provoquem acidentes, e não procurar apenas defeitos conhecidos.",
+      "Uma autorização ou condição de movimento não pode se basear apenas na intenção do profissional nem permanecer inalterada diante de mudanças. Ela precisa representar a situação real da operação para evitar um deslocamento incompatível com a via ou a circulação.",
   },
   {
     id: 16,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 3 — Circulação e Movimentação de Trens",
     dificuldade: "Fácil",
-    pergunta: "Em caso de emergência ferroviária, a primeira preocupação deve ser:",
+    pergunta: "Durante a circulação, qual deve ser a conduta diante de uma condição determinada pela sinalização que não permita a continuidade do movimento?",
     alternativas: [
-      "Evitar atrasos",
-      "Preservar vidas e controlar o risco",
-      "Retomar imediatamente a circulação",
-      "Evitar comunicação externa",
+      "Continuar o movimento até que outra informação seja recebida.",
+      "Prosseguir se a via aparentar estar livre.",
+      "Respeitar a condição indicada pela sinalização.",
+      "Considerar somente a velocidade permitida para o trecho.",
     ],
-    correta: 1,
+    correta: 2,
     explicacaoCorrecta:
-      "Em uma emergência, a primeira preocupação deve ser preservar vidas e controlar o risco.",
+      "A sinalização constitui um elemento fundamental para o controle dos movimentos ferroviários. Quando sua indicação estabelece uma condição que não permite a continuidade do movimento, essa condição deve ser respeitada, independentemente de a via aparentar estar livre.",
     explicacaoErrada:
-      "Em emergência, a prioridade é preservar vidas e controlar o risco. Atrasos, retomada da circulação e comunicação vêm depois da segurança.",
+      "A sinalização é um elemento fundamental para o controle dos movimentos ferroviários. Quando ela não permite a continuidade do movimento, essa condição deve ser respeitada, ainda que a via aparente estar livre.",
   },
   {
     id: 17,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 3 — Circulação e Movimentação de Trens",
     dificuldade: "Fácil",
-    pergunta: "Por que improvisações podem ser perigosas na operação ferroviária?",
+    pergunta: "Os limites de velocidade durante a circulação podem estar relacionados:",
     alternativas: [
-      "Porque podem introduzir riscos não previstos nos procedimentos",
-      "Porque sempre aumentam o custo",
-      "Porque tornam a atividade mais rápida",
-      "Porque dificultam somente os registros",
-    ],
-    correta: 0,
-    explicacaoCorrecta:
-      "Improvisações podem introduzir riscos não previstos nos procedimentos, por isso são perigosas.",
-    explicacaoErrada:
-      "Improvisar pode introduzir riscos não previstos nos procedimentos. A segurança depende de seguir as condições estabelecidas.",
-  },
-  {
-    id: 18,
-    tema: "Segurança Ferroviária",
-    dificuldade: "Fácil",
-    pergunta: "O uso correto dos equipamentos de proteção individual (EPI) tem como finalidade:",
-    alternativas: [
-      "Substituir todos os procedimentos de segurança",
-      "Reduzir a exposição do trabalhador aos riscos existentes na atividade",
-      "Permitir que qualquer atividade seja realizada",
-      "Eliminar completamente os riscos da operação",
+      "Apenas às características do veículo ferroviário.",
+      "Às características da via, às condições operacionais, à sinalização ou a outras restrições estabelecidas.",
+      "Somente às condições da sinalização.",
+      "Exclusivamente à decisão do profissional responsável pelo movimento.",
     ],
     correta: 1,
     explicacaoCorrecta:
-      "O EPI tem como finalidade reduzir a exposição do trabalhador aos riscos existentes na atividade.",
+      "A velocidade segura não depende exclusivamente do veículo. Ela também pode estar relacionada às características da via, às condições operacionais, à sinalização e a outras restrições estabelecidas para determinado trecho ou situação.",
     explicacaoErrada:
-      "O EPI reduz a exposição do trabalhador aos riscos existentes. Ele não substitui os procedimentos de segurança nem elimina completamente os riscos.",
+      "A velocidade segura não depende apenas do veículo. Ela pode estar relacionada às características da via, às condições operacionais, à sinalização e a outras restrições estabelecidas para o trecho ou situação.",
+  },
+  {
+    id: 18,
+    tema: "Aula 3 — Circulação e Movimentação de Trens",
+    dificuldade: "Fácil",
+    pergunta: "Durante uma movimentação ferroviária, ocorre uma alteração relevante nas condições inicialmente estabelecidas. O que deve ser considerado antes da continuidade do movimento?",
+    alternativas: [
+      "A alteração pode ser ignorada se o movimento já tiver sido iniciado.",
+      "Somente a velocidade do veículo precisa ser ajustada.",
+      "A nova condição deve ser considerada, podendo ser necessária a interrupção ou adequação do movimento conforme os procedimentos aplicáveis.",
+      "A continuidade deve ocorrer normalmente, desde que a via esteja aparentemente livre.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "O início de um movimento não significa que suas condições permanecerão inalteradas. Uma mudança na via, na sinalização ou em outras condições operacionais pode tornar o movimento incompatível com a situação atual. Nesses casos, a nova condição precisa ser considerada antes da continuidade.",
+    explicacaoErrada:
+      "As condições de um movimento podem se alterar depois do seu início. Uma mudança na via, na sinalização ou em outras condições operacionais deve ser considerada antes da continuidade, podendo ser necessária a interrupção ou adequação do movimento conforme os procedimentos.",
   },
   {
     id: 19,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 4 — Segurança nas Áreas Operacionais",
     dificuldade: "Fácil",
-    pergunta: "Durante uma atividade operacional, ocorre uma situação diferente da prevista no procedimento. Qual deve ser a conduta mais segura?",
+    pergunta: "Antes de acessar ou permanecer em uma área operacional ferroviária, é necessário:",
     alternativas: [
-      "Continuar a atividade e adaptar a execução conforme a experiência do profissional",
-      "Resolver a situação rapidamente para evitar impacto na circulação",
-      "Avaliar a condição, comunicar imediatamente ao CCO e seguir os procedimentos e orientações operacionais aplicáveis",
-      "Aguardar a ocorrência de um problema antes de comunicar ao CCO",
+      "Estar autorizado para acessar o local, conhecer os riscos existentes e observar as condições estabelecidas para a atividade.",
+      "Verificar somente se há algum trem parado nas proximidades.",
+      "Confirmar apenas se os equipamentos utilizados na atividade estão disponíveis.",
+      "Aguardar o início da atividade para identificar os riscos existentes.",
     ],
-    correta: 2,
+    correta: 0,
     explicacaoCorrecta:
-      "Diante de uma situação não prevista no procedimento, a conduta mais segura é avaliar a condição, comunicar imediatamente ao CCO e seguir os procedimentos e orientações operacionais aplicáveis.",
+      "O acesso a uma área operacional deve estar relacionado à atividade que será realizada e às condições estabelecidas para sua execução. Por isso, além de estar autorizado a acessar o local, é necessário conhecer os riscos existentes e identificar as condições que precisam ser observadas durante a atividade. A segurança não depende apenas da autorização de acesso, mas também da compreensão dos riscos e das condições do ambiente.",
     explicacaoErrada:
-      "Situações não previstas exigem avaliação e comunicação imediata ao CCO, seguindo procedimentos e orientações aplicáveis, em vez de improvisar ou aguardar um problema acontecer.",
+      "A segurança no acesso a uma área operacional não depende apenas de verificar a presença de trens ou a disponibilidade de equipamentos. É necessário estar autorizado, conhecer os riscos existentes e observar as condições estabelecidas para a atividade.",
   },
   {
     id: 20,
-    tema: "Segurança Ferroviária",
+    tema: "Aula 4 — Segurança nas Áreas Operacionais",
     dificuldade: "Fácil",
-    pergunta: "Qual atitude melhor representa uma cultura de segurança?",
+    pergunta: "Por que a via permanente deve ser tratada como uma área de risco?",
     alternativas: [
-      "Priorizar a produtividade mesmo diante de riscos",
-      "Corrigir somente situações que já causaram acidentes",
-      "Identificar riscos, comunicar desvios e agir preventivamente",
-      "Evitar comunicar problemas para não interromper a operação",
+      "Porque qualquer atividade realizada próxima à via é proibida.",
+      "Porque a aproximação de um trem pode ocorrer em diferentes condições de velocidade e nem sempre será percebida com antecedência suficiente para permitir uma reação segura.",
+      "Porque os trens circulam sempre em alta velocidade.",
+      "Porque somente profissionais autorizados podem observar a circulação ferroviária.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A via permanente é destinada à circulação ferroviária e, por isso, a presença de pessoas nesse ambiente exige atenção permanente às condições de circulação. Um trem pode se aproximar em diferentes condições de velocidade e sua aproximação nem sempre será percebida com antecedência suficiente para permitir uma reação segura. Dessa forma, a percepção do risco deve ser mantida durante toda a atividade.",
+    explicacaoErrada:
+      "O risco da via permanente não decorre de os trens circularem sempre em alta velocidade ou de qualquer atividade próxima ser proibida. Um trem pode se aproximar em diferentes condições de velocidade, e sua aproximação nem sempre será percebida a tempo de permitir uma reação segura.",
+  },
+  {
+    id: 21,
+    tema: "Aula 4 — Segurança nas Áreas Operacionais",
+    dificuldade: "Fácil",
+    pergunta: "Em plataformas e áreas de embarque e desembarque, qual condição é importante para a segurança?",
+    alternativas: [
+      "A separação adequada entre a circulação dos passageiros e a movimentação ferroviária.",
+      "A permanência dos passageiros próximos à via durante a aproximação do trem.",
+      "A realização do embarque antes da chegada do trem à plataforma.",
+      "A circulação de passageiros independentemente das condições da operação.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "Plataformas são locais onde ocorre a interação entre passageiros e a movimentação ferroviária. A segurança depende da adequada separação entre esses fluxos e do respeito às condições estabelecidas para a aproximação do trem, abertura e fechamento das portas e embarque ou desembarque.",
+    explicacaoErrada:
+      "Em plataformas ocorre a interação entre passageiros e a movimentação ferroviária. A segurança depende da adequada separação entre esses fluxos e do respeito às condições estabelecidas para aproximação do trem, abertura e fechamento das portas e embarque ou desembarque.",
+  },
+  {
+    id: 22,
+    tema: "Aula 4 — Segurança nas Áreas Operacionais",
+    dificuldade: "Fácil",
+    pergunta: "Durante o embarque ou desembarque de passageiros, qual situação deve ser considerada para manter a segurança?",
+    alternativas: [
+      "Apenas a presença do trem na plataforma.",
+      "A aproximação do trem, a abertura e o fechamento das portas e as condições estabelecidas para o embarque ou desembarque.",
+      "Somente o tempo disponível para o embarque.",
+      "Apenas a quantidade de passageiros presentes na plataforma.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "O embarque e o desembarque envolvem passageiros e movimentação ferroviária. Por isso, a segurança não depende apenas da presença do trem na plataforma. É necessário considerar as condições de sua aproximação, a abertura e o fechamento das portas e as condições estabelecidas para a realização dessas atividades.",
+    explicacaoErrada:
+      "A segurança no embarque e desembarque não depende apenas da presença do trem ou do tempo disponível. É necessário considerar a aproximação do trem, a abertura e o fechamento das portas e as condições estabelecidas para essas atividades.",
+  },
+  {
+    id: 23,
+    tema: "Aula 4 — Segurança nas Áreas Operacionais",
+    dificuldade: "Fácil",
+    pergunta: "Em oficinas e áreas destinadas à manutenção, antes de iniciar uma intervenção em um equipamento, devem ser consideradas:",
+    alternativas: [
+      "Somente as condições atuais do equipamento.",
+      "As condições do equipamento, os possíveis movimentos e as medidas necessárias para impedir que uma movimentação inesperada coloque pessoas em risco.",
+      "Apenas as ferramentas necessárias para realizar o serviço.",
+      "Somente a duração prevista para a intervenção.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Uma intervenção de manutenção pode envolver riscos relacionados ao próprio equipamento e a possíveis movimentos durante a atividade. Por isso, antes de iniciar o trabalho, é necessário considerar essas condições e adotar as medidas necessárias para impedir que uma movimentação inesperada coloque pessoas em risco.",
+    explicacaoErrada:
+      "Uma intervenção de manutenção pode envolver riscos além das condições atuais do equipamento ou das ferramentas. É necessário considerar os possíveis movimentos e adotar medidas para impedir que uma movimentação inesperada coloque pessoas em risco.",
+  },
+  {
+    id: 24,
+    tema: "Aula 4 — Segurança nas Áreas Operacionais",
+    dificuldade: "Fácil",
+    pergunta: "Uma atividade em uma área operacional envolve duas equipes diferentes. Para que a atividade seja realizada com segurança, é importante que:",
+    alternativas: [
+      "Cada equipe tenha conhecimento somente da parte da atividade sob sua responsabilidade.",
+      "Apenas o responsável pela atividade conheça as condições do local.",
+      "Todos os envolvidos tenham entendimento compatível sobre o que será realizado e sobre as condições necessárias para a execução.",
+      "A comunicação entre as equipes ocorra somente depois que a atividade for concluída.",
     ],
     correta: 2,
     explicacaoCorrecta:
-      "Uma cultura de segurança é representada por identificar riscos, comunicar desvios e agir preventivamente.",
+      "Quando uma atividade envolve mais de uma pessoa ou equipe, informações diferentes ou incompletas podem gerar interpretações incompatíveis. Por isso, todos os envolvidos precisam possuir entendimento compatível sobre o que será realizado e sobre as condições necessárias para executar suas responsabilidades com segurança.",
     explicacaoErrada:
-      "Cultura de segurança significa identificar riscos, comunicar desvios e agir preventivamente, e não priorizar produtividade diante de riscos ou ocultar problemas.",
+      "Quando uma atividade envolve mais de uma equipe, o conhecimento parcial ou a comunicação apenas após a conclusão podem gerar interpretações incompatíveis. Todos os envolvidos precisam ter entendimento compatível sobre o que será realizado e sobre as condições para a execução.",
+  },
+  {
+    id: 25,
+    tema: "Aula 5 — Passagens em Nível",
+    dificuldade: "Fácil",
+    pergunta: "O que caracteriza uma passagem em nível?",
+    alternativas: [
+      "O local onde duas linhas ferroviárias se cruzam em níveis diferentes.",
+      "O local onde a via ferroviária e uma rota rodoviária ou de pedestres se cruzam no mesmo nível.",
+      "O local destinado exclusivamente à circulação de veículos ferroviários.",
+      "O local onde ocorre a mudança de uma via ferroviária para outra.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A passagem em nível é o ponto de cruzamento, no mesmo nível, entre a via ferroviária e uma rota utilizada por veículos ou pedestres. Essa característica faz com que diferentes formas de circulação compartilhem uma mesma área de conflito.",
+    explicacaoErrada:
+      "A passagem em nível não é um cruzamento entre linhas ferroviárias nem um local exclusivo para trens. Ela é o ponto onde a via ferroviária e uma rota rodoviária ou de pedestres se cruzam no mesmo nível, formando uma área de conflito.",
+  },
+  {
+    id: 26,
+    tema: "Aula 5 — Passagens em Nível",
+    dificuldade: "Fácil",
+    pergunta: "Quais fatores podem influenciar a segurança em uma passagem em nível?",
+    alternativas: [
+      "Apenas a presença de sinalização ferroviária.",
+      "Somente o comportamento dos usuários da passagem.",
+      "As características do local, a visibilidade, a sinalização, os equipamentos de proteção e o comportamento dos usuários.",
+      "Exclusivamente as condições da via ferroviária.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "A segurança em uma passagem em nível resulta da combinação de diferentes fatores. As características do local, a visibilidade, a sinalização, os sistemas de proteção e o comportamento dos usuários podem interferir na possibilidade de identificar e evitar uma situação de conflito.",
+    explicacaoErrada:
+      "A segurança em uma passagem em nível não depende de um único fator, como apenas a sinalização ou o comportamento dos usuários. Ela resulta da combinação das características do local, da visibilidade, da sinalização, dos equipamentos de proteção e do comportamento dos usuários.",
+  },
+  {
+    id: 27,
+    tema: "Aula 5 — Passagens em Nível",
+    dificuldade: "Fácil",
+    pergunta: "Qual é a diferença entre sinalização passiva e sinalização ativa em uma passagem em nível?",
+    alternativas: [
+      "A sinalização passiva depende da aproximação de um trem, enquanto a ativa permanece sempre igual.",
+      "A sinalização passiva fornece informações permanentes, enquanto a ativa pode variar conforme a situação da circulação.",
+      "A sinalização passiva é utilizada somente para veículos ferroviários, enquanto a ativa é exclusiva para pedestres.",
+      "Não existe diferença entre os dois tipos de sinalização.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A sinalização passiva fornece uma informação permanente aos usuários. Já a sinalização ativa pode apresentar mudanças conforme a situação, podendo indicar a aproximação de um trem por meio de recursos como luzes, sons e barreiras, conforme o sistema existente.",
+    explicacaoErrada:
+      "A sinalização passiva fornece uma informação permanente aos usuários, enquanto a ativa pode variar conforme a circulação, indicando a aproximação de um trem por meio de luzes, sons ou barreiras. Não se trata de sinalização para públicos distintos, e a diferença entre os dois tipos existe.",
+  },
+  {
+    id: 28,
+    tema: "Aula 5 — Passagens em Nível",
+    dificuldade: "Fácil",
+    pergunta: "Por que a visibilidade é um fator importante em uma passagem em nível?",
+    alternativas: [
+      "Porque permite que o usuário identifique a aproximação de um trem com tempo suficiente para tomar uma decisão segura.",
+      "Porque elimina a necessidade de sinalização no local.",
+      "Porque impede que os trens circulem enquanto houver usuários na passagem.",
+      "Porque substitui os equipamentos de proteção existentes.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "A visibilidade contribui para que o usuário perceba a aproximação de um trem e tenha tempo suficiente para avaliar a situação. Por isso, obstáculos e características do entorno são fatores importantes quando se considera a segurança de uma passagem em nível.",
+    explicacaoErrada:
+      "A visibilidade contribui para que o usuário perceba a aproximação do trem e avalie a situação com antecedência. Ela não elimina a necessidade de sinalização nem substitui os equipamentos de proteção existentes na passagem.",
+  },
+  {
+    id: 29,
+    tema: "Aula 5 — Passagens em Nível",
+    dificuldade: "Fácil",
+    pergunta: "Qual conduta é recomendada antes de atravessar uma passagem em nível?",
+    alternativas: [
+      "Atravessar rapidamente para reduzir o tempo de permanência no local.",
+      "Pare, olhe e escute, respeitando a sinalização e verificando se existe aproximação de trem.",
+      "Atravessar sempre que não houver uma barreira fechada.",
+      "Observar somente a direção de onde normalmente circulam os trens.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Antes de atravessar, o usuário deve parar, observar e escutar, além de respeitar a sinalização existente e verificar a presença de trem. Se houver uma situação que torne a travessia insegura, deve-se aguardar.",
+    explicacaoErrada:
+      "Atravessar rapidamente ou apenas com base na ausência de barreira fechada não garante segurança. Antes de atravessar, o usuário deve parar, olhar e escutar, respeitando a sinalização e verificando se existe aproximação de trem.",
+  },
+  {
+    id: 30,
+    tema: "Aula 5 — Passagens em Nível",
+    dificuldade: "Fácil",
+    pergunta: "Por que um trem exige atenção especial ao se aproximar de uma passagem em nível?",
+    alternativas: [
+      "Porque o trem possui características de massa e distância de frenagem que diferem das de um veículo rodoviário.",
+      "Porque o trem pode interromper sua circulação imediatamente diante de qualquer obstáculo.",
+      "Porque o trem possui prioridade apenas quando a passagem está sem sinalização.",
+      "Porque a velocidade do trem é sempre superior à dos veículos rodoviários.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "O trem possui características próprias de massa e frenagem. Por isso, uma decisão de atravessar a passagem em nível deve ser tomada antes de entrar na zona de conflito, considerando a aproximação do trem e as condições de segurança existentes.",
+    explicacaoErrada:
+      "O trem não consegue interromper a circulação imediatamente nem tem sua prioridade condicionada à sinalização. Suas características de massa e de distância de frenagem diferem das de um veículo rodoviário, e por isso a decisão de atravessar deve ocorrer antes de entrar na zona de conflito.",
+  },
+  {
+    id: 31,
+    tema: "Aula 6 — Comunicação e Segurança Operacional",
+    dificuldade: "Fácil",
+    pergunta: "Por que a comunicação é considerada um elemento importante para a segurança operacional?",
+    alternativas: [
+      "Porque substitui a necessidade de procedimentos durante as atividades.",
+      "Porque as decisões e ações podem depender das informações que são transmitidas entre os profissionais.",
+      "Porque permite que apenas uma pessoa concentre todas as informações da operação.",
+      "Porque elimina a necessidade de verificar as condições reais da operação.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "As atividades ferroviárias dependem da troca de informações entre diferentes profissionais. Quando uma informação é transmitida corretamente, ela pode orientar decisões e ações de forma compatível com as condições existentes.",
+    explicacaoErrada:
+      "A comunicação não substitui os procedimentos nem elimina a necessidade de verificar as condições reais. As atividades dependem da troca de informações, e as decisões e ações podem ser orientadas corretamente quando essas informações são transmitidas de forma adequada.",
+  },
+  {
+    id: 32,
+    tema: "Aula 6 — Comunicação e Segurança Operacional",
+    dificuldade: "Fácil",
+    pergunta: "O que pode acontecer quando uma informação operacional é transmitida de forma incorreta, incompleta ou interpretada de maneira diferente?",
+    alternativas: [
+      "A atividade permanece necessariamente dentro das mesmas condições de segurança.",
+      "A informação deixa de ter qualquer relação com a atividade realizada.",
+      "As condições da atividade podem ser alteradas e contribuir para uma ocorrência.",
+      "Apenas a comunicação entre os profissionais é afetada, sem consequência para a atividade.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Uma informação incorreta, incompleta ou mal interpretada pode fazer com que uma pessoa tome uma decisão diferente daquela esperada. Isso pode alterar a forma como a atividade é realizada e contribuir para uma ocorrência.",
+    explicacaoErrada:
+      "Uma informação incorreta, incompleta ou mal interpretada pode levar a uma decisão diferente da esperada e alterar a forma como a atividade é realizada. Isso pode contribuir para uma ocorrência, em vez de manter as condições de segurança.",
+  },
+  {
+    id: 33,
+    tema: "Aula 6 — Comunicação e Segurança Operacional",
+    dificuldade: "Fácil",
+    pergunta: "Ao transmitir uma informação relacionada à segurança operacional, o profissional deve considerar:",
+    alternativas: [
+      "Somente a quantidade de informações que possui.",
+      "O que precisa ser informado, para quem a informação deve ser transmitida e qual entendimento ou ação deve resultar dela.",
+      "Apenas a pessoa que iniciou a atividade.",
+      "Somente a forma mais rápida de transmitir a informação.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Uma comunicação segura não depende apenas de transmitir uma mensagem. É necessário considerar o conteúdo da informação, quem precisa recebê-la e qual entendimento ou ação deve resultar dessa comunicação.",
+    explicacaoErrada:
+      "Uma comunicação segura não depende apenas da quantidade de informações ou da velocidade da transmissão. É necessário considerar o conteúdo, quem precisa receber a informação e qual entendimento ou ação deve resultar dela.",
+  },
+  {
+    id: 34,
+    tema: "Aula 6 — Comunicação e Segurança Operacional",
+    dificuldade: "Fácil",
+    pergunta: "Qual é a finalidade da repetição ou confirmação de uma informação relacionada à segurança?",
+    alternativas: [
+      "Aumentar a quantidade de comunicações realizadas durante a atividade.",
+      "Confirmar que a informação foi compreendida e reduzir a possibilidade de interpretações diferentes.",
+      "Substituir os registros necessários da atividade.",
+      "Permitir que somente o emissor determine como a informação deve ser interpretada.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A confirmação permite verificar se a informação transmitida foi compreendida corretamente. Isso reduz a possibilidade de que emissor e receptor tenham entendimentos diferentes sobre uma condição ou ação relacionada à atividade.",
+    explicacaoErrada:
+      "A confirmação não tem por finalidade aumentar comunicações, substituir registros ou favorecer o emissor. Ela verifica se a informação foi compreendida corretamente e reduz a possibilidade de interpretações diferentes.",
+  },
+  {
+    id: 35,
+    tema: "Aula 6 — Comunicação e Segurança Operacional",
+    dificuldade: "Fácil",
+    pergunta: "Por que a identificação correta de pessoas, locais, trens, veículos, equipamentos e condições é importante na comunicação operacional?",
+    alternativas: [
+      "Porque torna as mensagens mais longas e detalhadas.",
+      "Porque permite relacionar corretamente a informação à situação ou ao elemento a que ela se refere.",
+      "Porque elimina a necessidade de confirmar informações recebidas.",
+      "Porque permite que informações diferentes sejam transmitidas ao mesmo tempo.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A identificação correta evita que uma informação seja associada ao elemento ou situação errada. Em atividades operacionais, essa correspondência é importante para que as pessoas envolvidas compreendam exatamente a que situação a comunicação se refere.",
+    explicacaoErrada:
+      "A identificação correta não torna as mensagens mais longas, não elimina a confirmação das informações nem se destina à transmissão simultânea. Ela evita que a informação seja associada ao elemento ou situação errada.",
+  },
+  {
+    id: 36,
+    tema: "Aula 6 — Comunicação e Segurança Operacional",
+    dificuldade: "Fácil",
+    pergunta: "Uma condição operacional se modifica durante uma atividade. O que deve ocorrer com a comunicação?",
+    alternativas: [
+      "A nova condição deve ser comunicada antes que uma ação seja tomada com base na informação anterior.",
+      "A comunicação deve ocorrer somente depois que a atividade terminar.",
+      "A informação anterior deve continuar sendo utilizada até que ocorra uma consequência.",
+      "A mudança só precisa ser comunicada se houver interrupção da atividade.",
+    ],
+    correta: 0,
+    explicacaoCorrecta:
+      "Quando uma condição muda, a informação anterior pode deixar de representar a situação real. Por isso, a nova condição deve ser comunicada antes que alguém tome uma ação baseada em uma informação que já não corresponde à realidade.",
+    explicacaoErrada:
+      "Quando uma condição muda, a informação anterior pode deixar de representar a situação real. A nova condição deve ser comunicada antes que alguém aja com base em informação que já não corresponde à realidade, e não apenas após o término da atividade.",
+  },
+  {
+    id: 37,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "O que caracteriza uma ocorrência no contexto da segurança operacional?",
+    alternativas: [
+      "Somente eventos que resultam em danos materiais.",
+      "Qualquer situação relacionada exclusivamente à circulação de trens.",
+      "Um evento operacional que interrompe, altera ou compromete uma atividade e que requer registro, avaliação ou tratamento conforme sua natureza.",
+      "Apenas eventos classificados formalmente como acidentes.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "O termo ocorrência possui um sentido amplo e pode envolver diferentes tipos de eventos operacionais. Esses eventos podem afetar a circulação ou o trabalho e precisam ser registrados, avaliados e tratados de acordo com suas características.",
+    explicacaoErrada:
+      "O termo ocorrência possui sentido amplo e não se limita a danos materiais, à circulação de trens ou a acidentes formalmente classificados. Ela envolve eventos que interrompem, alteram ou comprometem uma atividade e requerem registro, avaliação ou tratamento.",
+  },
+  {
+    id: 38,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Qual é uma característica que diferencia um acidente de um incidente?",
+    alternativas: [
+      "O acidente é sempre causado por falha de equipamento, enquanto o incidente é causado por falha humana.",
+      "O acidente possui consequências que caracterizam essa classificação segundo os critérios aplicáveis, enquanto um incidente pode ocorrer sem produzir essas consequências.",
+      "O incidente sempre provoca danos, enquanto o acidente pode não provocar consequências.",
+      "Não existe diferença entre acidente e incidente.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A classificação não deve ser feita apenas pela percepção sobre o evento. O acidente é caracterizado pelas consequências e pelos critérios aplicáveis. Já um incidente pode estar relacionado à segurança operacional sem necessariamente produzir as consequências que caracterizam um acidente.",
+    explicacaoErrada:
+      "A diferença entre acidente e incidente não está na causa (equipamento ou humano) nem no fato de o incidente sempre provocar danos. O acidente é caracterizado pelas consequências e pelos critérios aplicáveis, enquanto um incidente pode ocorrer sem produzir essas consequências.",
+  },
+  {
+    id: 39,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Uma situação ocorreu sem produzir consequências de acidente, mas revelou uma condição inadequada de segurança. Por que essa situação deve ser analisada?",
+    alternativas: [
+      "Porque a ausência de consequências significa que o evento não possui importância operacional.",
+      "Porque situações sem consequências podem revelar falhas, condições inadequadas ou falhas de barreiras que precisam ser compreendidas.",
+      "Porque todo evento sem consequências deve obrigatoriamente ser classificado como acidente.",
+      "Porque somente eventos sem consequências permitem identificar responsáveis.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A ausência de uma consequência não significa ausência de risco. Uma situação que quase resultou em um evento mais grave pode revelar uma falha ou uma condição inadequada e, por isso, fornecer informações importantes para a prevenção.",
+    explicacaoErrada:
+      "A ausência de consequências não significa que o evento não tenha importância. Situações sem consequências podem revelar falhas, condições inadequadas ou falhas de barreiras que precisam ser compreendidas para a prevenção.",
+  },
+  {
+    id: 40,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Após uma ocorrência, uma análise adequada deve buscar:",
+    alternativas: [
+      "Identificar somente a ação que ocorreu imediatamente antes do evento.",
+      "Encontrar necessariamente uma única pessoa responsável pela ocorrência.",
+      "Compreender o que aconteceu e identificar as condições que contribuíram para o evento.",
+      "Encerrar a análise assim que a situação operacional voltar ao normal.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "A análise deve buscar compreender o evento de forma ampla, considerando a operação, os procedimentos, os equipamentos, as informações disponíveis e outros fatores que possam ter contribuído. A finalidade é compreender o ocorrido e identificar oportunidades de prevenção.",
+    explicacaoErrada:
+      "A análise de uma ocorrência não se limita à ação imediatamente anterior ao evento nem à busca de uma única pessoa responsável. Ela deve compreender o que aconteceu e identificar as condições que contribuíram para o evento, visando à prevenção.",
+  },
+  {
+    id: 41,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Qual é a diferença entre analisar as causas de uma ocorrência e simplesmente procurar um responsável?",
+    alternativas: [
+      "Não existe diferença, pois toda análise deve identificar uma pessoa responsável.",
+      "A análise busca compreender os fatores que contribuíram para o evento, que podem envolver uma combinação de condições, e não apenas apontar uma pessoa.",
+      "A análise deve considerar somente as ações realizadas pelos profissionais.",
+      "A busca por responsáveis substitui a necessidade de avaliar procedimentos e equipamentos.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Uma ocorrência pode resultar da combinação de diferentes fatores. Por isso, compreender suas causas exige analisar as condições da operação, os procedimentos, os equipamentos, as informações e outros elementos envolvidos, em vez de limitar a análise à identificação de uma pessoa.",
+    explicacaoErrada:
+      "A análise de causas não se limita a apontar uma pessoa. Uma ocorrência pode resultar de uma combinação de fatores, e compreendê-la exige avaliar procedimentos, equipamentos, informações e condições da operação, em vez de apenas procurar um responsável.",
+  },
+  {
+    id: 42,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Por que os registros de ocorrências são importantes para a segurança operacional?",
+    alternativas: [
+      "Porque servem apenas para documentar que uma ocorrência aconteceu.",
+      "Porque permitem identificar situações repetidas, tendências e avaliar a eficácia das medidas adotadas.",
+      "Porque substituem a necessidade de analisar cada ocorrência.",
+      "Porque são utilizados somente quando existem consequências materiais.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "Os registros permitem reunir informações sobre diferentes ocorrências ao longo do tempo. A análise desses dados pode revelar situações que se repetem, tendências e informações úteis para verificar se as medidas adotadas estão contribuindo para o controle dos riscos.",
+    explicacaoErrada:
+      "Os registros não servem apenas para documentar eventos nem substituem a análise de cada ocorrência. Eles permitem identificar situações repetidas, tendências e avaliar se as medidas adotadas estão contribuindo para o controle dos riscos.",
+  },
+  {
+    id: 43,
+    tema: "Aula 7 — Acidentes, Incidentes e Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Qual é uma finalidade da análise de uma ocorrência para a segurança operacional?",
+    alternativas: [
+      "Encerrar definitivamente qualquer possibilidade de ocorrência semelhante.",
+      "Transformar as informações obtidas com o evento em oportunidades de prevenção e melhoria dos controles.",
+      "Determinar que toda ocorrência resulta de uma única causa.",
+      "Substituir os procedimentos existentes por decisões tomadas após cada ocorrência.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A análise de uma ocorrência deve produzir conhecimento que possa ser utilizado para prevenir novos eventos. As informações obtidas podem contribuir para melhorar procedimentos, controles, equipamentos e outras condições relacionadas à segurança.",
+    explicacaoErrada:
+      "A análise não encerra qualquer possibilidade de ocorrência semelhante nem determina uma causa única. Ela transforma as informações do evento em oportunidades de prevenção e melhoria dos controles existentes.",
+  },
+  {
+    id: 44,
+    tema: "Aula 8 — Emergências e Resposta a Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Em uma situação de emergência, qual deve ser a primeira preocupação?",
+    alternativas: [
+      "Restabelecer imediatamente a circulação ferroviária.",
+      "Preservar informações para o registro da ocorrência.",
+      "Proteger a vida e a integridade das pessoas, reconhecendo os riscos existentes e evitando novas situações de perigo.",
+      "Retirar todos os equipamentos envolvidos antes de avaliar a situação.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Em uma emergência, a proteção das pessoas é a prioridade inicial. Para isso, é necessário reconhecer os perigos presentes e evitar que as ações de resposta criem novos riscos ou agravem a situação existente.",
+    explicacaoErrada:
+      "Em uma emergência, a prioridade inicial é a proteção da vida e da integridade das pessoas, e não restabelecer a circulação, preservar informações ou retirar equipamentos. É necessário reconhecer os riscos e evitar que as ações de resposta criem novos perigos.",
+  },
+  {
+    id: 45,
+    tema: "Aula 8 — Emergências e Resposta a Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Na avaliação inicial de uma emergência, quais informações são fundamentais para orientar a resposta?",
+    alternativas: [
+      "Apenas o tipo de equipamento envolvido.",
+      "O que aconteceu, onde aconteceu, quais são os riscos e quais medidas imediatas são necessárias.",
+      "Somente a quantidade de pessoas presentes no local.",
+      "Apenas as condições da circulação ferroviária.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A identificação do que aconteceu, do local, dos riscos presentes e das medidas imediatas necessárias permite compreender a situação e orientar a resposta. Essas informações também ajudam a definir os recursos necessários para o atendimento.",
+    explicacaoErrada:
+      "A avaliação inicial não se limita ao tipo de equipamento, à quantidade de pessoas ou às condições da circulação. É fundamental identificar o que aconteceu, onde aconteceu, os riscos presentes e as medidas imediatas necessárias para orientar a resposta.",
+  },
+  {
+    id: 46,
+    tema: "Aula 8 — Emergências e Resposta a Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Ao estabelecer uma área segura durante uma emergência, qual situação deve ser considerada?",
+    alternativas: [
+      "Somente a possibilidade de movimentação de trens.",
+      "Apenas a existência de pessoas próximas ao local.",
+      "Os diferentes riscos presentes, como movimentação ferroviária, energia elétrica, materiais perigosos, incêndio ou estruturas danificadas.",
+      "Exclusivamente os danos já observados no equipamento envolvido.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Uma emergência pode apresentar diferentes fontes de perigo ao mesmo tempo. Por isso, a definição de uma área segura deve considerar os riscos existentes e controlar o acesso ao local para evitar que outras pessoas sejam expostas a essas condições.",
+    explicacaoErrada:
+      "Uma emergência pode apresentar diferentes fontes de perigo ao mesmo tempo, e a definição da área segura não se limita à movimentação de trens, à presença de pessoas ou aos danos já observados. Todos os riscos presentes devem ser considerados e o acesso ao local, controlado.",
+  },
+  {
+    id: 47,
+    tema: "Aula 8 — Emergências e Resposta a Ocorrências",
+    dificuldade: "Fácil",
+    pergunta: "Durante uma emergência ferroviária, o fato de não haver um trem visível no local significa que a via está segura para circulação de pessoas?",
+    alternativas: [
+      "Sim, porque a ausência de um trem garante que não existe risco ferroviário.",
+      "Sim, desde que a área esteja visualmente livre.",
+      "Não. A segurança da via deve ser estabelecida conforme os procedimentos aplicáveis, não apenas pela ausência momentânea de um trem visível.",
+      "Não, porque nenhuma pessoa pode permanecer próxima a uma via ferroviária em qualquer situação.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "A ausência momentânea de um trem visível não é suficiente para considerar uma via segura. Em uma emergência, a circulação e as condições da via devem ser tratadas conforme os procedimentos aplicáveis e os riscos existentes.",
+    explicacaoErrada:
+      "A ausência momentânea de um trem visível não garante que a via esteja segura. A segurança da via deve ser estabelecida conforme os procedimentos aplicáveis e os riscos existentes, embora não seja correto afirmar que nenhuma pessoa possa permanecer próxima à via em qualquer situação.",
+  },
+  {
+    id: 48,
+    tema: "Aula 9 — Prevenção e Cultura de Segurança",
+    dificuldade: "Fácil",
+    pergunta: "O que caracteriza uma ação preventiva na segurança ferroviária?",
+    alternativas: [
+      "Atuar somente depois que uma ocorrência produzir consequências.",
+      "Atuar sobre condições que podem contribuir para uma ocorrência antes que suas consequências aconteçam.",
+      "Concentrar as ações apenas na correção de equipamentos danificados.",
+      "Evitar qualquer atividade que apresente algum risco.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A prevenção procura agir antes que uma condição de risco produza uma ocorrência ou suas consequências. Isso envolve reconhecer perigos, compreender os riscos e utilizar medidas de controle adequadas.",
+    explicacaoErrada:
+      "A ação preventiva ocorre antes que uma condição de risco produza consequências, e não somente depois da ocorrência ou apenas na correção de equipamentos. Ela envolve reconhecer perigos, compreender os riscos e utilizar medidas de controle adequadas.",
+  },
+  {
+    id: 49,
+    tema: "Aula 9 — Prevenção e Cultura de Segurança",
+    dificuldade: "Fácil",
+    pergunta: "Uma pessoa identifica uma condição que não compreende completamente e tem dúvida sobre a segurança para continuar uma atividade. Qual conduta está mais alinhada à prevenção?",
+    alternativas: [
+      "Continuar a atividade e avaliar a situação somente depois.",
+      "Ignorar a dúvida enquanto nenhuma ocorrência tiver acontecido.",
+      "Esclarecer a dúvida antes de realizar a ação, evitando continuar diante de uma condição que não está compreendida.",
+      "Transferir automaticamente a responsabilidade para outro profissional.",
+    ],
+    correta: 2,
+    explicacaoCorrecta:
+      "Reconhecer os próprios limites faz parte da prevenção. Quando existe dúvida ou quando as condições reais são diferentes do que era esperado, esclarecer a situação antes de agir ajuda a evitar que uma decisão seja tomada sem compreensão adequada do risco.",
+    explicacaoErrada:
+      "Continuar a atividade com dúvida, ignorar a situação ou transferir a responsabilidade não está alinhado à prevenção. Diante de uma condição não compreendida, o correto é esclarecer a dúvida antes de agir.",
+  },
+  {
+    id: 50,
+    tema: "Aula 9 — Prevenção e Cultura de Segurança",
+    dificuldade: "Fácil",
+    pergunta: "Qual situação contribui para o fortalecimento de uma cultura de segurança?",
+    alternativas: [
+      "Considerar a segurança apenas quando ocorre um acidente.",
+      "Tratar as informações de segurança como parte das decisões diárias e utilizar as ocorrências como fonte de aprendizado e melhoria.",
+      "Concentrar todas as responsabilidades de segurança em uma única área.",
+      "Evitar comunicar condições que ainda não tenham causado uma ocorrência.",
+    ],
+    correta: 1,
+    explicacaoCorrecta:
+      "A cultura de segurança se fortalece quando a prevenção faz parte das decisões e atividades do dia a dia. Informações de segurança são consideradas, condições de risco são comunicadas e as ocorrências são utilizadas para gerar aprendizado e melhorar procedimentos, equipamentos, treinamentos e controles.",
+    explicacaoErrada:
+      "A cultura de segurança não se fortalece considerando a segurança apenas após acidentes, concentrando responsabilidades em uma única área ou ocultando condições de risco. Ela se fortalece quando a prevenção faz parte das decisões diárias e as ocorrências geram aprendizado e melhoria.",
   },
 ];
 
