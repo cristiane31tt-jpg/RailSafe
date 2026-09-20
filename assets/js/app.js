@@ -146,23 +146,46 @@ function renderResultados() {
         typeof r.nota === "number"
           ? r.nota.toFixed(1).replace(".", ",")
           : String(r.nota);
+      const notaNum = Number(r.nota);
+      const notaValida = !isNaN(notaNum);
+      const classeNota = notaValida
+        ? notaNum <= 6
+          ? "results-card__nota--err"
+          : notaNum <= 8
+            ? "results-card__nota--warn"
+            : "results-card__nota--ok"
+        : "results-card__nota--err";
+      const rotuloStatus =
+        notaValida && notaNum >= 7 ? "Aprovado" : "Tente Novamente";
+
       const meta = document.createElement("p");
       meta.className = "results-card__meta";
-      meta.textContent =
-        "Concluído em " +
-        formatarDataResultado(r.data) +
-        " · Nota: " +
-        nota +
-        " · Acertos: " +
-        r.acertos +
-        "/" +
-        (Number(r.acertos) + Number(r.erros)) +
-        " · Erros: " +
-        r.erros +
-        " · Aproveitamento: " +
-        r.percentual +
-        "% · Status: " +
-        (r.status || "Concluído");
+
+      meta.appendChild(
+        document.createTextNode(
+          "Concluído em " + formatarDataResultado(r.data) + " · "
+        )
+      );
+
+      const notaSpan = document.createElement("span");
+      notaSpan.className = classeNota;
+      notaSpan.textContent = "Nota: " + nota;
+      meta.appendChild(notaSpan);
+
+      meta.appendChild(
+        document.createTextNode(
+          " · Acertos: " +
+            r.acertos +
+            "/" +
+            (Number(r.acertos) + Number(r.erros)) +
+            " · Erros: " +
+            r.erros +
+            " · Aproveitamento: " +
+            r.percentual +
+            "% · Status: " +
+            rotuloStatus
+        )
+      );
       corpo.appendChild(meta);
     });
 
@@ -1054,6 +1077,130 @@ document.getElementById("btn-back-to-trainings").addEventListener("click", () =>
   showView("view-trainings");
 });
 
+/* ===== Preparação do áudio das aulas (estrutura genérica) =====
+ * O player é criado por JavaScript e fica em um elemento ESTÁTICO do
+ * <main class="page">, fora de #aula-body* — pois os <article> de aula
+ * são movimentados durante a navegação.
+ * Nesta etapa ainda não existem arquivos MP3; a estrutura apenas monta
+ * automaticamente o caminho assets/audio/<treinamento>/aula-N.mp3.
+ * Cada treinamento futuro entra apenas com uma linha em CONFIG_AUDIO_AULAS.
+ */
+
+const CONFIG_AUDIO_AULAS = [
+  { viewId: "view-aula-sinalizacao", bodyId: "aula-body", slug: "sinalizacao", prefixoId: "conteudo-aula-" },
+  { viewId: "view-aula-amv", bodyId: "aula-body-amv", slug: "amv", prefixoId: "conteudo-amv-aula-" },
+  { viewId: "view-aula-seguranca", bodyId: "aula-body-seguranca", slug: "seguranca", prefixoId: "conteudo-seguranca-aula-" }
+];
+
+const PLAYERS_AUDIO = {};
+
+const NOMES_TREINAMENTOS = {
+  sinalizacao: "Sinalização Ferroviária",
+  amv: "Aparelho de Mudança de Via (AMV)",
+  seguranca: "Segurança Ferroviária"
+};
+
+function rotuloBotaoAudio(info) {
+  const nome = NOMES_TREINAMENTOS[info.slug] || info.slug;
+  return "Ouvir aula " + info.numero + " — " + nome;
+}
+
+function obterInfoAudio(viewId, stageId) {
+  const cfg = CONFIG_AUDIO_AULAS.find(function (c) {
+    return c.viewId === viewId;
+  });
+  if (!cfg) return null;
+  if (typeof stageId !== "string" || stageId.indexOf(cfg.prefixoId) !== 0) return null;
+  const numero = parseInt(stageId.slice(cfg.prefixoId.length), 10);
+  if (!Number.isFinite(numero)) return null;
+  return {
+    slug: cfg.slug,
+    numero: numero,
+    caminho: "assets/audio/" + cfg.slug + "/aula-" + numero + ".mp3"
+  };
+}
+
+function criarPlayerAudio(cfg) {
+  const view = document.getElementById(cfg.viewId);
+  const body = document.getElementById(cfg.bodyId);
+  if (!view || !body) return null;
+  const main = view.querySelector("main");
+  if (!main) return null;
+
+  const player = document.createElement("div");
+  player.className = "conteudo__audio";
+  player.hidden = true;
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "btn btn--secondary conteudo__audio-btn";
+  btn.textContent = "";
+
+  const audio = document.createElement("audio");
+  audio.className = "conteudo__audio-player";
+  audio.preload = "none";
+
+  let infoAtual = null;
+  function definirRotulo(info) {
+    infoAtual = info;
+    btn.textContent = info ? rotuloBotaoAudio(info) : "";
+  }
+
+  player.appendChild(btn);
+  player.appendChild(audio);
+  main.insertBefore(player, body);
+
+  btn.addEventListener("click", function () {
+    if (!audio.getAttribute("src")) return;
+    if (audio.paused) {
+      audio.play().catch(function () {});
+    } else {
+      audio.pause();
+    }
+  });
+
+  audio.addEventListener("playing", function () {
+    btn.textContent = "⏸ Pausar narração";
+  });
+
+  audio.addEventListener("pause", function () {
+    definirRotulo(infoAtual);
+  });
+
+  audio.addEventListener("ended", function () {
+    definirRotulo(infoAtual);
+  });
+
+  audio.addEventListener("error", function () {
+    definirRotulo(infoAtual);
+  });
+
+  return { player: player, btn: btn, audio: audio, definirRotulo: definirRotulo };
+}
+
+function atualizarPlayerAudio(viewId, stageId) {
+  const state = PLAYERS_AUDIO[viewId];
+  if (!state) return;
+  const info = obterInfoAudio(viewId, stageId);
+  if (!info) {
+    state.player.hidden = true;
+    state.audio.pause();
+    state.audio.removeAttribute("src");
+    state.definirRotulo(null);
+    return;
+  }
+  state.player.hidden = false;
+  state.audio.src = info.caminho;
+  state.definirRotulo(info);
+}
+
+(function prepararAudioDasAulas() {
+  CONFIG_AUDIO_AULAS.forEach(function (cfg) {
+    const state = criarPlayerAudio(cfg);
+    if (state) PLAYERS_AUDIO[cfg.viewId] = state;
+  });
+})();
+
 /* ===== Conteúdo didático de Sinalização (curso linear) ===== */
 
 const SEQUENCIA_AULAS = [];
@@ -1162,6 +1309,7 @@ function abrirAula(id) {
   const conteudo = document.getElementById(id);
   while (aulaBody.firstChild) conteudoTemplates.appendChild(aulaBody.firstChild);
   if (conteudo) aulaBody.appendChild(conteudo);
+  atualizarPlayerAudio("view-aula-sinalizacao", id);
 
   if (naSequencia) {
     const pct = Math.round(((aulaPos + 1) / TOTAL_ETAPAS) * 100);
@@ -1339,6 +1487,7 @@ function abrirAulaAmv(id) {
   const conteudo = document.getElementById(id);
   while (aulaBodyAmv.firstChild) conteudoTemplatesAmv.appendChild(aulaBodyAmv.firstChild);
   if (conteudo) aulaBodyAmv.appendChild(conteudo);
+  atualizarPlayerAudio("view-aula-amv", id);
 
   if (naSequencia) {
     const pct = Math.round(((aulaPosAmv + 1) / AMV_TOTAL_ETAPAS) * 100);
@@ -2332,6 +2481,7 @@ function abrirAulaSeguranca(id) {
   const conteudo = document.getElementById(id);
   while (aulaBodySeguranca.firstChild) conteudoTemplatesSeguranca.appendChild(aulaBodySeguranca.firstChild);
   if (conteudo) aulaBodySeguranca.appendChild(conteudo);
+  atualizarPlayerAudio("view-aula-seguranca", id);
 
   if (naSequencia) {
     const pct = Math.round(((aulaPosSeguranca + 1) / SEGURANCA_TOTAL_ETAPAS) * 100);
