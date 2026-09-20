@@ -2180,12 +2180,18 @@
           <h2 class="page__title">Meus Resultados</h2>
         </header>
 
-        <div class="empty-state">
+<div class="empty-state" id="results-empty-state">
           <span class="empty-state__icon" aria-hidden="true">📊</span>
           <p class="empty-state__text">
             Você ainda não realizou nenhum treinamento.
           </p>
         </div>
+
+<div class="results-list" id="results-list" hidden></div>
+
+        <button class="btn btn--secondary" id="btn-clear-results" type="button" hidden>
+          Limpar histórico de avaliações
+        </button>
       </main>
     </section>
 

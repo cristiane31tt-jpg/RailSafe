@@ -13,6 +13,7 @@ document.getElementById("btn-start").addEventListener("click", () => {
 });
 
 document.getElementById("btn-results").addEventListener("click", () => {
+  renderResultados();
   showView("view-results");
 });
 
@@ -22,6 +23,164 @@ document.getElementById("btn-back-trainings").addEventListener("click", () => {
 
 document.getElementById("btn-back-results").addEventListener("click", () => {
   showView("view-home");
+});
+
+/* ===== Meus Resultados ===== */
+
+const RESULTADOS_KEY = "railsafe_resultados";
+const MAX_RESULTADOS_POR_TREINAMENTO = 6;
+
+function lerResultados() {
+  try {
+    const raw = localStorage.getItem(RESULTADOS_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+    const normalizados = {};
+    Object.keys(parsed).forEach((nome) => {
+      const valor = parsed[nome];
+      if (Array.isArray(valor)) {
+        normalizados[nome] = valor;
+      } else if (valor && typeof valor === "object") {
+        normalizados[nome] = [valor];
+      }
+    });
+    return normalizados;
+  } catch (e) {
+    return {};
+  }
+}
+
+function salvarResultadoTreinamento(dados) {
+  if (!dados || typeof dados.treinamento !== "string" || !dados.treinamento.trim()) return;
+  const resultados = lerResultados();
+  const registro = {
+    treinamento: dados.treinamento,
+    data: new Date().toISOString(),
+    nota: dados.nota,
+    acertos: dados.acertos,
+    erros: dados.erros,
+    percentual: dados.percentual,
+    status: "Concluído",
+  };
+  const historico = resultados[dados.treinamento] || [];
+  historico.push(registro);
+  historico.sort((a, b) => tempoRegistro(a.data) - tempoRegistro(b.data));
+  if (historico.length > MAX_RESULTADOS_POR_TREINAMENTO) {
+    historico.splice(0, historico.length - MAX_RESULTADOS_POR_TREINAMENTO);
+  }
+  resultados[dados.treinamento] = historico;
+  try {
+    localStorage.setItem(RESULTADOS_KEY, JSON.stringify(resultados));
+  } catch (e) {}
+}
+
+function formatarDataResultado(iso) {
+  try {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    const pad = (n) => String(n).padStart(2, "0");
+    return (
+      pad(d.getDate()) +
+      "/" +
+      pad(d.getMonth() + 1) +
+      "/" +
+      d.getFullYear() +
+      " " +
+      pad(d.getHours()) +
+      ":" +
+      pad(d.getMinutes())
+    );
+  } catch (e) {
+    return "";
+  }
+}
+
+function tempoRegistro(data) {
+  const t = new Date(data).getTime();
+  return isNaN(t) ? 0 : t;
+}
+
+function renderResultados() {
+  const listEl = document.getElementById("results-list");
+  const emptyEl = document.getElementById("results-empty-state");
+  const clearBtn = document.getElementById("btn-clear-results");
+  if (!listEl || !emptyEl) return;
+
+  const porTreinamento = lerResultados();
+  const nomes = Object.keys(porTreinamento);
+  const vazio = nomes.length === 0;
+
+  emptyEl.hidden = !vazio;
+  listEl.hidden = vazio;
+  if (clearBtn) clearBtn.hidden = vazio;
+  listEl.innerHTML = "";
+  if (vazio) return;
+
+  nomes.forEach((nome) => {
+    const registros = porTreinamento[nome]
+      .filter((r) => r && typeof r.treinamento === "string")
+      .slice()
+      .sort((a, b) => tempoRegistro(b.data) - tempoRegistro(a.data))
+      .slice(0, MAX_RESULTADOS_POR_TREINAMENTO);
+
+    const card = document.createElement("div");
+    card.className = "card results-card";
+
+    const icone = document.createElement("span");
+    icone.className = "card__icon";
+    icone.setAttribute("aria-hidden", "true");
+    icone.textContent = "📋";
+
+    const corpo = document.createElement("div");
+    corpo.className = "results-card__body";
+
+    const titulo = document.createElement("span");
+    titulo.className = "card__title";
+    titulo.textContent = nome;
+
+    corpo.appendChild(titulo);
+
+    registros.forEach((r) => {
+      const nota =
+        typeof r.nota === "number"
+          ? r.nota.toFixed(1).replace(".", ",")
+          : String(r.nota);
+      const meta = document.createElement("p");
+      meta.className = "results-card__meta";
+      meta.textContent =
+        "Concluído em " +
+        formatarDataResultado(r.data) +
+        " · Nota: " +
+        nota +
+        " · Acertos: " +
+        r.acertos +
+        "/" +
+        (Number(r.acertos) + Number(r.erros)) +
+        " · Erros: " +
+        r.erros +
+        " · Aproveitamento: " +
+        r.percentual +
+        "% · Status: " +
+        (r.status || "Concluído");
+      corpo.appendChild(meta);
+    });
+
+    card.appendChild(icone);
+    card.appendChild(corpo);
+    listEl.appendChild(card);
+  });
+}
+
+document.getElementById("btn-clear-results").addEventListener("click", () => {
+  const confirmado = window.confirm(
+    "Limpar histórico de avaliações?\n\nTodos os seus resultados serão apagados. Essa ação não poderá ser desfeita."
+  );
+  if (!confirmado) return;
+  try {
+    localStorage.removeItem(RESULTADOS_KEY);
+  } catch (e) {}
+  renderResultados();
 });
 
 /* ===== Treinamento de Sinalização ===== */
@@ -870,9 +1029,17 @@ btnAnswer.addEventListener("click", () => {
   if (currentPos < totalPorTreinamento - 1) {
     currentPos += 1;
     renderQuestion(currentPos);
-  } else {
+} else {
     const total = totalPorTreinamento;
     const percent = total > 0 ? Math.round((acertos / total) * 100) : 0;
+
+    salvarResultadoTreinamento({
+      treinamento: "Sinalização",
+      nota: total > 0 ? Math.round((acertos / total) * 10 * 10) / 10 : 0,
+      acertos: acertos,
+      erros: erros,
+      percentual: percent,
+    });
 
     document.getElementById("result-acertos").textContent = acertos;
     document.getElementById("result-erros").textContent = erros;
@@ -2062,9 +2229,17 @@ amvBtnAnswer.addEventListener("click", () => {
   if (amvCurrentPos < amvMax - 1) {
     amvCurrentPos += 1;
     renderAmvQuestion(amvCurrentPos);
-  } else {
+} else {
     const total = amvMax;
     const percent = total > 0 ? Math.round((amvAcertos / total) * 100) : 0;
+
+    salvarResultadoTreinamento({
+      treinamento: "AMV",
+      nota: total > 0 ? Math.round((amvAcertos / total) * 10 * 10) / 10 : 0,
+      acertos: amvAcertos,
+      erros: amvErros,
+      percentual: percent,
+    });
 
     document.getElementById("result-acertos-amv").textContent = amvAcertos;
     document.getElementById("result-erros-amv").textContent = amvErros;
@@ -3215,9 +3390,17 @@ segBtnAnswer.addEventListener("click", () => {
   if (segCurrentPos < segMax - 1) {
     segCurrentPos += 1;
     renderSegQuestion(segCurrentPos);
-  } else {
+} else {
     const total = segMax;
     const percent = total > 0 ? Math.round((segAcertos / total) * 100) : 0;
+
+    salvarResultadoTreinamento({
+      treinamento: "Segurança Ferroviária",
+      nota: total > 0 ? Math.round((segAcertos / total) * 10 * 10) / 10 : 0,
+      acertos: segAcertos,
+      erros: segErros,
+      percentual: percent,
+    });
 
     document.getElementById("result-acertos-seguranca").textContent = segAcertos;
     document.getElementById("result-erros-seguranca").textContent = segErros;
