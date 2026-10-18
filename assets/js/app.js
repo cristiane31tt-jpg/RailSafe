@@ -1088,8 +1088,9 @@ document.getElementById("btn-back-to-trainings").addEventListener("click", () =>
 
 const CONFIG_AUDIO_AULAS = [
   { viewId: "view-aula-sinalizacao", bodyId: "aula-body", slug: "sinalizacao", prefixoId: "conteudo-aula-" },
-  { viewId: "view-aula-amv", bodyId: "aula-body-amv", slug: "amv", prefixoId: "conteudo-amv-aula-" },
-  { viewId: "view-aula-seguranca", bodyId: "aula-body-seguranca", slug: "seguranca", prefixoId: "conteudo-seguranca-aula-" }
+  { viewId: "view-aula-amv", bodyId: "aula-body-amv", slug: "amv", prefixoId: "conteudo-amv-aula-", segmentos: { 1: ["aula-1-1.mp3", "aula-1-2.mp3"], 2: ["aula-2-1.mp3", "aula-2-2.mp3", "aula-2-3.mp3", "aula-2-4.mp3"] } },
+  { viewId: "view-aula-seguranca", bodyId: "aula-body-seguranca", slug: "seguranca", prefixoId: "conteudo-seguranca-aula-" },
+  { viewId: "view-aula-circulacao", bodyId: "aula-body-circulacao", slug: "circulacao", prefixoId: "conteudo-circulacao-aula-" }
 ];
 
 const PLAYERS_AUDIO = {};
@@ -1097,7 +1098,8 @@ const PLAYERS_AUDIO = {};
 const NOMES_TREINAMENTOS = {
   sinalizacao: "Sinalização Ferroviária",
   amv: "Aparelho de Mudança de Via (AMV)",
-  seguranca: "Segurança Ferroviária"
+  seguranca: "Segurança Ferroviária",
+  circulacao: "Circulação de Trens"
 };
 
 function rotuloBotaoAudio(info) {
@@ -1113,10 +1115,16 @@ function obterInfoAudio(viewId, stageId) {
   if (typeof stageId !== "string" || stageId.indexOf(cfg.prefixoId) !== 0) return null;
   const numero = parseInt(stageId.slice(cfg.prefixoId.length), 10);
   if (!Number.isFinite(numero)) return null;
+  const caminho = "assets/audio/" + cfg.slug + "/aula-" + numero + ".mp3";
+  const segmentos = cfg.segmentos && cfg.segmentos[String(numero)];
+  const caminhos = Array.isArray(segmentos) && segmentos.length > 0
+    ? segmentos.map(function (nome) { return "assets/audio/" + cfg.slug + "/" + nome; })
+    : [caminho];
   return {
     slug: cfg.slug,
     numero: numero,
-    caminho: "assets/audio/" + cfg.slug + "/aula-" + numero + ".mp3"
+    caminho: caminhos[0],
+    caminhos: caminhos
   };
 }
 
@@ -1140,23 +1148,97 @@ function criarPlayerAudio(cfg) {
   audio.className = "conteudo__audio-player";
   audio.preload = "none";
 
+  const controle = document.createElement("div");
+  controle.className = "conteudo__audio-controle";
+  controle.hidden = true;
+
+  const progresso = document.createElement("div");
+  progresso.className = "conteudo__audio-progress";
+  const progressoFill = document.createElement("div");
+  progressoFill.className = "conteudo__audio-progress-fill";
+
+  const volume = document.createElement("input");
+  volume.type = "range";
+  volume.className = "conteudo__audio-volume";
+  volume.min = "0";
+  volume.max = "100";
+  volume.value = "100";
+  volume.setAttribute("aria-label", "Volume da narração");
+
+  progresso.appendChild(progressoFill);
+  controle.appendChild(progresso);
+  controle.appendChild(volume);
+
   let infoAtual = null;
+  let filaCaminhos = [];
+  let indiceSegmento = 0;
+  const duracaoSegmentos = [];
+
   function definirRotulo(info) {
     infoAtual = info;
     btn.textContent = info ? rotuloBotaoAudio(info) : "";
   }
 
+  function duracaoEfetiva(i) {
+    const d = duracaoSegmentos[i];
+    return Number.isFinite(d) && d > 0 ? d : 1;
+  }
+
+  function progressoPercentual() {
+    const n = filaCaminhos.length;
+    if (n < 2) return 0;
+    let base = 0;
+    let total = 0;
+    for (let i = 0; i < n; i++) {
+      const d = duracaoEfetiva(i);
+      total += d;
+      if (i < indiceSegmento) base += d;
+    }
+    const ct = audio.currentTime;
+    const atual = Number.isFinite(ct) && ct > 0 ? ct : 0;
+    const frac = Math.min(1, Math.max(0, (base + atual) / (total > 0 ? total : n)));
+    return Math.round(frac * 100);
+  }
+
+  function atualizarProgresso() {
+    progressoFill.style.width = progressoPercentual() + "%";
+  }
+
+  function carregarSegmento(i) {
+    const caminho = filaCaminhos[i];
+    if (!caminho) return false;
+    audio.src = caminho;
+    audio.load();
+    return true;
+  }
+
+  function iniciarSequencia(info) {
+    audio.pause();
+    filaCaminhos = info && Array.isArray(info.caminhos) ? info.caminhos.slice() : [];
+    indiceSegmento = 0;
+    duracaoSegmentos.length = 0;
+    progressoFill.style.width = "0%";
+    controle.hidden = filaCaminhos.length < 2;
+    volume.value = String(Math.round(Math.min(1, Math.max(0, audio.volume)) * 100));
+  }
+
   player.appendChild(btn);
+  player.appendChild(controle);
   player.appendChild(audio);
   main.insertBefore(player, body);
 
   btn.addEventListener("click", function () {
-    if (!audio.getAttribute("src")) return;
+    if (!filaCaminhos.length && !audio.getAttribute("src")) return;
+    if (!audio.getAttribute("src") && !carregarSegmento(0)) return;
     if (audio.paused) {
       audio.play().catch(function () {});
     } else {
       audio.pause();
     }
+  });
+
+  volume.addEventListener("input", function () {
+    audio.volume = Math.min(1, Math.max(0, Number(volume.value) / 100));
   });
 
   audio.addEventListener("playing", function () {
@@ -1168,6 +1250,16 @@ function criarPlayerAudio(cfg) {
   });
 
   audio.addEventListener("ended", function () {
+    if (filaCaminhos.length > 1 && indiceSegmento < filaCaminhos.length - 1) {
+      indiceSegmento += 1;
+      if (carregarSegmento(indiceSegmento)) {
+        audio.play().catch(function () {});
+        return;
+      }
+    }
+    indiceSegmento = 0;
+    progressoFill.style.width = "0%";
+    audio.removeAttribute("src");
     definirRotulo(infoAtual);
   });
 
@@ -1175,22 +1267,41 @@ function criarPlayerAudio(cfg) {
     definirRotulo(infoAtual);
   });
 
-  return { player: player, btn: btn, audio: audio, definirRotulo: definirRotulo };
+  audio.addEventListener("loadedmetadata", function () {
+    const d = audio.duration;
+    if (Number.isFinite(d) && d > 0) duracaoSegmentos[indiceSegmento] = d;
+    atualizarProgresso();
+  });
+
+  audio.addEventListener("timeupdate", function () {
+    atualizarProgresso();
+  });
+
+  return {
+    player: player,
+    btn: btn,
+    audio: audio,
+    controle: controle,
+    volume: volume,
+    progressoFill: progressoFill,
+    definirRotulo: definirRotulo,
+    iniciarSequencia: iniciarSequencia
+  };
 }
 
 function atualizarPlayerAudio(viewId, stageId) {
   const state = PLAYERS_AUDIO[viewId];
   if (!state) return;
   const info = obterInfoAudio(viewId, stageId);
+  state.iniciarSequencia(info);
   if (!info) {
     state.player.hidden = true;
-    state.audio.pause();
     state.audio.removeAttribute("src");
     state.definirRotulo(null);
     return;
   }
   state.player.hidden = false;
-  state.audio.src = info.caminho;
+  state.audio.src = info.caminhos[0];
   state.definirRotulo(info);
 }
 
@@ -3577,4 +3688,137 @@ document.querySelectorAll(".category").forEach((category) => {
     header.setAttribute("aria-expanded", String(!isOpen));
     category.classList.toggle("category--open", !isOpen);
   });
+});
+
+/* ===== Conteúdo didático de Circulação de Trens (curso linear) ===== */
+
+const CIRCULACAO_SEQUENCIA_AULAS = [];
+for (let n = 1; n <= 8; n++) CIRCULACAO_SEQUENCIA_AULAS.push("conteudo-circulacao-aula-" + n);
+CIRCULACAO_SEQUENCIA_AULAS.push("conteudo-circulacao-revisao", "conteudo-circulacao-referencia");
+
+const CIRCULACAO_TOTAL_ETAPAS = CIRCULACAO_SEQUENCIA_AULAS.length;
+
+/* ===== Progresso das aulas concluídas (módulo de Circulação de Trens) ===== */
+
+const CIRCULACAO_AULAS_CONCLUIDAS_KEY = "railsafe_circulacao_aulas_concluidas";
+
+let circulacaoAulasConcluidas = (function () {
+  try {
+    const raw = localStorage.getItem(CIRCULACAO_AULAS_CONCLUIDAS_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch (e) {
+    return new Set();
+  }
+})();
+
+function salvarAulaConcluidaCirculacao(id) {
+  if (id.indexOf("conteudo-circulacao-aula-") !== 0) return;
+  circulacaoAulasConcluidas = new Set(circulacaoAulasConcluidas);
+  circulacaoAulasConcluidas.add(id);
+  localStorage.setItem(CIRCULACAO_AULAS_CONCLUIDAS_KEY, JSON.stringify(Array.from(circulacaoAulasConcluidas)));
+}
+
+function atualizarProgressoCursoCirculacao() {
+  const info = document.getElementById("curso-progresso-info-circulacao");
+  if (!info) return;
+  let count = 0;
+  for (let n = 1; n <= 8; n++) {
+    if (circulacaoAulasConcluidas.has("conteudo-circulacao-aula-" + n)) count++;
+  }
+  if (count === 0 || count === 8) {
+    info.hidden = true;
+    return;
+  }
+  info.textContent = count + " de 8 aulas concluídas";
+  info.hidden = false;
+}
+
+let aulaPosCirculacao = 0;
+
+const aulaBodyCirculacao = document.getElementById("aula-body-circulacao");
+const btnAulaPrevCirculacao = document.getElementById("btn-aula-prev-circulacao");
+const btnAulaNextCirculacao = document.getElementById("btn-aula-next-circulacao");
+const progressoBlocoCirculacao = document.getElementById("curso-progresso-circulacao");
+const progressoLabelCirculacao = document.getElementById("aula-progresso-label-circulacao");
+const progressoFillCirculacao = document.getElementById("aula-progresso-fill-circulacao");
+const progressoBarCirculacao = document.getElementById("aula-progresso-bar-circulacao");
+const conteudoTemplatesCirculacao = document.querySelector("#view-aula-circulacao .conteudo__templates");
+
+function nomeEtapaCirculacao(id) {
+  if (id.indexOf("conteudo-circulacao-aula-") === 0) {
+    const n = parseInt(id.replace("conteudo-circulacao-aula-", ""), 10);
+    return "Aula " + n + " de 8";
+  }
+  if (id === "conteudo-circulacao-revisao") return "Revisão";
+  if (id === "conteudo-circulacao-referencia") return "Referência técnica";
+  return "";
+}
+
+function proximoRotuloCirculacao(id) {
+  if (id === "conteudo-circulacao-revisao") return "Continuar para referências →";
+  if (id === "conteudo-circulacao-aula-8") return "Continuar para revisão →";
+  return "Próxima aula →";
+}
+
+function abrirAulaCirculacao(id) {
+  aulaPosCirculacao = CIRCULACAO_SEQUENCIA_AULAS.indexOf(id);
+  const naSequencia = aulaPosCirculacao !== -1;
+  const conteudo = document.getElementById(id);
+  while (aulaBodyCirculacao.firstChild) conteudoTemplatesCirculacao.appendChild(aulaBodyCirculacao.firstChild);
+  if (conteudo) aulaBodyCirculacao.appendChild(conteudo);
+  atualizarPlayerAudio("view-aula-circulacao", id);
+
+  if (naSequencia) {
+    const pct = Math.round(((aulaPosCirculacao + 1) / CIRCULACAO_TOTAL_ETAPAS) * 100);
+    progressoBlocoCirculacao.hidden = false;
+    progressoLabelCirculacao.textContent = nomeEtapaCirculacao(id);
+    progressoFillCirculacao.style.width = pct + "%";
+    if (progressoBarCirculacao) progressoBarCirculacao.setAttribute("aria-valuenow", String(pct));
+
+    btnAulaPrevCirculacao.hidden = aulaPosCirculacao === 0;
+    btnAulaPrevCirculacao.textContent = "← Aula anterior";
+    btnAulaNextCirculacao.textContent = proximoRotuloCirculacao(id);
+    btnAulaNextCirculacao.hidden = id === "conteudo-circulacao-referencia";
+  } else {
+    progressoBlocoCirculacao.hidden = true;
+    btnAulaPrevCirculacao.hidden = true;
+    btnAulaNextCirculacao.hidden = true;
+  }
+
+  if (typeof window !== "undefined") window.scrollTo(0, 0);
+  showView("view-aula-circulacao");
+}
+
+function iniciarConteudoCirculacao() {
+  atualizarProgressoCursoCirculacao();
+  showView("view-conteudo-circulacao");
+}
+
+document.getElementById("btn-iniciar-treinamento-circulacao").addEventListener("click", () => {
+  abrirAulaCirculacao("conteudo-circulacao-aula-1");
+});
+
+document.getElementById("btn-back-conteudo-circulacao").addEventListener("click", () => {
+  showView("view-trainings");
+});
+
+document.getElementById("btn-back-aula-circulacao").addEventListener("click", () => {
+  atualizarProgressoCursoCirculacao();
+  showView("view-conteudo-circulacao");
+});
+
+btnAulaPrevCirculacao.addEventListener("click", () => {
+  if (aulaPosCirculacao > 0) abrirAulaCirculacao(CIRCULACAO_SEQUENCIA_AULAS[aulaPosCirculacao - 1]);
+});
+
+btnAulaNextCirculacao.addEventListener("click", () => {
+  salvarAulaConcluidaCirculacao(CIRCULACAO_SEQUENCIA_AULAS[aulaPosCirculacao]);
+  if (aulaPosCirculacao < CIRCULACAO_SEQUENCIA_AULAS.length - 1) {
+    abrirAulaCirculacao(CIRCULACAO_SEQUENCIA_AULAS[aulaPosCirculacao + 1]);
+  }
+});
+
+document.querySelector('[data-training="circulacao"]').addEventListener("click", () => {
+  iniciarConteudoCirculacao();
 });

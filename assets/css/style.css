@@ -510,7 +510,8 @@ body {
 
 .conteudo__audio {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 16px 0 0;
 }
 
@@ -520,6 +521,70 @@ body {
 
 .conteudo__audio-btn {
   min-width: 200px;
+}
+
+.conteudo__audio-controle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 460px;
+  margin: 10px 0 0;
+}
+
+.conteudo__audio-controle[hidden] {
+  display: none;
+}
+
+.conteudo__audio-progress {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.15);
+  overflow: hidden;
+}
+
+.conteudo__audio-progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transition: width 0.2s linear;
+}
+
+.conteudo__audio-volume {
+  width: 110px;
+  accent-color: var(--color-primary);
+}
+
+/* Vídeo didático (AMV e Sinalização): largura limitada, centralizado e com
+   a proporção original preservada (height auto). */
+.conteudo__video {
+  width: 100%;
+  max-width: 640px;
+  margin: 26px auto 0;
+}
+
+.conteudo__video-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.conteudo__video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #000;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+@media (max-width: 479px) {
+  .conteudo__video {
+    max-width: 100%;
+  }
 }
 
 .conteudo__badge {
@@ -1162,4 +1227,51 @@ body {
   .conteudo__aula-nav {
     flex-direction: column-reverse;
   }
+}
+
+/* Etapas como página contínua de leitura (aulas + revisão + referência) — módulo de Circulação de Trens. */
+#view-aula-circulacao .page {
+  max-width: 760px;
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__title {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__p:last-child {
+  margin-bottom: 0;
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__lista {
+  font-size: 16px;
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) .atividade__imagem {
+  margin: 22px 0;
+}
+
+#view-aula-circulacao .conteudo__stage:not(.conteudo__stage--atividade) .conteudo__box--conceito {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  background: rgba(245, 158, 11, 0.07);
+  margin: 26px 0 0;
+  padding: 18px 20px;
 }
